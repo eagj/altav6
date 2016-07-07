@@ -1,0 +1,11 @@
+/***************** INDEX ****************/
+header#general{
+	background-color: #414141;
+	height:50px;
+	
+}
+.contentgeneric{
+	max-width:1200px;
+	margin:0px auto;
+	position:relative;
+}
