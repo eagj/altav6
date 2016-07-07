@@ -1,3 +1,53 @@
+/*FONT FACE */
+@font-face {
+	font-family: 'IcoMoon-Ultimate';
+	src: url('fonts/IcoMoon-Ultimate.ttf?-mxku12') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: "Raleway";	
+	src: url('fonts/Raleway-Regular.ttf');
+	font-weight: normal;
+}
+
+
+@font-face {
+	font-family: "Raleway_bold";
+	src: url('fonts/Raleway-Bold.ttf') format('truetype');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Raleway_light";
+	src: url('fonts/Raleway-Light.ttf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Raleway_thin";
+	src: url('fonts/Raleway-Thin.ttf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Raleway_medium";
+	src: url('fonts/Raleway-Medium.ttf');
+	font-weight: normal;
+}
+
+/************************* COMUN ********************************/
+html{
+	font-family: 'Raleway', sans-serif;
+	text-rendering: optimizelegibility;
+	color: #616161;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4,h5,h6,strong{font-weight: normal;}
+
 /***************** INDEX ****************/
 header#general{
 	background-color: #414141;
