@@ -1,6 +1,6 @@
 /*FONT FACE */
 @font-face {
-	font-family: 'IcoMoon-Ultimate';
+	font-family: 'icomoon';
 	src: url('fonts/IcoMoon-Ultimate.ttf?-mxku12') format('truetype');
 	font-weight: normal;
 	font-style: normal;
@@ -48,14 +48,119 @@ html{
 
 h1, h2, h3, h4,h5,h6,strong{font-weight: normal;}
 
-/***************** INDEX ****************/
-header#general{
-	background-color: #414141;
-	height:50px;
-	
-}
 .contentgeneric{
 	max-width:1200px;
 	margin:0px auto;
 	position:relative;
 }
+
+
+
+
+
+/*HEADER GENERAL INMUEBLES VISITADOS Y LOGIN*/
+header#general{
+	background-color: #414141;
+	height:50px;	
+}
+	header#general #pUltimosVisitados{
+		float: left;
+    	margin-left: 1%;
+    	padding: 13px 0;
+    	text-transform: uppercase;
+	}
+		header#general #pUltimosVisitados a{
+			color:#fff;
+			font-size: 0.875em;
+		}
+		header#general #pUltimosVisitados a::before{
+			font-family: 'icomoon';
+			content:"\eddd";
+		  	font-size: 1.3em;
+    		margin-right: 15px;
+    		vertical-align: middle;
+		}
+		
+		header#general p.loginhead{
+			background-color: #c3c3c3;
+			float: right;
+    		font-size: 0.875em;
+    		height: 50px;
+			margin-right: 1%;
+    		padding-top: 15px;
+    		text-align: center;
+    		text-transform: uppercase;
+    		width: 210px;
+		}
+		header#general p.loginhead::before{
+  			background: transparent url("/images/ico_user.png") no-repeat scroll center center;
+			content: "\00a0";
+			display: inline-block;
+			height: 24px;
+			vertical-align: middle;
+			width: 24px;
+		}
+			header#general p.loginhead a{
+				color:#414141;
+			}
+				header#general p.loginhead a.acceso {
+    				margin-left: 5px;
+					margin-right: 5px;	
+				}
+				header#general p.loginhead a.registro {
+    				margin-left: 5px;	
+				}
+
+
+
+
+
+
+
+
+
+
+/***************** INDEX ****************/
+/*HEADER LOGO Y NAV*/
+header#logonav{
+	background-color: #fff;
+	height:70px;	
+}
+	header#logonav img#logoalta{
+	 	margin-left: 1%;
+    	padding-top: 15px;
+	}
+	
+	header#logonav nav#menu{
+		float: right;
+    	margin-right: 1%;
+		margin-top: 27px;
+	}
+		header#logonav nav#menu li{
+			display: inline-block;
+			text-transform: uppercase;
+		}
+			header#logonav nav#menu li a{
+				color:red;
+				margin-right: 10px;
+				padding-bottom: 19px;
+			}
+			header#logonav nav#menu li a:hover{
+				border-bottom:4px solid red;
+			}
+
+
+
+
+
+/*SECCION BUSCADCOR INDEX*/
+section#buscador{
+	width:100%;
+	
+}	
+	section#buscador #bgimage{
+		height:888px;
+		overflow:hidden;
+	}
+	
+	
