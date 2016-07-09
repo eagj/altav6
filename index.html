@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>index</title>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 	<!-- HOJAS DE ESTILOS -->
 <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
 <link rel="stylesheet" type="text/css" href="/styles/style.css">
+<link href="/include/jquery/vegas/vegas.css" rel="stylesheet">
 </head>
 <body>
 <div id="index">
@@ -31,9 +33,25 @@
 	</header>
 	<section id="buscador">
 		<div id="bgimage" class="vegas-container">
-			<img src="/images/bg-home.JPG" alt="Buscador de inmuebles" />
 		</div>
 	</section>
 </div>
+<script src="/include/jquery/vegas/vegas.js"></script>
+<script>
+		$("#bgimage").vegas({
+			timer:false,
+			delay:10000,
+			transition: 'zoomOut',
+			transitionDuration:3000,
+		    slides: [
+				
+					{ src: "/images/bg-home.jpg"},
+					
+						        
+		        	      
+		  
+		    ]
+		});
+	</script>
 </body>
 </html>
