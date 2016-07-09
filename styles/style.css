@@ -42,7 +42,7 @@
 html{
 	font-family: 'Raleway', sans-serif;
 	text-rendering: optimizelegibility;
-	color: #616161;
+	color: #414141;
 	font-size: 16px;
 }
 
@@ -155,12 +155,83 @@ header#logonav{
 
 /*SECCION BUSCADCOR INDEX*/
 section#buscador{
-	width:100%;
+ 	display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 888px;
 	
 }	
 	section#buscador #bgimage{
-		height:888px;
-		overflow:hidden;
+ 		height: 100%;
+    	overflow: hidden;
+    	position: absolute;
+    	width: 100%;
+    	z-index: 1;
 	}
+
+section#buscador .cajabuscador{
+	width:98%;
+	margin-left: 1%;
+	background-color: rgba(195,195,195, .85);
+	-webkit-box-shadow: -5px 14px 30px 19px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow:-5px 14px 30px 19px rgba(0, 0, 0, 0.4);
+	box-shadow:-5px 14px 30px 19px rgba(0, 0, 0, 0.4);
+	height:177px;
+	margin-top: 270px;
+	position:relative;
+	z-index: 2;
+}
+section#buscador .cajabuscador .tipooper{
+	display: block;
+    margin-left: 30px;
+    width: calc(100% - 30px);
+}
 	
-	
+	section#buscador .cajabuscador .tipooper ul li{
+		font-family: raleway_light;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		display:inline-block;
+		border-top: 4px solid transparent;
+	 	margin: 0 10px;
+		padding: 10px;
+	}		
+		section#buscador .cajabuscador .tipooper ul li a{
+			color:#414141
+		}					
+		
+		section#buscador .cajabuscador .tipooper ul li:hover, section#buscador .cajabuscador .tipooper ul li.selected{
+			border-top: 4px solid red;
+			font-family: raleway_bold;
+		}
+			section#buscador .cajabuscador .tipooper ul li.selected a, section#buscador .cajabuscador .tipooper ul li:hover a{
+				color:red;
+			}
+			
+section#buscador .cajabuscador .tipo{
+ 	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 97% center;
+    border-radius: 7px 0 0 7px;
+    float: left;
+    margin-left: 21px;
+    margin-right: 10px;
+    padding: 11px;
+    overflow: hidden;
+    width: 190px;    
+}
+section#buscador .cajabuscador .tipo select{
+	font-family: Raleway_medium;
+	background: transparent none repeat scroll 0 0;
+    border: medium none;
+    margin: 0;
+    width: 116%;
+    font-size: 0.875em;
+}
+
+section#buscador .cajabuscador .semanti{
+	float: left;
+	width:715px;
+}
+	section#buscador .cajabuscador .semanti input{
+		width:100%;
+		height: 43px;
+	}	

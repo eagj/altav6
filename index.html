@@ -34,6 +34,32 @@
 	<section id="buscador">
 		<div id="bgimage" class="vegas-container">
 		</div>
+		<div class="contentgeneric">
+			<div class="cajabuscador">	
+				<div class="tipooper">
+					<ul>
+						<li class="selected"><a href="#">comprar</a></li>
+						<li><a href="#">alquilar</a></li>
+					</ul>
+				</div>
+				<div class="lineaselect">
+					<div class="tipo">
+						<select id="tipo" name="tipoInmueble">
+							<option value="1">Casas y Pisos</option>
+							<option value="2">Trasteros</option>
+							<option value="3">Garajes</option>
+							<option value="4">Locales</option>
+							<option value="5">Naves Industriales</option>
+							<option value="6">Oficinas</option>
+							<option value="9">Suelos</option>
+						</select>
+					</div>
+					<div class="semanti">
+						<input type="text" placeholder="introduce localidad, direcci&oacute;n, barrio o c&oacute;digo postal" id="eleccion_widget" tabindex="1" value="" name="busquedaSemantica_widget" class="ui-autocomplete-input" autocomplete="off">
+					</div>
+				</div>		
+			</div>
+		</div>	
 	</section>
 </div>
 <script src="/include/jquery/vegas/vegas.js"></script>
@@ -45,11 +71,7 @@
 			transitionDuration:3000,
 		    slides: [
 				
-					{ src: "/images/bg-home.jpg"},
-					
-						        
-		        	      
-		  
+					{ src: "/images/bg-home.jpg"}
 		    ]
 		});
 	</script>
