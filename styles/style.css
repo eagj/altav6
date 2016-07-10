@@ -13,6 +13,12 @@
 	font-weight: normal;
 }
 
+@font-face {
+	font-family: "Raleway_semibold";
+	src: url('fonts/Raleway-semibold.ttf') format('truetype');
+	font-weight: normal;
+}
+
 
 @font-face {
 	font-family: "Raleway_bold";
@@ -153,7 +159,7 @@ header#logonav{
 
 
 
-/*SECCION BUSCADCOR INDEX*/
+/*SECCION BUSCADOR INDEX*/
 section#buscador{
  	display: inline-block;
     position: relative;
@@ -207,31 +213,206 @@ section#buscador .cajabuscador .tipooper{
 			section#buscador .cajabuscador .tipooper ul li.selected a, section#buscador .cajabuscador .tipooper ul li:hover a{
 				color:red;
 			}
-			
+
+section#buscador .cajabuscador .lineaselect {
+    float: left;
+    margin-top: 6px;
+    width: 100%;
+}			
 section#buscador .cajabuscador .tipo{
  	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 97% center;
     border-radius: 7px 0 0 7px;
     float: left;
-    margin-left: 21px;
+    margin-left: 35px;
     margin-right: 10px;
-    padding: 11px;
+    padding: 14px;
     overflow: hidden;
-    width: 190px;    
+    width: 16%;
 }
 section#buscador .cajabuscador .tipo select{
 	font-family: Raleway_medium;
 	background: transparent none repeat scroll 0 0;
     border: medium none;
     margin: 0;
-    width: 116%;
+    width: 120%;
     font-size: 0.875em;
 }
 
 section#buscador .cajabuscador .semanti{
 	float: left;
-	width:715px;
+	width:61%;
 }
 	section#buscador .cajabuscador .semanti input{
+		font-size: 0.813em;
+    	height: 49px;
+    	text-indent: 7px;
+    	text-transform: uppercase;
+    	width: 100%;
+	}
+	
+section#buscador .cajabuscador .send {
+	float: left;
+    margin-left: 10px;
+    width: 15%;
+    position:relative;
+}
+section#buscador .cajabuscador .send::before {
+    background: transparent url("/images/lupa_buscar.png") no-repeat scroll 0 0;
+    content: "\00a0";
+    left: 19%;
+    position: absolute;
+    top: 11px;
+    width: 27px;
+    height: 27px;
+}
+	section#buscador .cajabuscador .send input{
+		background-color: red;
+    	border: medium none;
+    	border-radius: 0 7px 7px 0;
+    	color: #fff;
+    	display: inline-block;
+    	font-size:1.125em;
+    	height: 49px;
+    	text-indent: 23%;
+    	text-transform: uppercase;
+    	width: 100%;
+	}
+
+
+section#buscador .cajabuscador .lineastipobusc{
+	float: left;
+    margin-left: 20%;
+    margin-top: 21px;
+    width: 79%;
+}
+	section#buscador .cajabuscador .lineastipobusc p{
+		display: inline-block;
+		font-family: raleway_bold;
+		font-size: 1.250em;
+	}
+
+section#buscador .cajabuscador .lineastipobusc .porlocali{
+	display: inline-block;
+	margin-left: 10px;
+}
+	section#buscador .cajabuscador .lineastipobusc .porlocali label{
+  		font-family: Raleway_semibold;
+    	font-size: 1.125em;
+	}
+
+section#buscador .cajabuscador .lineastipobusc .porref{
+	display: inline-block;
+	margin-left: 21px;
+}
+	section#buscador .cajabuscador .lineastipobusc .porref label{
+  		font-family: Raleway_semibold;
+    	font-size: 1.125em;
+	} 
+
+section#buscador .cajabuscador .lineastipobusc input[type="radio"] {
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+}
+section#buscador .cajabuscador .lineastipobusc input[type="radio"] ~ label::before {
+   	content:"\00a0";
+	background: transparent url("/images/check_nook.png") no-repeat scroll 0 0;
+	display: inline-block;
+	height: 20px;
+    width: 25px;
+    margin-right: 10px;
+}
+section#buscador .cajabuscador .lineastipobusc input[type="radio"]:checked ~ label::before {
+	content:"\00a0";
+   	background: transparent url("/images/check_ok.png") no-repeat scroll 0 0;
+	display: inline-block;
+	height: 19px;
+    width: 25px;
+    margin-right: 10px;
+}
+section#buscador .items{
+ 	background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+	section#buscador .items .item{		
+		float: left;
+		height: 170px;
+    	width: 33%;
+	}
+		section#buscador .items .item a{
+	 		display: table;
+    		height: 100%;
+    		width: 100%;
+		}
+		section#buscador .items .item a:hover{
+			background-color: rgba(122, 142, 14, .8);
+		}
+			section#buscador .items .item a .ico{
+		  		display: table-cell;
+    			height: 100%;
+    			padding-right: 20px;
+    			text-align: right;
+    			vertical-align: middle;
+    			width:20%;
+			}
+				section#buscador .items .item a .ico img{
+			  		max-width: 62px;
+    				width: 100%;
+				}
+			section#buscador .items .item a .texto{
+	  			color: #414141;
+    			display: table-cell;
+    			font-size: 1.25em;
+    			height: 100%;
+    			text-align: left;
+    			text-transform: uppercase;
+    			vertical-align: middle;
+    			width: 60%;
+			}
+			section#buscador .items .item a:hover .texto{
+				color:#fff;
+			}
+				section#buscador .items .item a .texto span{
+					font-family: Raleway_semibold;
+				}
+	
+	
+	
+	
+	/*SECCION CAMPANAS INDEX*/
+section#promos{
+	margin-top: 115px;
+}
+	section#promos h2{
+		font-family: raleway_bold;
+    	font-size: 2.5em;
+    	text-align: center;
+	}
+	section#promos h3{
+		color: red;
+    	font-family: raleway_light;
+    	font-size: 1.875em;
+    	text-align: center
+	}
+	
+	section#promos .campanas{
+		float: left;
 		width:100%;
-		height: 43px;
-	}	
+		margin-top: 60px;
+	}
+	section#promos .campanas .campana{
+		float: left;
+    	text-align: center;
+    	width: 45%;
+	 	margin-right: 20px;
+	 	margin-bottom: 20px;
+	}
+		section#promos .campanas .campana img{
+			width:100%;
+			max-width: 580px;
+		}
+		
