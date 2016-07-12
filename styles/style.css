@@ -385,7 +385,7 @@ section#buscador .items{
 	
 	
 	
-	/*SECCION CAMPANAS INDEX*/
+/*SECCION CAMPANAS INDEX*/
 section#promos{
  	display: inline-block;
 	margin-top: 95px;
@@ -446,6 +446,57 @@ section#blog{
     	font-size: 1.875em;
     	text-align: center
 	}
+/* FLECHA IZQDA*/
+section#blog .prevarticle {
+    height: 420px;
+    top: 133px;
+    position: absolute;
+    vertical-align: middle;
+    z-index: 2;
+}
+	section#blog .prevarticle a {
+		display: table;
+    	height: 100%;
+    	vertical-align: middle;
+    	width: 100%;
+	}
+		section#blog .prevarticle a::before{
+			color: #cdcdcd;
+    		content: "\edc2";
+    		display: table-cell;
+    		font-family: icomoon;
+    		font-size: 3em;
+    		vertical-align: middle;
+    		z-index: 2;
+		}
+
+
+/* FLECHA dcha*/
+section#blog .nextarticle {
+    height: 420px;
+    top: 133px;
+    position: absolute;
+    vertical-align: middle;
+    z-index: 2;
+    right:0;
+}
+	section#blog .nextarticle a {
+		display: table;
+    	height: 100%;
+    	vertical-align: middle;
+    	width: 100%;
+	}
+		section#blog .nextarticle a::before{
+			color: #cdcdcd;
+    		content: "\edba";
+    		display: table-cell;
+    		font-family: icomoon;
+    		font-size: 3em;
+    		vertical-align: middle;
+    		z-index: 2;
+		}
+
+
 
 section#blog .entrada{
 	display:inline-block;
@@ -453,6 +504,9 @@ section#blog .entrada{
 	margin-top: 50px;
 }
 	section#blog .entrada .foto{
+		background-image:linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 40%), url("http://portal.altamiraassetmanagement.es/estaticos/fotos/noticias/cap1-ventajas-comprar-vivienda-pareja.jpg");
+		background-size:cover;
+		background-position:center center;
 		float: left;
     	height: 420px;
     	overflow: hidden;
@@ -480,7 +534,125 @@ section#blog .entrada{
     		margin: 15px 0;
 		}
 		section#blog .entrada .texto p.vermas {
-    		color: #9a9b22;
+			color: #9a9b22;
+    		display: inline-block;
     		font-family: raleway_semibold;
-    		text-transform: uppercase;
+    		margin-top: 10px;
+    		text-transform:uppercase;
+    		width: 100%;
 		}
+
+/*SECCION BANNERS*/
+section#banners{
+ 	display: inline-block;
+	margin-top: 95px;
+	margin-bottom: 180px;
+	width:100%;
+}
+	section#banners h2{
+		font-family: raleway_bold;
+    	font-size: 2.5em;
+    	text-align: center;
+	}
+	section#banners h3{
+		color: red;
+    	font-family: raleway_light;
+    	font-size: 1.875em;
+    	text-align: center
+	}
+	
+	section#banners .banners{
+		float: left;
+		width:100%;
+		margin-top: 60px;
+	}
+	section#banners .banners .banner{
+		float: left;
+    	margin-bottom: 1.5%;
+    	text-align: center;
+    	width: 48%;
+	}
+	
+	section#banners .banners .banner:nth-child(2n+1) {
+    	margin-left: 1%;
+	}
+	section#banners .banners .banner:nth-child(2n) {
+    	float: right;
+    	margin-right: 1%;
+	}
+		section#banners .banners .banner img{
+			width:100%;
+			max-width: 580px;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************* FOOTER ****************/
+footer{
+	width:100%;
+}
+	footer .contacto{
+		float: left;
+		width: 30%;
+	}
+		footer .contacto p.contact{
+			
+		}
+			footer .contacto .number{
+				
+			}
+	
+	footer .granjas{
+		float: right;
+		width: 70%;
+	}
+		footer .granja{
+			display: inline-block;
+    		margin-right: 1%;
+    		position: relative;
+    		width: 48%;					
+		}
+			footer .granja h4{
+				float: left;
+    			text-align: right;
+    			width: 100%;
+			}
+				footer .granja h4 a{
+					color:red;
+					font-size: 1.125em;
+					font-family:Raleway_medium;
+				}
+			
+			footer .granja ul{
+	 			bottom: 20px;
+    			max-height: 112px;
+    			overflow-x: hidden;
+    			overflow-y: auto;
+    			padding: 0 5px;
+    			position: absolute;
+    			text-align: center;
+    			width: 100%;
+			}
+				footer .granja li{
+		 			display: inline-block;
+    				margin: 5px 0;
+    				text-align: right;
+    				width: 100%;
+    				font-size: .9em;
+				}
+					footer .granja li a{
+						color:#414141;
+						font-size: 1em;
+						font-family: raleway_light;
+					}
