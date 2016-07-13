@@ -602,32 +602,63 @@ section#banners{
 footer{
 	width:100%;
 }
+	footer .upfoot {
+	   	border-bottom: 1px solid #ccc;
+    	display: inline-block;
+	   	padding-bottom: 18px;
+    	width: 100%;
+	}
 	footer .contacto{
 		float: left;
-		width: 30%;
+		width: 29%;
+		margin-left: 1%;
 	}
 		footer .contacto p.contact{
-			
+			color:#858383;
+			font-family: raleway_medium;
+			padding-left: 55px;
 		}
 			footer .contacto .number{
-				
+				color: red;
+    			font-family: raleway_bold;
+    			font-size: 1.5em;
+    			padding-left: 55px;
+			}
+			.number::before {
+    			background: transparent url("/images/ico_tfno_pie.png") no-repeat scroll left bottom;
+    			content: "\00a0";
+    			height: 56px;
+    			position: absolute;
+    			top: 0;
+    			width: 44px;
+    			left:1%;
 			}
 	
 	footer .granjas{
 		float: right;
-		width: 70%;
+    	margin-right: 4%;
+    	text-align: right;
+    	width: 66%;
 	}
 		footer .granja{
-			display: inline-block;
+	 		display: inline-block;
     		margin-right: 1%;
-    		position: relative;
-    		width: 48%;					
+    		margin-top: 13px;
+    		position: relative;			
 		}
 			footer .granja h4{
-				float: left;
+		  		float: left;
+    			margin: 0 12px;
     			text-align: right;
-    			width: 100%;
+    			width: 100%
 			}
+				footer .granja h4::after {
+    				color: #808080;
+					content: "\edb4";
+    				font-family: icomoon;
+    				margin-left: 12px;
+    				vertical-align: middle;
+				}
 				footer .granja h4 a{
 					color:red;
 					font-size: 1.125em;
@@ -635,14 +666,16 @@ footer{
 				}
 			
 			footer .granja ul{
-	 			bottom: 20px;
+		 		bottom: 25px;
+    			height: 0;
     			max-height: 112px;
     			overflow-x: hidden;
     			overflow-y: auto;
-    			padding: 0 5px;
+    			padding: 0 10px;
     			position: absolute;
+    			right: -10px;
     			text-align: center;
-    			width: 100%;
+    			width: 200%;
 			}
 				footer .granja li{
 		 			display: inline-block;
@@ -656,3 +689,253 @@ footer{
 						font-size: 1em;
 						font-family: raleway_light;
 					}
+
+			/*DESPLEGADO*/
+			footer .granja.desp h4::after {    				
+					content: "\edbc";
+					color:red;    				
+				}
+				footer .granja.desp ul{
+					height:auto;
+				}
+
+	footer .downfoot{
+		float: left;
+		margin: 25px 0;
+		width:100%;
+	}
+		footer .downfoot ul.enlacespie{
+			float: left;
+		 	margin-top: 4px;
+	 	 	margin-left: 1%;
+		 
+		}
+			footer .downfoot ul.enlacespie li{
+		 		border-right: 1px solid #ccc;
+    			display: inline-block;
+    			font-family: raleway_light;
+    			font-size: 1em;
+				
+			}
+				footer .downfoot ul.enlacespie li a{
+					color: #414141;
+    				padding-right: 10px;
+				}
+	
+	footer .socialpie{				
+		float: right;
+    	margin-top: -5px;
+    	margin-right: 1%;
+	}
+		footer .socialpie li{
+			display: inline-block;
+			margin: 0 6px;
+		}
+
+
+
+
+
+
+
+
+
+
+
+/* iPads (portrait and landscape) */
+@media (max-width: 1024px){	
+	
+	html{
+		font-size: 15px;
+	}
+	section#buscador .cajabuscador .send::before{
+		left: 11%;
+	}
+}
+
+/* tablets menos de 1024 */
+@media (max-width: 1023px){	
+	
+	html{
+		font-size: 12px;
+	}
+	footer .downfoot ul.enlacespie{
+		width:100%;
+		text-align: center;
+	}
+	footer .downfoot ul.socialpie{
+		width:100%;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+/* mobile menos de 1023 */
+@media (max-width: 1022px){
+	html{
+		font-size: 14px;
+	}
+	h2{
+		font-size: 2em !important;
+		width: 96%;
+		margin-left: 2%;
+	}
+	h3{
+		font-size: 1.5em!important;
+		width: 96%;
+		margin-left: 2%;
+	}
+	/*CABECERA*/	
+	header#general #pUltimosVisitados{
+		display:none;
+	}
+	header#general p.loginhead{
+		width:100%;
+	}
+	header#logonav img#logoalta{
+		margin-left: 2%;
+	}
+	
+	/*BUSCADOR*/
+	section#buscador{
+		height:470px;
+	}
+	section#buscador .cajabuscador{
+		height: 290px;
+    	margin-left: 0;
+    	margin-top: 105px;
+    	width: 100%;		
+	}
+	section#buscador .cajabuscador .tipo{
+		margin-left:2%;
+		width:96%;
+	 	border-radius: 0;
+	 	margin-bottom: 10px;
+	}
+	section#buscador .cajabuscador .semanti {   
+    	margin-left: 2%;
+    	width: 96%;
+	}
+	
+	section#buscador .cajabuscador .lineastipobusc{
+		 margin-left: 0;
+    	text-align: center;
+    	width: 100%;
+	}
+	section#buscador .cajabuscador .lineastipobusc p{
+		display:none;
+	}
+	
+	section#buscador .cajabuscador .send{
+	 	margin-left: 15%;
+    	margin-top: 170px;
+    	position: absolute;
+    	width: 70%;
+	}
+	section#buscador .cajabuscador .send::before{
+		left:19px;
+	}
+		section#buscador .cajabuscador .send input{
+			border-radius: 7px;
+			text-indent: 0;
+		}
+	
+	section#buscador .items{
+		display:none;
+	}
+	
+	/*CAMPANAS*/
+	section#promos{
+		margin-top: 30px;
+	}
+		section#promos .campanas{
+			margin-top: 30px;
+		}
+			section#promos .campanas .campana{
+				width:100%;
+				margin-left: 2%;
+    			width: 96%;
+			}
+			section#promos .campanas .campana:nth-child(2n+1){
+				margin-left: 2%;
+			}
+			section#promos .campanas .campana:nth-child(2n){
+				margin-right: 0;
+				float: left;
+			}
+			section#promos .campanas .campana img{
+				max-width:100%;
+			}
+	
+	/*BLOG*/
+	section#blog{
+		margin-top: 30px;
+		width:96%;
+		margin-left: 2%;
+	}
+		section#blog .prevarticle{
+			left:2%;
+			height: 380px;
+		}
+		section#blog .entrada{
+			margin-top: 30px;
+			margin-left: 2%;
+    		width: 96%;
+		}
+		section#blog .nextarticle{
+			right:2%;
+			height: 380px;
+		}
+		section#blog .entrada .texto{
+			display:none;
+		}
+		section#blog .entrada .foto{
+			width:100%;
+			height:380px;
+			background-image:linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%), url("http://portal.altamiraassetmanagement.es/estaticos/fotos/noticias/cap1-ventajas-comprar-vivienda-pareja.jpg");
+		}
+		
+	/*BANNERS*/
+	section#banners{
+		/* margin-top: 30px; */
+		margin-bottom: 30px;
+		}
+		section#banners .banners{
+			margin-top: 30px;
+		}
+			section#banners .banners .banner{
+				width:96%;
+				margin-left: 2%;					
+			}
+			section#banners .banners .banner:nth-child(2n+1){
+				margin-left: 2%;;
+			}
+			section#banners .banners .banner:nth-child(2){
+				float: left;
+				margin-left: 2%;
+			}
+				section#banners .banners .banner img {
+					max-width:100%;
+				}
+				
+	/*FOOTER*/
+	footer .contacto{
+		text-align: center;
+    	width: 100%;
+    	margin-left: 0;
+	}
+	footer .granjas{
+		display:none;
+	}
+	footer .contacto p.contact{
+		padding-left:0;
+		font-size: 22px;
+	}	
+	footer .contacto .number{
+		padding-left:0;
+		font-size: 34px;
+	}
+	.number::before{
+		background: none;
+	}
+}
