@@ -139,7 +139,7 @@ header#logonav{
 	header#logonav nav#menu{
 		float: right;
     	margin-right: 1%;
-		margin-top: 27px;
+		margin-top: 27px;		
 	}
 		header#logonav nav#menu li{
 			display: inline-block;
@@ -154,9 +154,56 @@ header#logonav{
 				border-bottom:4px solid red;
 			}
 
-
-
-
+/*NAV RESPONSIVE*/
+header nav#responsive{
+	display:none;
+	position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 100%;
+}
+header nav#responsive p{
+	margin-right: 10px;
+    padding-top: 10px
+}
+	header nav#responsive p a{
+	 	color: #a0a0a0;
+    	font-family: raleway_medium;
+    	font-size: 1.357em;
+    	text-transform: capitalize;
+	}
+	header nav#responsive p a::after{
+		font-family: icomoon;
+		content:"\ec6e";
+		font-size: 2em;
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+		header nav#responsive ul{
+			background-color: #fff;
+    		left: 0;
+    		position: absolute;
+    		text-align: center;
+    		top: 70px;
+    		width: 100%;
+    		z-index: 5;
+    		box-shadow: 0 -3px 20px rgba(133, 133, 133, 0.2);
+    		display:none;
+		}
+			header nav#responsive ul li{}
+				header nav#responsive ul li a{
+					color: #414141;
+					font-family: raleway_medium;
+    				font-size: 1.429em;
+				 	padding: 12px 0;
+				 	display:inline-block;
+				 	width:100%;
+				 	
+				}
+				header nav#responsive ul li a:hover{
+					background-color: #e1e1e1;
+				}
 
 /*SECCION BUSCADOR INDEX*/
 section#buscador{
@@ -935,7 +982,15 @@ footer{
 	header#logonav img#logoalta{
 		margin-left: 2%;
 	}
-	
+	#contbutton{
+		display: none;
+	}
+	header nav#menu{
+		display:none;
+	}
+	header nav#responsive{
+		display:block;
+	}
 	/*BUSCADOR*/
 	section#buscador{
 		height:470px;

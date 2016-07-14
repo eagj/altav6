@@ -21,6 +21,11 @@
 		document.getElementById("contbutton").style.display="block";
 		
 	}
+	function showmenu(){
+		document.getElementById("opt_responsive").style.display="block";	
+		
+	}
+	
 	
 </script>
 </head>
@@ -38,6 +43,17 @@
 	<header id="logonav">
 		<div class="contentgeneric">
 			<img id="logoalta" src="/images/logoaltamira.png" alt="Altamira Inmuebles logo" />
+			<nav id="responsive">
+				<p><a href="#" onclick="showmenu(); return false">men&uacute;</a></p>
+				<ul id="opt_responsive">
+					<li><a href="">Buscador</a></li>
+					<li><a href="">Promociones</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Acceso</a></li>
+					<li><a href="">Registro</a></li>
+					<li><a href="">contacto</a></li>
+				</ul>
+			</nav>
 			<nav id="menu">
 				<ul>
 					<li><a href="#">Promociones</a></li>
