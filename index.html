@@ -11,6 +11,18 @@
 <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
 <link rel="stylesheet" type="text/css" href="/styles/style.css">
 <link href="/include/jquery/vegas/vegas.css" rel="stylesheet">
+<script type="text/javascript">
+	function showform(){
+		document.getElementById("contacto").style.display="block";
+		document.getElementById("contbutton").style.display="none";		
+	}
+	function hideform(){
+		document.getElementById("contacto").style.display="none";
+		document.getElementById("contbutton").style.display="block";
+		
+	}
+	
+</script>
 </head>
 <body>
 <div id="index">
@@ -75,6 +87,38 @@
 						<label for="porref">Por referencia</label>
 					</div>		
 				</div>
+			</div>
+		</div>
+		<div class="contact" id="contbutton">
+			<a href="#" onclick="showform();return false">
+				<div class="ico">				
+					<img src="/images/ico_sobre_contact.png" alt="Contactar" />
+				</div>
+				<div class="texto">
+					<p>&iexcl;Cont&aacute;ctanos! </p>
+				</div>
+			</a>
+		</div>
+		<div id="contacto">
+			<div class="cerrar">
+				<a href="#" onclick="hideform();return false">&nbsp;</a>
+			</div>
+			<div class="titulo">
+				<div class="ico"><img src="/images/ico_sobre_contact.png" alt="Contactar" /></div>
+				<p>&iexcl;Cont&aacute;ctanos!</p>
+			</div>
+			<div class="cuerpo">
+				<form action="" method="get">
+			  		<input type="text" name="nombre" value="" id="nombre"placeholder="Nombre"/>
+				  	<input type="text" name="apellidos" value="" id="apellidos"placeholder="Apellidos"/>
+				  	<input type="text" name="tfno" value="" id="tfno"placeholder="Tel&eacute;fono"/>
+				  	<input type="text" name="email" value="" id="email"placeholder="Email"/>
+				  	<div class="avisoleg">
+				  		<input type="checkbox" name="politi" id="politi">
+				  		<label for="politi">He le&iacute;do y acepto el aviso legal<br /> y la pol&iacute;tica de privacidad</label>
+				  	</div>
+		   			<p><input type="submit" value="enviar"/></p>
+				</form>
 			</div>
 		</div>
 		<div class="items">
