@@ -22,8 +22,17 @@
 		
 	}
 	function showmenu(){
-		document.getElementById("opt_responsive").style.display="block";	
-		
+		document.getElementById("opt_responsive").style.display="block";		
+	}
+	function showarepriv(){
+		document.getElementById("menuAreaPrivada").style.display="block";		
+	}
+	function showarepriv(){
+		document.getElementById("loginacces").style.display="none";
+		document.getElementById("usuario").style.display="block";		
+	}	
+	function showmenuarepriv(){
+		document.getElementById("menuAreaPrivada").style.display="block";		
 	}
 	
 	
@@ -36,8 +45,25 @@
 			<p class="visitados" id="pUltimosVisitados">
 				<a id="btnUltimosVisitados" href="#">Ver &uacute;ltimos visitados</a>
 			</p>
-			<p class="loginhead">
-				<a href="#" class="acceso">Acceso</a>|<a class="registro" href="/pagina-alta">Registro</a></p>
+			<p class="loginhead" id="loginacces">
+				<a href="#" class="acceso" onclick="showarepriv(); return false">Acceso</a>|<a class="registro" href="/pagina-alta">Registro</a>
+			</p>
+			<div class="usuarioconect" id="usuario">
+				<a href="" onclick="showmenuarepriv(); return false" id="nombrePerfil">Quique Garcia</a>
+				<div style="display: none;" id="menuAreaPrivada">
+					<ul>
+						<li class="inicio"><a href="">Inicio</a></li>
+						<li class="fav"><a href="">Favoritos</a></li>
+						<li class="buscguard"><a href="">Alertas</a></li>
+						<li class="inmuguard"><a href="">Inmuebles guardados</a></li>
+						<li class="solicenv"><a href="">Consultas</a></li>
+						<li class="suscrip"><a href="">Suscripciones</a></li>
+						<li class="perfil"><a href="">Perfil</a></li>
+						<li class="exit"><a title="Salir" href="">Salir</a></li>
+					</ul>
+				</div>				
+			</div>
+						
 		</div>
 	</header>
 	<header id="logonav">
