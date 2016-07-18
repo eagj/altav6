@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-  	<!-- Desactivar la detección automática de números de teléfono -->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+  	<!-- Desactivar la deteccion automatica de numeros de teléfono -->
     <meta name="format-detection" content="telephone=no">
 	<title>index</title>
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
@@ -32,7 +32,8 @@
 		document.getElementById("usuario").style.display="block";		
 	}	
 	function showmenuarepriv(){
-		document.getElementById("menuAreaPrivada").style.display="block";		
+		document.getElementById("menuAreaPrivada").style.display="block";
+		$( "#usuario" ).addClass("desple");
 	}
 	
 	
