@@ -6,6 +6,7 @@
   	<!-- Desactivar la deteccion automatica de numeros de teléfono -->
     <meta name="format-detection" content="telephone=no">
 	<title>index</title>
+	<link rel="icon" type="image/png" href="favicon.ico" />
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 	<!-- HOJAS DE ESTILOS -->
 <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
@@ -69,7 +70,20 @@
 	</header>
 	<header id="logonav">
 		<div class="contentgeneric">
-			<img id="logoalta" src="/images/logoaltamira.png" alt="Altamira Inmuebles logo" />
+			<div class="logohead">
+				<a href="/"><img id="logoalta" src="/images/logoaltamira.png" alt="Altamira Inmuebles logo" /></a>
+			</div>
+			<div class="contact">
+				<div class="contacto seccion">					
+					<p><a href="#" onclick="showform();return false"><img src="/images/ico_head_contacto.png" alt="Contacto" /> Contacto</a></p>
+				</div>
+				<div class="tellamamos seccion">					
+					<p><a href=""><img src="/images/ico_head_tellamamos.png" alt="Contacto" /> Te llamamos</a></p>
+				</div>
+				<div class="telefono seccion">					
+					<p><img src="/images/ico_head_tfno.png" alt="Contacto" /> 902 509 559</p>
+				</div>
+			</div>
 			<nav id="responsive">
 				<p><a href="#" onclick="showmenu(); return false">men&uacute;</a></p>
 				<ul id="opt_responsive">
@@ -132,7 +146,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="contact" id="contbutton">
+		<<!-- div class="contact" id="contbutton">
 			<a href="#" onclick="showform();return false">
 				<div class="ico">				
 					<img src="/images/ico_sobre_contact.png" alt="Contactar" />
@@ -141,7 +155,7 @@
 					<p>&iexcl;Cont&aacute;ctanos! </p>
 				</div>
 			</a>
-		</div>
+		</div> -->
 		<div id="contacto">
 			<div class="cerrar">
 				<a href="#" onclick="hideform();return false">&nbsp;</a>
@@ -242,7 +256,7 @@
 				</div>							
 				<div class="texto">
 					<div class="titulo">
-						<h4>Ventajas de comprar vivienda en vez de alquilar</h4>
+						<h4><a href="">Ventajas de comprar vivienda en vez de alquilar</a></h4>
 					</div>	
 					<p>Conoce a nuestra pareja de compradores de una vivienda de Altamira;  Javier y Pilar.</p> 
 					<p>Tambi&eacute;n ellos se plantearon hace unos meses esa misma pregunta, en relaci&oacute;n al uso y disfrute de vivienda, qu&eacute; deseaban y qu&eacute; pod&iacute;an conseguir.</p> 
@@ -309,9 +323,7 @@
 					<li><a href="">Gobierno Corporativo</a></li>
 					<li><a href="">Aviso legal</a></li>
 					<li><a href="">Pol&iacute;tica de Cookies</a></li>
-					<li><a href="">Mapa web</a></li>
-					<li><a href="">Intranet corporativa</a></li>
-					<li><a href="">APIs</a></li>
+					<li><a href="">Mapa web</a></li>					
 				</ul>
 				<ul class="socialpie">
 					<li><a href=""><img src="/images/ico_pie_fb.png" alt="Facebook" /></a></li>
@@ -329,9 +341,9 @@
 <script>
 		$("#bgimage").vegas({
 			timer:false,
-			delay:10000,
-			transition: 'zoomOut',
-			transitionDuration:3000,
+			//delay:10000,
+			transition: 'none',
+			//transitionDuration:3000,
 		    slides: [
 				
 					{ src: "/images/bg-home.jpg"}

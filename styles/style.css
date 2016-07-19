@@ -225,10 +225,36 @@ header#logonav{
 	background-color: #fff;
 	height:70px;	
 }
-	header#logonav img#logoalta{
-	 	margin-left: 1%;
+	header#logonav .logohead{
+ 		float: left;
+    	margin-left: 1%;
+    	width: 196px;
     	padding-top: 15px;
 	}
+		header#logonav .contact{		 	
+			float: left;    		
+    		padding-top: 18px;
+    		text-align: center;
+    		width: 60%;
+		}
+			header#logonav .contact .seccion{
+				display: inline-block;
+    			margin: 0 1%;
+    			vertical-align: super;
+			}
+				
+				header#logonav .contact .seccion p{
+					display: inline-block;
+					font-size: 1.125em;
+				}
+				header#logonav .contact .seccion p a{
+					color: #414141;
+				}
+					header#logonav .contact .seccion p img{
+				 		display: inline-block;
+    					vertical-align: middle;
+					}
+	
 	
 	header#logonav nav#menu{
 		float: right;
@@ -240,12 +266,14 @@ header#logonav{
 			text-transform: uppercase;
 		}
 			header#logonav nav#menu li a{
-				color:red;
+				color:#414141;
 				margin-right: 10px;
-				padding-bottom: 19px;
+				padding-bottom: 20px;
 			}
 			header#logonav nav#menu li a:hover{
 				border-bottom:4px solid red;
+				color:red;
+				font-family: raleway_bold;
 			}
 
 /*NAV RESPONSIVE*/
@@ -259,7 +287,7 @@ header nav#responsive{
 }
 header nav#responsive p{
 	margin-right: 10px;
-    padding-top: 10px
+    padding-top: 12px
 }
 	header nav#responsive p a{
 	 	color: #a0a0a0;
@@ -376,7 +404,7 @@ section#buscador .cajabuscador .tipo select{
     border: medium none;
     float: left;
     font-family: Raleway_medium;
-    font-size: 0.875em;
+    font-size: 1.2em;
     height: 100%;
     text-indent: 10px;
     width: 120%;
@@ -387,10 +415,9 @@ section#buscador .cajabuscador .semanti{
 	width:61%;
 }
 	section#buscador .cajabuscador .semanti input{
-		font-size: 0.813em;
+		font-size: 1em;
     	height: 49px;
-    	text-indent: 7px;
-    	text-transform: uppercase;
+    	text-indent: 15px;    	
     	width: 100%;
     	border:none;
 	}
@@ -501,23 +528,27 @@ section#buscador .contact {
 
 /*FORMULARIO CONTACTAR*/
 section#buscador #contacto{
-	right:1%;
+	right:47%;
     position: absolute;    
-    top: 1%;
+    top: -2%;
     width: 320px;
     z-index: 3;
     display:none;
 }
 
 section#buscador #contacto .cerrar a::after{
-	 color: #fff;
-    content: "\ed66";
+	background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 66%;
+    color: #414141;
+    content: "\ed6b";
     font-family: icomoon;
     font-size: 1.5em;
     position: absolute;
-    right: 0;
-    top: 12px
+    right: -5px;
+    top: 12px;
 }
+
 section#buscador #contacto .titulo{
 	background-color: red;
     color: #fff;
@@ -743,7 +774,7 @@ section#blog .prevarticle {
     	vertical-align: middle;
     	width: 100%;
 	}
-		section#blog .prevarticle a::before{
+		section#blog .prevarticle a:before{
 			color: #cdcdcd;
     		content: "\edc2";
     		display: table-cell;
@@ -805,7 +836,7 @@ section#blog .entrada{
     	margin-left: 2%;
     	width: 45%;
 	}
-		section#blog .entrada .texto .titulo{
+		section#blog .entrada .texto .titulo a{
 			color: #9a9b22;
     		font-family: raleway_light;
     		font-size: 2.125em;
@@ -816,7 +847,7 @@ section#blog .entrada{
     		font-size: 1.125em;
     		margin: 15px 0;
 		}
-		section#blog .entrada .texto p.vermas {
+		section#blog .entrada .texto p.vermas a{
 			color: #9a9b22;
     		display: inline-block;
     		font-family: raleway_semibold;
@@ -961,13 +992,13 @@ footer{
     			padding: 0 10px;
     			position: absolute;
     			right: -10px;
-    			text-align: center;
-    			width: 200%;
+    			text-align: left;
+    			width: 130%;
 			}
 				footer .granja li{
 		 			display: inline-block;
     				margin: 5px 0;
-    				text-align: right;
+    				text-align: left;
     				width: 100%;
     				font-size: .9em;
 				}
@@ -979,7 +1010,7 @@ footer{
 
 			/*DESPLEGADO*/
 			footer .granja.desp h4::after {    				
-					content: "\edbc";
+					content: "\edb4";
 					color:red;    				
 				}
 				footer .granja.desp ul{
@@ -1197,9 +1228,8 @@ footer{
 			top: 88px;
 		}
 		section#blog .entrada{
-			margin-top: 30px;
-			margin-left: 2%;
-    		width: 96%;
+			margin-top: 30px;			
+    		width:100%;
 		}
 		section#blog .nextarticle{
 			right:2%;
@@ -1215,7 +1245,7 @@ footer{
 			section#blog .entrada .texto .titulo{
 				text-align: center;
 			}
-			section#blog .entrada .texto .titulo h4{
+			section#blog .entrada .texto .titulo h4 a{
 				color:#fff;
 			 	height: 70px;
     			overflow: hidden;
