@@ -531,7 +531,7 @@ section#buscador .contact {
 		}
 
 /*FORMULARIO CONTACTAR*/
-section#buscador #contacto{
+section#buscador .contact_form{
 	right:47%;
     position: absolute;    
     top: -2%;
@@ -540,7 +540,7 @@ section#buscador #contacto{
     display:none;
 }
 
-section#buscador #contacto .cerrar a::after{
+section#buscador .contact_form .cerrar a::after{
 	background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 66%;
@@ -553,7 +553,7 @@ section#buscador #contacto .cerrar a::after{
     top: 12px;
 }
 
-section#buscador #contacto .titulo{
+section#buscador .contact_form .titulo{
 	background-color: red;
     color: #fff;
     float: left;
@@ -564,23 +564,23 @@ section#buscador #contacto .titulo{
     width: 100%;
     padding:20px 0;
 }
-	section#buscador #contacto .titulo .ico{
+	section#buscador .contact_form .titulo .ico{
  		display: inline-block;
     	vertical-align: middle;
     	margin-right: 10px;
 	}
-	section#buscador #contacto .titulo p{
+	section#buscador .contact_form .titulo p{
 		display: inline-block;
 	}	
 	
-section#buscador #contacto .cuerpo{
+section#buscador .contact_form .cuerpo{
 	background-color: #e1e1e1;
     float: left;
     padding: 15px 0 10px;
     width: 100%;
 }	
 	
-	section#buscador #contacto .cuerpo input{
+	section#buscador .contact_form .cuerpo input{
 		border: medium none;
     	float: left;
     	margin: 5px 3%;
@@ -588,7 +588,7 @@ section#buscador #contacto .cuerpo{
     	width: 94%;
 	}
 
-section#buscador #contacto .cuerpo .avisoleg{
+section#buscador .contact_form .cuerpo .avisoleg{
 	display:inline-block;
 	width:100%;
 	text-align: center;
@@ -596,20 +596,20 @@ section#buscador #contacto .cuerpo .avisoleg{
 }
 
 
-section#buscador #contacto .cuerpo .avisoleg label{
+section#buscador .contact_form .cuerpo .avisoleg label{
 	font-family: Raleway_semibold;
     font-size: 0.813em;
     
     
 }
 
-section#buscador #contacto .cuerpo .avisoleg input[type="checkbox"] {
+section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"] {
     left: 0;
     position: absolute;
     visibility: hidden;
 }
 
-section#buscador #contacto .cuerpo .avisoleg input[type="checkbox"] ~ label::before {
+section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before {
    	content:"\00a0";
 	background: transparent url("/images/check_nook_red.png") no-repeat scroll 0 0;
 	display: inline-block;
@@ -617,7 +617,7 @@ section#buscador #contacto .cuerpo .avisoleg input[type="checkbox"] ~ label::bef
     width: 25px;
     margin-right: 10px;
 }
-section#buscador #contacto .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before {
+section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before {
 	content:"\00a0";
    	background: transparent url("/images/check_ok_red.png") no-repeat scroll 0 0;
 	display: inline-block;
@@ -627,13 +627,13 @@ section#buscador #contacto .cuerpo .avisoleg input[type="checkbox"]:checked ~ la
 }
 
 
-section#buscador #contacto .cuerpo p{
+section#buscador .contact_form .cuerpo p{
 	display:inline-block;
 	text-align: center;
 	width:100%;
  	margin-bottom: 15px;
 }
-section#buscador #contacto .cuerpo input[type="submit"]{
+section#buscador .contact_form .cuerpo input[type="submit"]{
  	background-color: red;
     border: medium none;
     border-radius: 4px;
