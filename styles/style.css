@@ -1344,6 +1344,11 @@ footer{
     	width: 100%;
     	margin-left: 0;
 	}
+	footer .inverpro{
+		float:left;
+		width:100%;
+		margin:20px 0 0;
+	}
 	footer .granjas{
 		display:none;
 	}
