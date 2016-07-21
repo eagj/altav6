@@ -240,9 +240,11 @@ header#logonav{
     		width: 60%;
 		}
 			header#logonav .contact .seccion{
+				/* display: inline-block;
+				    			margin: 0 1%;
+				    			vertical-align: super; */
 				display: inline-block;
-    			margin: 0 1%;
-    			vertical-align: super;
+    			margin: 0px -2px;			
 			}
 				
 				header#logonav .contact .seccion p{
@@ -251,7 +253,11 @@ header#logonav{
 				}
 				header#logonav .contact .seccion p a{
 					color: #414141;
+					padding: 24px 10px;
 				}
+					header#logonav .contact .seccion p a:hover{
+						background-color: #f2f2f2;
+					}
 					header#logonav .contact .seccion p img{
 				 		display: inline-block;
     					vertical-align: middle;
@@ -274,7 +280,7 @@ header#logonav{
 				margin-right: 10px;
 				padding-bottom: 20px;
 			}
-			header#logonav nav#menu li a:hover{
+			header#logonav nav#menu li a:hover, header#logonav nav#menu li.select a{
 				border-bottom:4px solid red;
 				color:red;
 				font-family: raleway_bold;
@@ -291,7 +297,7 @@ header nav#responsive{
 }
 header nav#responsive p{
 	margin-right: 10px;
-    padding-top: 12px
+    padding-top: 17px
 }
 	header nav#responsive p a{
 	 	color: #a0a0a0;
@@ -339,6 +345,18 @@ section#buscador{
     height: 888px;
 	
 }	
+	section#buscador h1.h1title{
+		 color: #fff;
+    	font-size: 2em;
+    	position: absolute;
+    	text-align: center;
+    	text-shadow: 0 0 4px #666;
+    	top: 130px;
+    	width: 100%;
+    	z-index: 2;
+    	text-transform: uppercase;
+    	
+	}
 	section#buscador #bgimage{
  		height: 100%;
     	overflow: hidden;
@@ -609,7 +627,7 @@ section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"] {
     visibility: hidden;
 }
 
-section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before {
+section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before{
    	content:"\00a0";
 	background: transparent url("/images/check_nook_red.png") no-repeat scroll 0 0;
 	display: inline-block;
@@ -617,7 +635,7 @@ section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label:
     width: 25px;
     margin-right: 10px;
 }
-section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before {
+section#buscador .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before{
 	content:"\00a0";
    	background: transparent url("/images/check_ok_red.png") no-repeat scroll 0 0;
 	display: inline-block;
@@ -915,6 +933,47 @@ section#banners{
 
 
 
+/****************** BUSCADOR PAGINA *********/
+/*HEAD BUSCADOR PAGINA
+header#logonav.headbusc nav#menu {
+    margin-left: 3%;
+    float: left;
+}
+header#logonav.headbusc .contact{
+	float: right;
+	text-align: right;
+	margin-right: 2%
+}*/
+
+section.mapa{
+	height: calc(100% - 295px);	
+    position: absolute;
+    width: 66%;
+}
+	section.mapa > *{
+		width:100%;
+		height:100%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER PAGINA BUSCADOR */
+
+footer.footbusc {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+
 
 
 
@@ -934,6 +993,7 @@ footer{
 		float: left;
 		width: 20%;
 		margin-left: 1%;
+		position: relative;
 	}
 		footer .contacto p.contact{
 			color:#858383;
@@ -1191,6 +1251,10 @@ footer{
 	section#buscador{
 		height:470px;
 	}
+	section#buscador h1.h1title{
+ 		color:transparent;
+ 		text-shadow: inherit;
+	}
 	section#buscador .cajabuscador{
 		height: 290px;
     	margin-left: 0;
@@ -1345,9 +1409,7 @@ footer{
     	margin-left: 0;
 	}
 	footer .inverpro{
-		float:left;
-		width:100%;
-		margin:20px 0 0;
+		display:none
 	}
 	footer .granjas{
 		display:none;
