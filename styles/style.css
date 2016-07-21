@@ -946,7 +946,7 @@ header#logonav.headbusc .contact{
 }*/
 
 section.mapa{
-	height: calc(100% - 295px);	
+	height: calc(100% - 154px);	
     position: absolute;
     width: 66%;
 }
@@ -968,13 +968,37 @@ section.mapa{
 /* FOOTER PAGINA BUSCADOR */
 
 footer.footbusc {
+	border-top: 1px solid #ccc;
     bottom: 0;
+    left: 0;
+    padding-top: 10px;
     position: fixed;
     width: 100%;
 }
 
+	footer.footbusc .downfoot{
+		margin:0;
+	}
+		
+footer.footbusc .downfoot ul.enlacespie{
+	margin-top: 0;
+}
+	footer.footbusc .downfoot ul.enlacespie li{
+		font-size: .9em;
+	}
 
+footer.footbusc.granja h4 a {
+    color: #414141;
+    font-family: Raleway_light;
+    font-size: 1em;
+}
 
+footer.footbusc .downfoot .granja{
+	margin-top: 0;
+}
+	footer.footbusc .downfoot .granja h4 a{
+		font-size: 1em;
+	}
 
 
 
@@ -1084,6 +1108,7 @@ footer{
     			right: 0;
     			text-align: left;
     			width: 100%;
+    			background-color: #fff;
 			}
 				footer .granja li{
 		 			display: inline-block;
