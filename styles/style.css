@@ -235,14 +235,11 @@ header#logonav{
 	}
 		header#logonav .contact{		 	
 			float: left;    		
-    		padding-top: 18px;
+    		padding-top: 19px;
     		text-align: center;
     		width: 60%;
 		}
-			header#logonav .contact .seccion{
-				/* display: inline-block;
-				    			margin: 0 1%;
-				    			vertical-align: super; */
+			header#logonav .contact .seccion{				
 				display: inline-block;
     			margin: 0px -2px;			
 			}
@@ -253,7 +250,7 @@ header#logonav{
 				}
 				header#logonav .contact .seccion p a{
 					color: #414141;
-					padding: 24px 10px;
+					padding: 25px 10px;
 				}
 					header#logonav .contact .seccion p a:hover{
 						background-color: #f2f2f2;
@@ -411,25 +408,60 @@ section#buscador .cajabuscador .lineaselect {
     width: 100%;
 }			
 section#buscador .cajabuscador .tipo{
- 	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 97% center;
-    border-radius: 7px 0 0 7px;
+ 	/* background: #ffffff url("/images/select_cursor.png") no-repeat scroll 97% center; */
+    /* border-radius: 7px 0 0 7px; */
     float: left;
-    height: 49px;
+    /* height: 49px; */
     margin-left: 35px;
     margin-right: 10px;
-    overflow: hidden;
-    width: 16%;
-    
+    /* overflow: hidden; */
+    width: 17%;    
 }
+/*ESTILOS SELECT*/
+section#buscador .cajabuscador .tipo a.selectBox {
+	background: #fff none repeat scroll 0 0;
+    border:1px solid #fff;
+    height: 49px;
+    line-height: 49px;
+    border-radius: 7px 0 0 7px;
+    width:100% !important;
+}
+
+section#buscador .cajabuscador .tipo a.selectBox .selectBox-arrow{
+	border:none;
+	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll 50% center;
+}
+ul.selectBox-dropdown-menu {
+	margin-left: 0px;
+    margin-top: -5px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+	max-height: 300px;
+	border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;  
+    width:100%;
+    border:1px solid #fff;  
+}
+ul.selectBox-dropdown-menu li a{
+	padding:0.5em;
+
+}
+
+ul.selectBox-dropdown-menu li.selectBox-selected a {
+   
+    font-family: raleway_bold;
+}
+
+
+
 section#buscador .cajabuscador .tipo select{
-	background: transparent none repeat scroll 0 0;
+	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 97% center;
     border: medium none;
     float: left;
     font-family: Raleway_medium;
     font-size: 1.2em;
-    height: 100%;
+    height: 49px;
     text-indent: 10px;
-    width: 120%;
+    /* width: 120%; */
 }
 
 section#buscador .cajabuscador .semanti{
@@ -934,21 +966,11 @@ section#banners{
 
 
 /****************** BUSCADOR PAGINA *********/
-/*HEAD BUSCADOR PAGINA
-header#logonav.headbusc nav#menu {
-    margin-left: 3%;
-    float: left;
-}
-header#logonav.headbusc .contact{
-	float: right;
-	text-align: right;
-	margin-right: 2%
-}*/
-
 section.mapa{
-	height: calc(100% - 154px);	
-    position: absolute;
-    width: 66%;
+	height: calc(100% - 222px);
+	position: absolute;
+	top: 189px;
+	width: 66%;
 }
 	section.mapa > *{
 		width:100%;
@@ -956,11 +978,39 @@ section.mapa{
 	}
 
 
+section.filtrador{
+	background-color: rgba(234, 234, 234, 0.9);
+    float: left;
+    height: 70px;
+    width: 100%;
+    margin-top: -1px;
+    padding-top: 15px;
+}
+section.filtrador .semanti{
+  	float: left;
+    margin-left: 1%;
+    width: 30%; 
+    margin-right: 8px;	
+}
+	section.filtrador .semanti input{
+		border: 1px solid #c3c3c3;
+    	border-radius: 7px 0 0 7px;
+    	height: 40px;    	
+    	width: 100%;
+    	text-indent:15px ;
+	}
 
-
-
-
-
+section.filtrador .send{
+	 float: left;
+}
+	section.filtrador .send input{
+		background: red url("/images/lupa_buscar.png") no-repeat scroll center center;
+    	border: medium none;
+    	border-radius: 0 7px 7px 0;
+    	height: 40px;
+    	width: 45px;
+	}
+		
 
 
 
@@ -974,6 +1024,7 @@ footer.footbusc {
     padding-top: 10px;
     position: fixed;
     width: 100%;
+    background-color: #fff;
 }
 
 	footer.footbusc .downfoot{
