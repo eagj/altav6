@@ -7,7 +7,10 @@
     <meta name="format-detection" content="telephone=no">
 	<title>index</title>
 	<link rel="icon" type="image/png" href="favicon.ico" />
- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 	<!-- selectbox-->
+ 	<script src="/include/jquery/selectbox/jquery.selectBox.js" type="text/javascript"></script>
+ 	<link href="/include/jquery/selectbox/jquery.selectBox.css" rel="stylesheet" type="text/css" />
 	<!-- HOJAS DE ESTILOS -->
 <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
 <link rel="stylesheet" type="text/css" href="/styles/style.css">
@@ -114,11 +117,113 @@
 		<div class="send">
 			<input type="submit" id="botonSubmit" value="">
 		</div>
+		<div class="tipo">
+			<select id="tipo" name="tipoInmueble">
+				<option value="1">Pisos y casas</option>
+				<option value="2">Trasteros</option>
+				<option value="3">Garajes</option>
+				<option value="4">Locales</option>
+				<option value="5">Naves Industriales</option>
+				<option value="6">Oficinas</option>
+				<option value="9">Suelos</option>
+			</select>
+		</div>
 	</section>	
 	<section class="mapa">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194347.38441000276!2d-3.819619853628188!3d40.438131079835216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1469084166813"  frameborder="0" style="border:0" allowfullscreen></iframe>
 	</section>
-	
+	<aside class="minifichas">
+		<header>
+			<h1>58<span> pisos y casas</span> en <span>venta</span> en Madrid</h1>
+			<div class="ordenar">
+				<label>Ordenar por:</label>
+				<select id="ordenResultados" name="ordenResultados">
+					<option value="1">M&aacute;s relevante</option>
+					<option value="2">Precio asc</option>
+					<option value="3">Precio desc</option>
+					<option value="4">Dormitorios</option>
+					<option value="5">Superficie</option>
+				</select>
+			</div>
+			
+		</header>
+		<div class="minificha">
+			<div class="foto">
+				<a href=""><img src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg" alt="" /></a> 
+			</div>
+			<div class="info">
+				<h2>Puerta de San Fernado SCMV FASE I</h2>
+				<h3>desde <span>151.550&euro;</span></h3>
+				<div class="detalles">
+					<ul>
+						<li class="superf">63 <span>m<sup>2</sup></span></li>
+						<li class="hab">3 <span>hab.</span></li>
+						<li class="ban">2 <span>ba&ntilde;os</span></li>
+					</ul>					
+				</div>
+				<p class="enlace">
+					<a href="">Ver inmueble</a>
+				</p>
+			</div>			
+		</div>
+		<div class="minificha">
+			<div class="foto">
+				<a href=""><img src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg" alt="" /></a> 
+			</div>
+			<div class="info">
+				<h2>Puerta de San Fernado SCMV FASE I</h2>
+				<h3>desde <span>151.550&euro;</span></h3>
+				<div class="detalles">
+					<ul>
+						<li class="superf">63 <span>m<sup>2</sup></span></li>
+						<li class="hab">3 <span>hab.</span></li>
+						<li class="ban">2 <span>ba&ntilde;os</span></li>
+					</ul>					
+				</div>
+				<p class="enlace">
+					<a href="">Ver inmueble</a>
+				</p>
+			</div>			
+		</div>
+		<div class="minificha">
+			<div class="foto">
+				<a href=""><img src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg" alt="" /></a> 
+			</div>
+			<div class="info">
+				<h2>Puerta de San Fernado SCMV FASE I</h2>
+				<h3>desde <span>151.550&euro;</span></h3>
+				<div class="detalles">
+					<ul>
+						<li class="superf">63 <span>m<sup>2</sup></span></li>
+						<li class="hab">3 <span>hab.</span></li>
+						<li class="ban">2 <span>ba&ntilde;os</span></li>
+					</ul>					
+				</div>
+				<p class="enlace">
+					<a href="">Ver inmueble</a>
+				</p>
+			</div>			
+		</div>
+		<div class="minificha">
+			<div class="foto">
+				<a href=""><img src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg" alt="" /></a> 
+			</div>
+			<div class="info">
+				<h2>Puerta de San Fernado SCMV FASE I</h2>
+				<h3>desde <span>151.550&euro;</span></h3>
+				<div class="detalles">
+					<ul>
+						<li class="superf">63 <span>m<sup>2</sup></span></li>
+						<li class="hab">3 <span>hab.</span></li>
+						<li class="ban">2 <span>ba&ntilde;os</span></li>
+					</ul>					
+				</div>
+				<p class="enlace">
+					<a href="">Ver inmueble</a>
+				</p>
+			</div>			
+		</div>
+	</aside>
 	
 	<footer class="footbusc">
 		<div class="downfoot">
@@ -153,5 +258,13 @@
 		</div>	
 	</footer>
 </div>
+<script>
+	$('select').selectBox({
+		mobile: false,
+		
+	}
+	
+	);
+</script>
 </body>
 </html>

@@ -1013,6 +1013,218 @@ section.filtrador .send{
 		
 
 
+/*ESTILOS SELECT*/
+section.filtrador .tipo{
+	display:inline-block;
+	width: 10%;
+	margin-top: -5px;
+	margin-left: 1%;
+}
+section.filtrador a.selectBox {
+	background: transparent;
+	box-shadow:none;
+    border:none;
+    height: 49px;
+    line-height: 49px;
+    border-radius: 7px 0 0 7px;
+    width:100% !important;
+}
+
+section.filtrador a.selectBox .selectBox-arrow{
+	border:none;
+	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll 50% center;
+}
+ul.selectBox-dropdown-menu {
+	margin-left: 0px;
+    
+    box-shadow: none;
+	max-height: 300px;
+	border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;  
+    width:100%;
+    border:1px solid #fff;  
+}
+ul.selectBox-dropdown-menu li a{
+	padding:0.5em;
+
+}
+
+ul.selectBox-dropdown-menu li.selectBox-selected a {
+   
+    font-family: raleway_bold;
+}
+
+
+/*ASIDE MINIFICHAS*/
+aside.minifichas{
+ 	background-color: #fff;
+    height: calc(100% - 225px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 190px;
+    width: 33%;
+}
+	aside.minifichas header{
+ 		float: left;
+    	margin: 2% 0;
+    	width: 100%
+	}
+		aside.minifichas header h1{
+		 	display: block;
+    		text-align: center;
+    		font-size: 1.5em;
+    		 margin: 0;
+		}
+			aside.minifichas header h1 span{
+				font-family: raleway_bold;
+			}
+			
+	aside.minifichas .ordenar{
+		text-align: center;
+		 margin-top: 15px;
+	}
+		aside.minifichas .ordenar label{
+			font-family: raleway_bold;
+    		font-size: 1.05em;
+		}
+		/*ESTILOS SELECT*/
+		.filtrador aside.minifichas .ordenar{
+			display:inline-block;
+			width: 10%;
+			margin-top: -5px;
+			margin-left: 1%;
+		}
+		aside.minifichas .ordenar a.selectBox {
+			background: transparent;
+			box-shadow:none;
+		    border:none;
+		    border-bottom: 1px solid #414141;
+		    display:inline-block;
+		    border-radius:0;
+		    line-height: 1;
+	     	margin-top: 5px;
+		}
+		aside.minifichas .ordenar a.selectBox.selectBox-dropdown .selectBox-label{
+			padding:0 8px;
+			text-align: center;
+			font-size: 0.9em;
+			color:#8f8f8f
+		}
+
+		aside.minifichas .ordenar a.selectBox .selectBox-arrow{
+			border:none;
+			background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll 50% center;
+		}
+		ul.selectBox-dropdown-menu {
+			margin-left: 0px;
+		    
+		    box-shadow: none;
+			max-height: 300px;
+			border-bottom-left-radius: 7px;
+		    border-bottom-right-radius: 7px;  
+		    width:100%;
+		    border:1px solid #fff;  
+		}
+		ul.selectBox-dropdown-menu li a{
+			padding:0.5em;
+		
+		}
+		
+
+/*minificha*/
+aside.minifichas .minificha{	
+    float: left;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    width: 98%;
+    border-bottom: 1px solid #c7c7c7;
+}
+	aside.minifichas .minificha .foto{
+		float: left;
+    	overflow: hidden;
+    	width: 37%;
+	}
+		aside.minifichas .minificha .foto img{
+			max-width: 100%;
+		}
+	
+	aside.minifichas .minificha .info{
+		 float: left;
+		margin-left: 3%;
+    	width: 60%;
+	}
+		aside.minifichas .minificha .info h2{
+	 		color: red;
+    		font-family: raleway_bold;
+			font-size: 1.5em;
+    		max-height: 60px;
+    		overflow: hidden;
+    		width: 92%;
+    		margin-bottom: 5px;
+		}
+		aside.minifichas .minificha .info h3{
+			font-size: 1.2em;
+			margin-bottom: 5px;
+		}
+			aside.minifichas .minificha .info h3 span{
+				font-family: raleway_bold;
+				font-size: 1.6em;
+			}
+	
+		aside.minifichas .minificha .info .detales{
+			display: block;
+    		margin: 10px 0;
+		}
+			aside.minifichas .minificha .info .detalles{}
+				aside.minifichas .minificha .info .detalles li{
+					display:inline-block;
+					margin-right: -3px;
+					width: 33.3333%
+				}
+					aside.minifichas .minificha .info .detalles li span{
+						font-family: raleway_bold;
+						font-size: 0.8em;
+					}
+					
+				/*ICOS DETALLES*/
+				aside.minifichas .minificha .info .detalles li.superf::before{
+				 	content:"\00a0";
+				 	background: transparent url("/images/ico_m2.png") no-repeat scroll center center;    
+    				display: inline-block;
+    				height: 31px;
+    				margin-right: 5px;
+    				vertical-align: middle;
+					width: 31px;					 
+				}
+				aside.minifichas .minificha .info .detalles li.hab::before{
+					content:"\00a0";
+					background: transparent url("/images/ico_habitaciones.png") no-repeat scroll center center;    
+    				display: inline-block;
+    				height: 21px;
+    				margin-right: 5px;
+    				vertical-align: middle;
+    				width: 35px;
+				}
+				aside.minifichas .minificha .info .detalles li.ban::before{
+					content:"\00a0";
+					 background: transparent url("/images/ico_banos.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 23px;
+    				margin-right: 5px;
+    				vertical-align: middle;
+    				width: 35px;	
+				}
+			
+	aside.minifichas .minificha .info p.enlace{}
+		aside.minifichas .minificha .info p.enlace a{
+			color: red;
+    		font-size: 0.9em;
+    		text-decoration: underline;
+		}
+
+
 
 
 /* FOOTER PAGINA BUSCADOR */
