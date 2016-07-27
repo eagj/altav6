@@ -433,7 +433,7 @@ section#buscador .cajabuscador .tipo a.selectBox .selectBox-arrow{
 }
 ul.selectBox-dropdown-menu {
 	margin-left: 0px;
-    margin-top: -5px;
+    /* margin-top: -5px; */
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
 	max-height: 300px;
 	border-bottom-left-radius: 7px;
@@ -962,6 +962,15 @@ section#banners{
 
 
 
+/*ESTILOS PARA LOS SELECT***/
+#index ~ #tipo {
+    margin-top: -2px;
+    width: 199px !important;
+}
+
+
+
+
 
 
 
@@ -989,7 +998,7 @@ section.filtrador{
 section.filtrador .semanti{
   	float: left;
     margin-left: 1%;
-    width: 30%; 
+    width: 28%; 
     margin-right: 8px;	
 }
 	section.filtrador .semanti input{
@@ -1015,8 +1024,8 @@ section.filtrador .send{
 
 /*ESTILOS SELECT*/
 section.filtrador .tipo{
-	display:inline-block;
-	width: 10%;
+	float: left;	
+	width: 175px;
 	margin-top: -5px;
 	margin-left: 1%;
 }
@@ -1053,6 +1062,59 @@ ul.selectBox-dropdown-menu li.selectBox-selected a {
    
     font-family: raleway_bold;
 }
+
+
+
+section.filtrador .precio{
+	float: left;
+	width: auto;
+	margin-top: 10px;
+	margin-left: 1%;
+	margin-right: 2%;
+	position:relative;	
+}
+section.filtrador .precio::after {
+	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center;
+	content: "\00a0";
+	position: absolute;
+	right: -18px;
+	top: 0;
+	width: 10px;
+}
+	section.filtrador .precio .selectprecio{
+		display:inline-block;
+		width:49%;
+		display:none;
+	}
+	
+.precio > p {
+    color:#000
+}
+
+section.filtrador .guardbusq{
+ 	float:right;    
+    margin-top: 10px;
+  	margin-right: 1%;
+}
+	section.filtrador .guardbusq a{
+	 	background-color: #798e0e;
+    	border-radius: 7px;
+    	color: #c6e22d;
+    	font-family: raleway_semibold;
+    	padding: 10px 20px;
+	}
+	section.filtrador .guardbusq a::before{
+		content:"\00a0";
+		background: transparent url("/images/ico_guardabusq.png") no-repeat scroll left center;    
+    	display: inline-block;
+    	height: 22px;
+    	margin-right: 15px;
+    	vertical-align: middle;
+    	width: 21px;
+	}
+	section.filtrador .guardbusq a:hover{
+		background-color: #4c5908;
+	}
 
 
 /*ASIDE MINIFICHAS*/
@@ -1136,11 +1198,35 @@ aside.minifichas{
 /*minificha*/
 aside.minifichas .minificha{	
     float: left;
-    margin-bottom: 2%;
+    padding-top: 2%;
     padding-bottom: 2%;
     width: 98%;
     border-bottom: 1px solid #c7c7c7;
+    position:relative;
 }
+aside.minifichas .minificha.banner{
+	text-align: center;
+	background-color: #eee;
+}
+aside.minifichas .minificha.banner img{
+	max-width:100%;
+}
+
+aside.minifichas .minificha .fav{
+	font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}	
+	aside.minifichas .minificha .fav a:before{
+		font-family: icomoon;
+		content:"\ecdf";
+		color:#d1d1d1;
+	}
+	aside.minifichas .minificha .fav.active a:before{
+		color:#dccf03;
+	}
+
 	aside.minifichas .minificha .foto{
 		float: left;
     	overflow: hidden;
@@ -1158,21 +1244,45 @@ aside.minifichas .minificha{
 		aside.minifichas .minificha .info h2{
 	 		color: red;
     		font-family: raleway_bold;
-			font-size: 1.5em;
-    		max-height: 60px;
+			font-size: 1.3em;
+    		max-height: 45px;
     		overflow: hidden;
     		width: 92%;
     		margin-bottom: 5px;
 		}
 		aside.minifichas .minificha .info h3{
-			font-size: 1.2em;
-			margin-bottom: 5px;
+			font-size: 1em;
+		 	margin: 10px 0;
 		}
 			aside.minifichas .minificha .info h3 span{
 				font-family: raleway_bold;
 				font-size: 1.6em;
 			}
-	
+		
+		aside.minifichas .minificha .info .descuento{
+			border-bottom: 1px solid #7a8e0e;
+			border-top: 1px solid #7a8e0e;
+			color: #7a8e0e;
+			padding: 5px;
+			text-align: center;
+		 	margin-bottom: 10px;
+		}
+			aside.minifichas .minificha .info .descuento p{
+				display:inline-block;
+			}
+			aside.minifichas .minificha .info .descuento p::before {
+    			background: transparent url("/images/ico_descuento.png") no-repeat scroll center center;
+				content: "\00a0";
+    			display: inline-block;
+    			height: 35px;
+    			margin-right: 10px;
+    			vertical-align: middle;
+    			width: 35px;
+			}
+				aside.minifichas .minificha .info .descuento p span{
+					font-family: raleway_bold;
+				}
+		
 		aside.minifichas .minificha .info .detales{
 			display: block;
     		margin: 10px 0;
@@ -1217,7 +1327,9 @@ aside.minifichas .minificha{
     				width: 35px;	
 				}
 			
-	aside.minifichas .minificha .info p.enlace{}
+	aside.minifichas .minificha .info p.enlace{
+		margin:10px 0
+	}
 		aside.minifichas .minificha .info p.enlace a{
 			color: red;
     		font-size: 0.9em;
