@@ -1,0 +1,106 @@
+@media (max-width: 1750px){
+	
+	section.mapa{
+		width:64%;
+}
+
+	aside.minifichas{
+		width:35%;
+	}
+}
+@media (max-width: 1550px){
+	
+	section.mapa{
+		width:61%;
+}
+
+	aside.minifichas{
+		width:38%;
+	}
+}
+@media (max-width: 1400px){
+	
+	section.mapa{
+		width:59%;
+}
+
+	aside.minifichas{
+		width:40%;
+	}
+}
+@media (max-width: 1280px){
+	
+	section.mapa{
+		width:58%;
+}
+
+	aside.minifichas{
+		width:41%;
+	}
+}
+@media (max-width: 1260px){
+	aside.minifichas .minificha .info .detalles li.superf::before{
+		background: transparent url("/images/ico_m2_peq.png") no-repeat scroll center center;
+		width:17px;
+	}
+	aside.minifichas .minificha .info .detalles li.hab::before{
+		background: transparent url("/images/ico_habitaciones_peq.png") no-repeat scroll center center;
+		width:19px;
+	}
+	aside.minifichas .minificha .info .detalles li.ban::before{
+		background:transparent url("/images/ico_banos_peq.png") no-repeat scroll center center;
+		width:19px;
+	}
+	
+}
+
+/* iPads (portrait and landscape) */
+@media (max-width: 1024px){	
+	
+	html{
+		font-size: 15px;
+	}
+	
+}
+
+/* tablets menos de 1024 */
+@media (max-width: 1023px){	
+	
+	html{
+		font-size: 12px;
+	}
+	
+}
+
+/* mobile menos de 1023 */
+@media (max-width: 1022px){
+	html{
+		font-size: 14px;
+	}
+
+	
+	
+	
+	
+
+/* mobile 320px y menos*/
+@media (max-width: 320px){
+	html{
+		font-size: 11px;
+	}
+	header#logonav .logohead{
+		width:40%;
+	}
+		header#logonav .logohead img{
+			width:100%;
+		}
+	
+	.contact_responsive{
+		left:62%;
+	}
+		
+	header nav#responsive p{
+		padding-top: 20px;
+	}
+	
+}

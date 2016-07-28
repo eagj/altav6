@@ -223,7 +223,8 @@ header#general #menuAreaPrivada{
 /*HEADER LOGO Y NAV*/
 header#logonav{
 	background-color: #fff;
-	height:70px;	
+	height:70px;
+	position: relative;	
 }
 	header#logonav .logohead{
  		float: left;
@@ -355,7 +356,7 @@ section#buscador{
     	
 	}
 	section#buscador #bgimage{
- 		height: 100%;
+ 		height: 100% !important;
     	overflow: hidden;
     	position: absolute;
     	width: 100%;
@@ -454,14 +455,14 @@ ul.selectBox-dropdown-menu li.selectBox-selected a {
 
 
 section#buscador .cajabuscador .tipo select{
-	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 97% center;
+	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 93% center;
     border: medium none;
     float: left;
     font-family: Raleway_medium;
     font-size: 1.2em;
     height: 49px;
     text-indent: 10px;
-    /* width: 120%; */
+    width: 105%;
 }
 
 section#buscador .cajabuscador .semanti{
@@ -1136,7 +1137,7 @@ aside.minifichas{
 		aside.minifichas header h1{
 		 	display: block;
     		text-align: center;
-    		font-size: 1.5em;
+    		font-size: 1.3em;
     		 margin: 0;
 		}
 			aside.minifichas header h1 span{
@@ -1197,7 +1198,7 @@ aside.minifichas{
 
 /*minificha*/
 aside.minifichas .minificha{	
-    float: left;
+    float: left;   
     padding-top: 2%;
     padding-bottom: 2%;
     width: 98%;
@@ -1228,7 +1229,9 @@ aside.minifichas .minificha .fav{
 	}
 
 	aside.minifichas .minificha .foto{
-		float: left;
+		/* float: left; */
+		display:table-cell;
+	 	vertical-align: middle;
     	overflow: hidden;
     	width: 37%;
 	}
@@ -1237,17 +1240,19 @@ aside.minifichas .minificha .fav{
 		}
 	
 	aside.minifichas .minificha .info{
-		 float: left;
-		margin-left: 3%;
-    	width: 60%;
+	 	/* float: left; */
+	 	display:table-cell;
+	 	vertical-align: middle;
+		padding-left: 3%;
+    	width: 63%;
 	}
 		aside.minifichas .minificha .info h2{
 	 		color: red;
     		font-family: raleway_bold;
-			font-size: 1.3em;
+			font-size: 1.2em;
     		max-height: 45px;
     		overflow: hidden;
-    		width: 92%;
+    		width: 90%;
     		margin-bottom: 5px;
 		}
 		aside.minifichas .minificha .info h3{
@@ -1287,11 +1292,16 @@ aside.minifichas .minificha .fav{
 			display: block;
     		margin: 10px 0;
 		}
-			aside.minifichas .minificha .info .detalles{}
+			aside.minifichas .minificha .info .detalles{
+				font-size: 0.9em;
+			}
 				aside.minifichas .minificha .info .detalles li{
 					display:inline-block;
 					margin-right: -3px;
-					width: 33.3333%
+					width: 30%
+				}
+				aside.minifichas .minificha .info .detalles li:nth-child(1){
+					width:40%
 				}
 					aside.minifichas .minificha .info .detalles li span{
 						font-family: raleway_bold;
@@ -1544,12 +1554,92 @@ footer{
 		}
 
 
-
-
-
-
-
-
-
-
-
+/* tablets menos de 1024 */
+@media (max-width: 1023px){	
+	
+/*CABECERA*/	
+	header#general #pUltimosVisitados{
+		display:none;
+	}
+	header#general p.loginhead{
+		width:100%;
+	}
+	header#logonav img#logoalta{
+		margin-left: 4%;
+		width:173px;
+	}
+	#contbutton{
+		display: none;
+	}
+	header nav#menu{
+		display:none;
+	}
+	header nav#responsive{
+		display:block;
+	}
+	
+	header#general .usuarioconect{
+		width:100%;
+		padding:16px 2% 0 0px;
+	}
+	header#general .usuarioconect::before{
+		position:relative;
+		left:-2%;
+		top:0;
+	}
+	header#general #menuAreaPrivada{
+		width:100%;
+	}
+		header#general #menuAreaPrivada ul li a{
+			padding-left: 35%;
+		}
+		header#general #menuAreaPrivada ul li a::before{
+			left:20%;
+		}
+	footer .downfoot ul.enlacespie{
+		width:100%;
+		text-align: center;
+	}
+	footer .downfoot ul.socialpie{
+		width:100%;
+		text-align: center;
+		margin-top: 20px;
+	}
+	header#logonav .contact{
+		display:none;
+	}
+	.contact_responsive{
+	 	display: block;
+		left: 58%;    	
+    	position: absolute;
+    	z-index: 2;
+    	padding-top: 15px;
+	}	
+		
+		/*FOOTER*/
+	footer .contacto{
+		text-align: center;
+    	width: 100%;
+    	margin-left: 0;
+	}
+	footer .inverpro{
+		display:none
+	}
+	footer .granjas{
+		display:none;
+	}
+	footer .contacto p.contact{		
+		font-size: 22px;
+		text-indent: -60px;
+		padding-left: 54px;
+	}	
+	footer .contacto .number{		
+		font-size: 34px;
+		padding-left: 54px;
+	}
+	.number::before{
+		margin-left: -55px;
+    	margin-top: 10px;
+    	left:inherit;
+	}
+}

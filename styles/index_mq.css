@@ -15,25 +15,7 @@
 	html{
 		font-size: 12px;
 	}
-	footer .downfoot ul.enlacespie{
-		width:100%;
-		text-align: center;
-	}
-	footer .downfoot ul.socialpie{
-		width:100%;
-		text-align: center;
-		margin-top: 20px;
-	}
-	header#logonav .contact{
-		display:none;
-	}
-	.contact_responsive{
-	 	display: block;
-		left: 58%;    	
-    	position: absolute;
-    	z-index: 2;
-    	padding-top: 15px;
-	}	
+	
 }
 
 /* mobile menos de 1023 */
@@ -51,45 +33,7 @@
 		width: 96%;
 		margin-left: 2%;
 	}
-	/*CABECERA*/	
-	header#general #pUltimosVisitados{
-		display:none;
-	}
-	header#general p.loginhead{
-		width:100%;
-	}
-	header#logonav img#logoalta{
-		margin-left: 4%;
-		width:173px;
-	}
-	#contbutton{
-		display: none;
-	}
-	header nav#menu{
-		display:none;
-	}
-	header nav#responsive{
-		display:block;
-	}
 	
-	header#general .usuarioconect{
-		width:100%;
-		padding:16px 2% 0 0px;
-	}
-	header#general .usuarioconect::before{
-		position:relative;
-		left:-2%;
-		top:0;
-	}
-	header#general #menuAreaPrivada{
-		width:100%;
-	}
-		header#general #menuAreaPrivada ul li a{
-			padding-left: 35%;
-		}
-		header#general #menuAreaPrivada ul li a::before{
-			left:20%;
-		}
 	
 	
 	/*BUSCADOR*/
@@ -112,6 +56,7 @@
 		width:96%;
 	 	border-radius: 0;
 	 	margin-bottom: 10px;
+	 	overflow: hidden;
 	}
 	section#buscador .cajabuscador .semanti {   
     	margin-left: 2%;
@@ -247,32 +192,7 @@
 					max-width:100%;
 				}
 				
-	/*FOOTER*/
-	footer .contacto{
-		text-align: center;
-    	width: 100%;
-    	margin-left: 0;
-	}
-	footer .inverpro{
-		display:none
-	}
-	footer .granjas{
-		display:none;
-	}
-	footer .contacto p.contact{		
-		font-size: 22px;
-		text-indent: -60px;
-		padding-left: 54px;
-	}	
-	footer .contacto .number{		
-		font-size: 34px;
-		padding-left: 54px;
-	}
-	.number::before{
-		margin-left: -55px;
-    	margin-top: 10px;
-    	left:inherit;
-	}
+	
 }
 
 
