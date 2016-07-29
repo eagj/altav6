@@ -295,7 +295,8 @@ header nav#responsive{
 }
 header nav#responsive p{
 	margin-right: 10px;
-    padding-top: 17px
+    padding-top: 5px;
+    
 }
 	header nav#responsive p a{
 	 	color: #a0a0a0;
@@ -315,7 +316,7 @@ header nav#responsive p{
     		left: 0;
     		position: absolute;
     		text-align: center;
-    		top: 70px;
+    		top: 50px;
     		width: 100%;
     		z-index: 5;
     		box-shadow: 0 -3px 20px rgba(133, 133, 133, 0.2);
@@ -1024,11 +1025,15 @@ section.filtrador .send{
 
 
 /*ESTILOS SELECT*/
+select#tipo {
+    margin-top: 12px;
+    }
 section.filtrador .tipo{
 	float: left;	
-	width: 175px;
+	width: 140px;
 	margin-top: -5px;
 	margin-left: 1%;
+	
 }
 section.filtrador a.selectBox {
 	background: transparent;
@@ -1036,13 +1041,15 @@ section.filtrador a.selectBox {
     border:none;
     height: 49px;
     line-height: 49px;
-    border-radius: 7px 0 0 7px;
-    width:100% !important;
+   /*  border-radius: 7px 0 0 7px; */ 	
+    /* width:100% !important; */
 }
-
+section.filtrador a.selectBox .selectBox-label{
+	 background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center;
+}
 section.filtrador a.selectBox .selectBox-arrow{
-	border:none;
-	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll 50% center;
+	display:none;
+	border:none;	
 }
 ul.selectBox-dropdown-menu {
 	margin-left: 0px;
@@ -1069,9 +1076,9 @@ ul.selectBox-dropdown-menu li.selectBox-selected a {
 section.filtrador .precio{
 	float: left;
 	width: auto;
-	margin-top: 10px;
+	margin-top: 12px;
 	margin-left: 1%;
-	margin-right: 2%;
+	margin-right: 4%;
 	position:relative;	
 }
 section.filtrador .precio::after {
@@ -1102,7 +1109,7 @@ section.filtrador .guardbusq{
     	border-radius: 7px;
     	color: #c6e22d;
     	font-family: raleway_semibold;
-    	padding: 10px 20px;
+    	padding: 10px;
 	}
 	section.filtrador .guardbusq a::before{
 		content:"\00a0";
@@ -1117,6 +1124,11 @@ section.filtrador .guardbusq{
 		background-color: #4c5908;
 	}
 
+
+
+section.filtrador_mobile{
+	display:none;
+}
 
 /*ASIDE MINIFICHAS*/
 aside.minifichas{
@@ -1137,7 +1149,7 @@ aside.minifichas{
 		aside.minifichas header h1{
 		 	display: block;
     		text-align: center;
-    		font-size: 1.3em;
+    		font-size: 1.2em;
     		 margin: 0;
 		}
 			aside.minifichas header h1 span{
@@ -1150,7 +1162,7 @@ aside.minifichas{
 	}
 		aside.minifichas .ordenar label{
 			font-family: raleway_bold;
-    		font-size: 1.05em;
+    		font-size: 0.9em;
 		}
 		/*ESTILOS SELECT*/
 		.filtrador aside.minifichas .ordenar{
@@ -1172,7 +1184,7 @@ aside.minifichas{
 		aside.minifichas .ordenar a.selectBox.selectBox-dropdown .selectBox-label{
 			padding:0 8px;
 			text-align: center;
-			font-size: 0.9em;
+			font-size: 0.8em;
 			color:#8f8f8f
 		}
 
@@ -1242,17 +1254,17 @@ aside.minifichas .minificha .fav{
 	aside.minifichas .minificha .info{
 	 	/* float: left; */
 	 	display:table-cell;
-	 	vertical-align: middle;
+	 	vertical-align: top;
 		padding-left: 3%;
     	width: 63%;
 	}
 		aside.minifichas .minificha .info h2{
 	 		color: red;
-    		font-family: raleway_bold;
+    		font-family: raleway;
 			font-size: 1.2em;
     		max-height: 45px;
     		overflow: hidden;
-    		width: 90%;
+    		width: 89%;
     		margin-bottom: 5px;
 		}
 		aside.minifichas .minificha .info h3{
@@ -1355,7 +1367,8 @@ footer.footbusc {
 	border-top: 1px solid #ccc;
     bottom: 0;
     left: 0;
-    padding-top: 10px;
+     padding-bottom: 5px;
+    padding-top: 5px;
     position: fixed;
     width: 100%;
     background-color: #fff;
@@ -1557,17 +1570,29 @@ footer{
 /* tablets menos de 1024 */
 @media (max-width: 1023px){	
 	
-/*CABECERA*/	
+/*CABECERA*/
+	header#general{
+		height: 33px;
+	}
 	header#general #pUltimosVisitados{
 		display:none;
 	}
 	header#general p.loginhead{
 		width:100%;
+		 height: 33px;
+    	padding-top: 5px;
 	}
-	header#logonav img#logoalta{
-		margin-left: 4%;
-		width:173px;
+	
+	header#logonav{
+		height: 50px;
 	}
+		header#logonav .logohead{
+			padding-top: 8px;
+		}
+		header#logonav img#logoalta{
+			margin-left: 4%;
+			width:80%;
+		}
 	#contbutton{
 		display: none;
 	}
@@ -1580,7 +1605,8 @@ footer{
 	
 	header#general .usuarioconect{
 		width:100%;
-		padding:16px 2% 0 0px;
+		padding:6px 2% 0 0;
+		height:33px;
 	}
 	header#general .usuarioconect::before{
 		position:relative;
@@ -1589,6 +1615,7 @@ footer{
 	}
 	header#general #menuAreaPrivada{
 		width:100%;
+		top: 35px;
 	}
 		header#general #menuAreaPrivada ul li a{
 			padding-left: 35%;
@@ -1610,10 +1637,10 @@ footer{
 	}
 	.contact_responsive{
 	 	display: block;
-		left: 58%;    	
+		left: 53%;    	
     	position: absolute;
     	z-index: 2;
-    	padding-top: 15px;
+    	padding-top: 8px;
 	}	
 		
 		/*FOOTER*/
