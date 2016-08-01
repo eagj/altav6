@@ -1027,13 +1027,19 @@ section.filtrador .send{
 /*ESTILOS SELECT*/
 select#tipo {
     margin-top: 12px;
-    }
+	background-color: #fff;
+	outline: none;
+	box-shadow: none !important;
+	border:none; 
+ 	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center; 	
+ 	width:120px;
+ 	margin-top: 18px;	 
+}
 section.filtrador .tipo{
-	float: left;	
+	float: left;
 	width: 140px;
 	margin-top: -5px;
 	margin-left: 1%;
-	
 }
 section.filtrador a.selectBox {
 	background: transparent;
@@ -1129,6 +1135,8 @@ section.filtrador .guardbusq{
 section.filtrador_mobile{
 	display:none;
 }
+
+
 
 /*ASIDE MINIFICHAS*/
 aside.minifichas{

@@ -137,8 +137,7 @@
 			<p>Precio</p>
 			<div class="selectprecio" id="preciomin">
 				<select name="preciomin" id="preciomin">
-					<option>Desde 50.000&euro;</option>
-					<
+					<option>Desde 50.000&euro;</option>					
 				</select>
 			</div>
 			<div class="selectprecio" id="preciomax">
@@ -158,12 +157,26 @@
 		</div>
 	</section>
 	<section class="filtrador_mobile">
-	 &nbsp;
+		<div class="modo">
+			<ul>
+				<li class="listado"><a href="">Mapa</a></li>
+				<li class="mapa"><a href="">Listado</a></li>
+			</ul>
+		</div>
+		<div class="ordenar_mobile">				
+			<select id="ordenResultados" name="ordenResultados">
+				<option value="1">M&aacute;s relevante</option>
+				<option value="2">Precio asc</option>
+				<option value="3">Precio desc</option>
+				<option value="4">Dormitorios</option>
+				<option value="5">Superficie</option>
+			</select>
+		</div>
 	</section>	
-	<section class="mapa">
+	<section class="mapa">		
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194347.38441000276!2d-3.819619853628188!3d40.438131079835216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1469084166813"  frameborder="0" style="border:0" allowfullscreen></iframe>
 	</section>
-	<aside class="minifichas">
+	<aside class="minifichas">		
 		<header>
 			<h1>58<span> pisos y casas</span> en <span>venta</span> en <span>Madrid</span></h1>
 			<div class="ordenar" onclick="passid('ordenar')">
