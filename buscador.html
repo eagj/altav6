@@ -67,10 +67,12 @@
 		$( "#mapa_li" ).removeClass("hidden");
 		$( ".resultados_mobile" ).removeClass("hidden");
 		$( ".ordenar_mobile" ).addClass("hidden");
-		
-		
 	}
-	
+	function show_box_extend(id){
+		$( "#precio_box" ).removeClass("selected");		
+		$( "#superficie_box" ).removeClass("selected");
+		$(id).addClass("selected");
+	}
 </script>
 </head>
 <body>
@@ -153,24 +155,46 @@
 				<option value="9">Suelos</option>
 			</select>
 		</div>
-		<div class="precio">
-			<p>Precio</p>
-			<div class="selectprecio" id="preciomin">
-				<select name="preciomin" id="preciomin">
-					<option>Desde 50.000&euro;</option>					
-				</select>
-			</div>
-			<div class="selectprecio" id="preciomax">
-				<select name="preciomax" id="preciomax">
-					<option>hasta 50.000&euro;</option>
-				</select>
+		<div id="precio_box" class="box_extend">
+			<p><a href="#" onclick="show_box_extend('#precio_box')">Precio</a></p>
+			<div class="box_extend_content">
+				<div class="selectextend" id="preciomin">
+					<label for="preciomin">M&iacute;nimo</label>
+					<select name="preciomin" id="preciomin">
+						<option>Cualquiera</option>
+						<option>100.000&euro;</option>					
+					</select>
+				</div>
+				<div class="selectextend" id="preciomax">
+					<label>M&aacute;ximo</label>
+					<select name="preciomax" id="preciomax">
+						<option>Cualquiera</option>
+						<option>100.000&euro;</option>	
+					</select>
+				</div>
 			</div>
 		</div>
-		<div class="precio superficie">
-			<p>Superficie</p>			
+		<div id="superficie_box" class="box_extend">
+			<p><a href="#" onclick="show_box_extend('#superficie_box')">Superficie</a></p>
+			<div class="box_extend_content">
+				<div class="selectextend" id="preciomin">
+					<label for="preciomin">M&iacute;nimo</label>
+					<select name="preciomin" id="preciomin">
+						<option>Cualquiera</option>
+						<option>100.000&euro;</option>					
+					</select>
+				</div>
+				<div class="selectextend" id="preciomax">
+					<label>M&aacute;ximo</label>
+					<select name="preciomax" id="preciomax">
+						<option>Cualquiera</option>
+						<option>100.000&euro;</option>	
+					</select>
+				</div>
+			</div>			
 		</div>
-		<div class="precio masfilt">
-			<p>Filtros</p>
+		<div class="box_extend masfilt">
+			<p><a href="">Filtros</a></p>
 		</div>
 		<div class="guardbusq">
 			<a href="">Guardar b&uacute;squeda</a> 

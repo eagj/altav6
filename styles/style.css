@@ -1058,8 +1058,7 @@ section.filtrador a.selectBox .selectBox-arrow{
 	border:none;	
 }
 ul.selectBox-dropdown-menu {
-	margin-left: 0px;
-    
+	margin-left: 0px;    
     box-shadow: none;
 	max-height: 300px;
 	border-bottom-left-radius: 7px;
@@ -1079,29 +1078,83 @@ ul.selectBox-dropdown-menu li.selectBox-selected a {
 
 
 
-section.filtrador .precio{
-	float: left;
-	width: auto;
-	margin-top: 12px;
-	margin-left: 1%;
-	margin-right: 4%;
-	position:relative;	
+section.filtrador .box_extend{  	
+    float: left;
+    margin-left: 1%;    
+    padding:10px;
+    position: relative;
+    vertical-align: middle;
+    width: auto;
+    border-radius: 7px 7px 0 0;
+    cursor: pointer;
 }
-section.filtrador .precio::after {
-	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center;
+
+section.filtrador .box_extend.selected{
+	background-color: red;
+}
+	section.filtrador .box_extend p a{
+		color:#000;
+	} 
+	section.filtrador .box_extend.selected p a{
+		color:#FFFFFF
+	}	
+	section.filtrador .box_extend.selected p a::after {	
+		content: "\00a0";
+	 	background: rgba(0, 0, 0, 0) url("/images/select_cursor_hover.png") no-repeat scroll right center;
+ 	}    
+
+	
+section.filtrador .box_extend p a::after {	
 	content: "\00a0";
-	position: absolute;
-	right: -18px;
-	top: 0;
-	width: 10px;
+	 background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center;    
+    display: inline-block;
+    margin: 0 10px;
+    width: 10px;
 }
-	section.filtrador .precio .selectprecio{
-		display:inline-block;
-		width:49%;
+	section.filtrador .box_extend .box_extend_content{
 		display:none;
+  		background-color: #fff;
+  		border-top: 4px solid red;
+    	margin-left: -10px;
+    	margin-top: 10px;
+    	position: absolute;
+    	width: 285px;
+    	z-index: 2;
+	}
+	section.filtrador .box_extend.selected .box_extend_content{
+		display:inline;
+	}
+	section.filtrador .box_extend .box_extend_content .selectextend{
+		float: left;
+		width:49%;		
+	 	padding: 10px 0 0;
+	 	text-align: center;
+	}
+		section.filtrador .box_extend .box_extend_content .selectextend label{
+			color: #8f8f8f;
+		}
+
+section.filtrador .precio .box_extend .box_extend_content a.selectBox {
+	text-align: center;
+	height:40px
+}
+	section.filtrador .box_extend .box_extend_content .selectextend a.selectBox .selectBox-label {
+		background: transparent;
+		box-shadow:none;
+	    border:none;
+	    border-bottom: 1px solid #414141;
+	    display:inline-block;
+	    border-radius:0;
+	    line-height: 1;
+     	margin-top: 5px;
+     	color: #8f8f8f;
+     	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center;
+     	font-size: 0.9em;
+     	text-align: center;
+     	margin-left: 2%
 	}
 	
-.precio > p {
+.box_extend > p {
     color:#000
 }
 
@@ -1116,13 +1169,14 @@ section.filtrador .guardbusq{
     	color: #c6e22d;
     	font-family: raleway_semibold;
     	padding: 10px;
+	 	font-size: 0.9em;
 	}
 	section.filtrador .guardbusq a::before{
 		content:"\00a0";
 		background: transparent url("/images/ico_guardabusq.png") no-repeat scroll left center;    
     	display: inline-block;
     	height: 22px;
-    	margin-right: 15px;
+    	margin-right:5px;
     	vertical-align: middle;
     	width: 21px;
 	}
