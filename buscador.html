@@ -50,6 +50,26 @@
 	function passid(elid){
 		$(".selectBox-dropdown-menu").attr('id', elid);;
 	}
+	function modolist(){
+		document.getElementById("modomapa").style.display="none";
+		document.getElementById("modolist").style.display="block";
+		$( "#mapa_li" ).addClass("hidden");	
+		$( "#listado_li" ).removeClass("hidden");
+		$( ".resultados_mobile" ).addClass("hidden");
+		$( ".ordenar_mobile" ).removeClass("hidden");
+		
+		
+	}
+	function modomapa(){
+		document.getElementById("modolist").style.display="none";
+		document.getElementById("modomapa").style.display="block";
+		$( "#listado_li" ).addClass("hidden");
+		$( "#mapa_li" ).removeClass("hidden");
+		$( ".resultados_mobile" ).removeClass("hidden");
+		$( ".ordenar_mobile" ).addClass("hidden");
+		
+		
+	}
 	
 </script>
 </head>
@@ -159,11 +179,14 @@
 	<section class="filtrador_mobile">
 		<div class="modo">
 			<ul>
-				<li class="listado"><a href="">Mapa</a></li>
-				<li class="mapa"><a href="">Listado</a></li>
+				<!-- ESTE ONCLICK HACE QUE SE MUESTRE EL MAPA EN VERSION TABLET/MOBILE --->
+				<li class="listado hidden" id="listado_li"><a href="#" onclick="modomapa();return false">Mapa</a></li><!-- EL ID DEL LI ES PARA METERLE UN CLASS DE HIDDEN AL PULSARLO-->
+				<!-- ESTE ONCLICK HACE QUE SE MUESTRE EL LISTADO EN VERSION TABLET/MOBILE --->
+				<li class="mapa" id="mapa_li"><a href="#" onclick="modolist();return false">Listado</a></li><!-- EL ID DEL LI ES PARA METERLE UN CLASS DE HIDDEN AL PULSARLO-->
 			</ul>
 		</div>
-		<div class="ordenar_mobile">				
+		<div class="ordenar_mobile hidden">
+			<!--- ESTE SELECT TIENE QUE SER IGUAL QUE EL #ordenResultados DE LA VERSION DESKTOP ----->				
 			<select id="ordenResultados" name="ordenResultados">
 				<option value="1">M&aacute;s relevante</option>
 				<option value="2">Precio asc</option>
@@ -172,11 +195,13 @@
 				<option value="5">Superficie</option>
 			</select>
 		</div>
+		<!--- ESTE RESULTADO TIENE QUE SER IGUAL QUE EL RESULTADOS DE LA VERSION DESKTOP ----->
+		<p class="resultados_mobile"><span>58</span> resultados</p>
 	</section>	
-	<section class="mapa">		
+	<section class="mapa" id="modomapa"> <!--ESTE ID SOLO LO USO PARA LA FUNCION DE MOSTRAR EL MAPA-->		
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194347.38441000276!2d-3.819619853628188!3d40.438131079835216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1469084166813"  frameborder="0" style="border:0" allowfullscreen></iframe>
 	</section>
-	<aside class="minifichas">		
+	<aside class="minifichas" id="modolist"> <!--ESTE ID SOLO LO USO PARA LA FUNCION DE MOSTRAR EL MAPA-->		
 		<header>
 			<h1>58<span> pisos y casas</span> en <span>venta</span> en <span>Madrid</span></h1>
 			<div class="ordenar" onclick="passid('ordenar')">
@@ -189,7 +214,6 @@
 					<option value="5">Superficie</option>
 				</select>
 			</div>
-			
 		</header>
 		<div class="minificha">
 			<div class="fav active">
