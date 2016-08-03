@@ -1037,7 +1037,7 @@ select#tipo {
 }
 section.filtrador .tipo{
 	float: left;
-	width: 140px;
+	width: 130px;
 	margin-top: -5px;
 	margin-left: 1%;
 }
@@ -1046,7 +1046,8 @@ section.filtrador a.selectBox {
 	box-shadow:none;
     border:none;
     height: 49px;
-    line-height: 49px;
+    line-height: 41px;
+    cursor: pointer;
    /*  border-radius: 7px 0 0 7px; */ 	
     /* width:100% !important; */
 }
@@ -1119,16 +1120,17 @@ section.filtrador .box_extend p a::after {
     	margin-top: 10px;
     	position: absolute;
     	width: 285px;
-    	z-index: 2;
+    	z-index: 4;
 	}
 	section.filtrador .box_extend.selected .box_extend_content{
 		display:inline;
 	}
 	section.filtrador .box_extend .box_extend_content .selectextend{
-		float: left;
-		width:49%;		
-	 	padding: 10px 0 0;
-	 	text-align: center;
+  		float: left;
+    	margin: 0 2%;
+    	padding: 10px 0 0;
+    	text-align: center;
+    	width: 46%;
 	}
 		section.filtrador .box_extend .box_extend_content .selectextend label{
 			color: #8f8f8f;
@@ -1157,6 +1159,23 @@ section.filtrador .precio .box_extend .box_extend_content a.selectBox {
 .box_extend > p {
     color:#000
 }
+
+/*ESTILOS SELECT PRECIO*/
+#preciominselect, #supminselect{
+	font-size: 0.9em;
+	margin-left: -5px;
+	text-align: center;
+	width: 140px !important;
+	margin-top: -23px;
+}
+#preciomaxselect, #supmaxselect {
+    font-size: 0.9em;
+    margin-left: -5px;
+    text-align: center;
+    width: 142px !important;
+  	margin-top: -23px;
+}
+
 
 section.filtrador .guardbusq{
  	float:right;    
@@ -1268,6 +1287,10 @@ aside.minifichas{
 			padding:0.5em;
 		
 		}
+		
+			 
+
+		
 		
 
 /*minificha*/
@@ -1434,6 +1457,7 @@ footer.footbusc {
     position: fixed;
     width: 100%;
     background-color: #fff;
+ 	z-index: 3;
 }
 
 	footer.footbusc .downfoot{

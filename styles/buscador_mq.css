@@ -55,20 +55,26 @@
 
 
 
-/* iPads (portrait and landscape) */
+/* iPads (horizontal) */
 @media (max-width: 1024px){	
 	
 	html{
 		font-size: 15px;
 	}
 	
+	section.mapa, aside.minifichas{
+		display:block;
+	}
 }
 
-/* tablets menos de 1024 */
+/* tablets menos de 1024 y ipad en vertical*/
 @media (max-width: 1023px){	
 	
 	html{
 		font-size: 12px;
+	}
+	section.filtrador .tipo, section.filtrador #precio_box, section.filtrador #superficie_box{
+		display: none
 	}
 	
 	section.filtrador_mobile{
@@ -148,16 +154,14 @@
 			aside.minifichas .ordenar {
 				display: none;
 			}
+			section.filtrador_mobile .ordenar_mobile{
+				display:inline-block;
+			}
 			section.filtrador_mobile select{
-	 			background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll 95% center;
-    			border:1px solid #a0a0a0;
-    			color:#a0a0a0;
-    			padding: 5px;
-    			border-radius:0;
-    			box-shadow: none !important;    			
-    			outline: medium none;
-    			width: 125px;
-    			margin-left: 5px;
+	 			outline: none;
+	 			border: 1px solid #a0a0a0;
+	 			background-color: #e9e9e9;
+	 			height:30px;
 			}		
 	
 	section.filtrador .guardbusq{
@@ -169,7 +173,7 @@
 		width:100%;		
 		}
 	aside.minifichas{
-		display:none;
+		z-index:0;		
 	 	height: calc(100% - 210px);
 	 	top: 182px;		
 		width:100%;
@@ -213,24 +217,45 @@
 	}
 	section.filtrador .semanti{
 		margin-left: 0;
-		width:39%;
+		width:70%;
+	}
+	section.filtrador .box_extend{
+		padding:10px 0;
+		float: right;
 	}
 	section.mapa {
     	height: calc(100% - 210px);    	
     	top: 183px;
     	width: 100;
+    	z-index:1;
+	}	
+	
+}
+
+/* MQ para 465 de maximo */
+@media (max-width: 465px){
+	section.filtrador .semanti{
+		margin-left: 0;
+		width:60%;
 	}
-	
+	section.filtrador .guardbusq a{
+   		padding: 10px 5px;
+    	font-size: .8em;
+	}
+	section.filtrador .guardbusq a::before{
+		background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    	margin-right: 0;
+    	width: 0;
+	}
+	section.filtrador_mobile .resultados_mobile{
+		font-size: .9em;
+		width:92%
+	}
+	aside.minifichas .minificha{
+		width:98%;
+	}
 }
-/* mobile menos de  768 */
-@media (max-width: 767px){	
-	
-	
-}
-	
-	
-	
-	
+
 
 /* mobile 320px y menos*/
 @media (max-width: 320px){

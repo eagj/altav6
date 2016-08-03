@@ -51,18 +51,16 @@
 		$(".selectBox-dropdown-menu").attr('id', elid);;
 	}
 	function modolist(){
-		document.getElementById("modomapa").style.display="none";
-		document.getElementById("modolist").style.display="block";
+		document.getElementById("modomapa").style.zIndex="1";
+		document.getElementById("modolist").style.zIndex="2";
 		$( "#mapa_li" ).addClass("hidden");	
 		$( "#listado_li" ).removeClass("hidden");
 		$( ".resultados_mobile" ).addClass("hidden");
 		$( ".ordenar_mobile" ).removeClass("hidden");
-		
-		
 	}
 	function modomapa(){
-		document.getElementById("modolist").style.display="none";
-		document.getElementById("modomapa").style.display="block";
+		document.getElementById("modolist").style.zIndex="1";
+		document.getElementById("modomapa").style.zIndex="2";
 		$( "#listado_li" ).addClass("hidden");
 		$( "#mapa_li" ).removeClass("hidden");
 		$( ".resultados_mobile" ).removeClass("hidden");
@@ -144,7 +142,7 @@
 		<div class="send">
 			<input type="submit" id="botonSubmit" value="">
 		</div>
-		<div class="tipo" onclick="passid('tipo')">
+		<div class="tipo" onclick="passid('tiposelect')">
 			<select id="tipo" name="tipoInmueble">
 				<option value="1">Pisos y casas</option>
 				<option value="2">Trasteros</option>
@@ -158,14 +156,14 @@
 		<div id="precio_box" class="box_extend">
 			<p><a href="#" onclick="show_box_extend('#precio_box')">Precio</a></p>
 			<div class="box_extend_content">
-				<div class="selectextend" id="preciomin">
+				<div class="selectextend" id="preciomin" onclick="passid('preciominselect')">
 					<label for="preciomin">M&iacute;nimo</label>
 					<select name="preciomin" id="preciomin">
 						<option>Cualquiera</option>
 						<option>100.000&euro;</option>					
 					</select>
 				</div>
-				<div class="selectextend" id="preciomax">
+				<div class="selectextend" id="preciomax" onclick="passid('preciomaxselect')">
 					<label>M&aacute;ximo</label>
 					<select name="preciomax" id="preciomax">
 						<option>Cualquiera</option>
@@ -177,14 +175,14 @@
 		<div id="superficie_box" class="box_extend">
 			<p><a href="#" onclick="show_box_extend('#superficie_box')">Superficie</a></p>
 			<div class="box_extend_content">
-				<div class="selectextend" id="preciomin">
+				<div class="selectextend" id="superfmin" onclick="passid('supminselect')">
 					<label for="preciomin">M&iacute;nimo</label>
 					<select name="preciomin" id="preciomin">
 						<option>Cualquiera</option>
 						<option>100.000&euro;</option>					
 					</select>
 				</div>
-				<div class="selectextend" id="preciomax">
+				<div class="selectextend" id="superfmax" onclick="passid('supmaxselect')">
 					<label>M&aacute;ximo</label>
 					<select name="preciomax" id="preciomax">
 						<option>Cualquiera</option>
@@ -193,7 +191,7 @@
 				</div>
 			</div>			
 		</div>
-		<div class="box_extend masfilt">
+		<div class="box_extend masfilt" id="filtros">
 			<p><a href="">Filtros</a></p>
 		</div>
 		<div class="guardbusq">
