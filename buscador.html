@@ -48,7 +48,7 @@
 		$( "#usuario" ).addClass("desple");
 	}
 	function passid(elid){
-		$(".selectBox-dropdown-menu").attr('id', elid);;
+		$(".selectBox-dropdown-menu").attr('id', elid);
 	}
 	function modolist(){
 		document.getElementById("modomapa").style.zIndex="1";
@@ -69,6 +69,7 @@
 	function show_box_extend(id){
 		$( "#precio_box" ).removeClass("selected");		
 		$( "#superficie_box" ).removeClass("selected");
+		$( "#filtros_box" ).removeClass("selected");
 		$(id).addClass("selected");
 	}
 </script>
@@ -157,16 +158,16 @@
 			<p><a href="#" onclick="show_box_extend('#precio_box')">Precio</a></p>
 			<div class="box_extend_content">
 				<div class="selectextend" id="preciomin" onclick="passid('preciominselect')">
-					<label for="preciomin">M&iacute;nimo</label>
+					<!-- <label for="preciomin">M&iacute;nimo</label> -->
 					<select name="preciomin" id="preciomin">
-						<option>Cualquiera</option>
+						<option>M&iacute;nimo</option>
 						<option>100.000&euro;</option>					
 					</select>
 				</div>
 				<div class="selectextend" id="preciomax" onclick="passid('preciomaxselect')">
-					<label>M&aacute;ximo</label>
+					<!-- <label>M&aacute;ximo</label> -->
 					<select name="preciomax" id="preciomax">
-						<option>Cualquiera</option>
+						<option>M&aacute;ximo</option>
 						<option>100.000&euro;</option>	
 					</select>
 				</div>
@@ -176,23 +177,100 @@
 			<p><a href="#" onclick="show_box_extend('#superficie_box')">Superficie</a></p>
 			<div class="box_extend_content">
 				<div class="selectextend" id="superfmin" onclick="passid('supminselect')">
-					<label for="preciomin">M&iacute;nimo</label>
+					<!-- <label for="preciomin">M&iacute;nimo</label> -->
 					<select name="preciomin" id="preciomin">
-						<option>Cualquiera</option>
+						<option>M&iacute;nimo</option>
 						<option>100.000&euro;</option>					
 					</select>
 				</div>
 				<div class="selectextend" id="superfmax" onclick="passid('supmaxselect')">
-					<label>M&aacute;ximo</label>
+					<!-- <label>M&aacute;ximo</label> -->
 					<select name="preciomax" id="preciomax">
-						<option>Cualquiera</option>
+						<option>M&aacute;ximo</option>
 						<option>100.000&euro;</option>	
 					</select>
 				</div>
 			</div>			
 		</div>
-		<div class="box_extend masfilt" id="filtros">
-			<p><a href="">Filtros</a></p>
+		<div class="box_extend" id="filtros_box">
+			<p><a href="#" onclick="show_box_extend('#filtros_box')">Filtros</a></p>
+			<div class="box_extend_content">
+				<form action="" method="get">								   
+				
+					<div id="estado" class="linea">
+						<p class="titulo">Estado</p>
+						<div class="bloque">
+							<input type="checkbox" id="obraNueva01" value="true" name="filtro.obraNueva01">
+							<label for="obraNueva01">Obra Nueva</label>
+						</div>
+						<div class="bloque">
+							<input type="checkbox" id="segundaMano01" value="true" name="filtro.segundaMano01">
+							<label for="segundaMano01">Segunda Mano</label>
+						</div>
+						
+						
+					</div>
+					<div id="habitaciones" class="linea">
+						<p class="titulo">Habitaciones</p>
+						
+						<div class="bloque">
+							<input type="radio" value="1" checked="checked" id="habitaciones1" name="numhabis">
+							<label for="habitaciones1">1</label>
+						</div>				
+						
+						<div class="bloque">
+							<input type="radio" value="2" id="habitaciones2" name="numhabis">
+							<label for="habitaciones2">2</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="radio" value="3" id="habitaciones3" name="numhabis">
+							<label for="habitaciones3">3</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="radio" value="4" id="habitaciones4" name="numhabis">
+							<label for="habitaciones4">4 &oacute; m&aacute;s</label>
+						</div>
+					</div>
+					
+					<div id="otrosserv" class="linea">
+						<p class="titulo">Otros Servicios</p>
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conGaraje" value="true" name="filtro.conGaraje">
+							<label for="filtradoForm_filtro_conGaraje">Garaje</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conAscensor" value="true" name="filtro.conAscensor">
+							<label for="filtradoForm_filtro_conAscensor">Ascensor</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conTrastero" value="true" name="filtro.conTrastero">
+							<label for="filtradoForm_filtro_conTrastero">Trastero</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conPiscina" value="true" name="filtro.conPiscina">
+							<label for="filtradoForm_filtro_conPiscina">Piscina</label>
+						</div>
+					</div>
+					<div id="promos" class="linea">
+						<p class="titulo">Promociones</p>
+						<select name="promos" id="promobox">
+							<option>La Era de los Descuentos 2</option>
+							<option>Semana Santa Costa 2016</option>
+							<option>Naves, locales y oficinas 2016</option>
+							<option>Segunda Mano</option>
+						</select>
+					</div>
+					<div class="botonera linea">
+						<input type="reset" value="Borrar filtros" name="submit" id="filtradoForm_reset">
+						<input type="submit" value="Aceptar" name="submit" id="filtradoForm_submit">
+					</div>
+				</form>
+			</div>
 		</div>
 		<div class="guardbusq">
 			<a href="">Guardar b&uacute;squeda</a> 

@@ -463,7 +463,8 @@ section#buscador .cajabuscador .tipo select{
     font-size: 1.2em;
     height: 49px;
     text-indent: 10px;
-    width: 105%;
+    width: 100%;
+    margin-top: 0; 
 }
 
 section#buscador .cajabuscador .semanti{
@@ -1022,6 +1023,170 @@ section.filtrador .send{
     	width: 45px;
 	}
 		
+
+#filtros_box .box_extend_content {
+	margin-left: -415px;
+    width: 500px;
+}
+	#filtros_box .box_extend_content .linea{
+		margin:20px 10px;
+	}
+	#filtros_box .box_extend_content p.titulo{
+		color: red;
+    	display: inline-block;
+    	font-family: raleway_medium;
+    	margin-right: 50px;
+    	width: 80px;
+    	vertical-align: middle;
+    	font-size: 1.125em;
+	}
+
+#filtros_box .box_extend_content #estado{}
+	#filtros_box .box_extend_content label{
+		color:#8f8f8f;
+		font-family: raleway_medium;
+		font-size: 0.938em;		
+	}
+	#filtros_box .box_extend_content #estado label{
+		margin-right: 50px;
+	}
+
+#filtros_box .box_extend_content .bloque{
+	display:inline-block;
+	text-align: center;	
+}
+
+#filtros_box .box_extend_content .bloque input[type="checkbox"] {
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+}
+#filtros_box .box_extend_content .bloque input[type="checkbox"] ~ label::before {
+   	/* content:"\00a0";
+   		background: transparent url("/images/check_nook.png") no-repeat scroll 0 0; */
+	font-family: icomoon;
+	content:"\ee64";
+	display: inline-block;
+	/* height: 20px;
+	    width: 25px; */
+    margin-right: 10px;
+}
+#filtros_box .box_extend_content .bloque input[type="checkbox"]:checked ~ label::before {
+	/* content:"\00a0";
+	   	background: transparent url("/images/check_ok.png") no-repeat scroll 0 0; */
+   	font-family: icomoon;
+	content:"\ed6c";
+	display: inline-block;
+	/* height: 19px;
+	    width: 25px; */
+    margin-right: 10px;
+}
+
+#filtros_box .box_extend_content .bloque input[type="radio"] {
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+}
+#filtros_box .box_extend_content .bloque input[type="radio"] ~ label::before { 
+	font-family: icomoon;
+	content:"\ee70";
+	display: inline-block;
+	vertical-align: middle;
+    margin-right: 10px;
+}
+#filtros_box .box_extend_content .bloque input[type="radio"]:checked ~ label::before {
+	/* content:"\00a0";
+	   	background: transparent url("/images/check_ok.png") no-repeat scroll 0 0; */
+   	font-family: icomoon;
+	content:"\ed6c";
+	display: inline-block;
+	/* height: 19px;
+	    width: 25px; */
+    margin-right: 10px;
+}
+
+#habitaciones .bloque {
+	margin: 0 10px;
+}
+
+
+/*SERVICIOS*/
+#filtros_box .box_extend_content #otrosserv .bloque {
+    vertical-align: middle;
+}
+#filtros_box .box_extend_content #otrosserv .bloque label{
+	cursor:pointer;
+}
+/*ICONOS OTROS SERVICIOS*/
+#filtros_box .box_extend_content #otrosserv .bloque input[type="checkbox"] ~ label::before{
+	content:"\00a0";	
+    display: inline-block;
+    height: 33px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+/*GARAJE*/
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conGaraje[type="checkbox"] ~ label::before {   	
+	background: transparent url("/images/ico_garaje.png") no-repeat scroll center center;    
+}
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conGaraje[type="checkbox"]:checked ~ label::before {
+	background: transparent url("/images/ico_garaje_select.png") no-repeat scroll center center;
+}
+/*ASCENSOR*/
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conAscensor[type="checkbox"] ~ label::before {   	
+	background: transparent url("/images/ico_ascensor.png") no-repeat scroll center center;    
+}
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conAscensor[type="checkbox"]:checked ~ label::before {
+	background: transparent url("/images/ico_ascensor_select.png") no-repeat scroll center center;
+}
+/*TRASTERO*/
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conTrastero[type="checkbox"] ~ label::before {   	
+	background: transparent url("/images/ico_trastero.png") no-repeat scroll center center;    
+}
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conTrastero[type="checkbox"]:checked ~ label::before {
+	background: transparent url("/images/ico_trastero_select.png") no-repeat scroll center center;
+}
+/*PISCINA*/
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conPiscina[type="checkbox"] ~ label::before {   	
+	background: transparent url("/images/ico_piscina.png") no-repeat scroll center center;    
+}
+#filtros_box .box_extend_content #otrosserv .bloque input#filtradoForm_filtro_conPiscina[type="checkbox"]:checked ~ label::before {
+	background: transparent url("/images/ico_piscina_select.png") no-repeat scroll center center;
+}
+
+
+#filtros_box .box_extend_content .linea#promos{}
+	#filtros_box .box_extend_content .linea#promos .selectBox {
+	 	border-bottom: 1px solid #414141;
+    	border-radius: 0;
+    	height: 40px;
+    	width: 65% !important;
+	} 
+#filtros_box .box_extend_content .linea#promos .selectBox .selectBox-label{
+	width:100% !important;
+}
+#filtros_box .box_extend_content .botonera.linea{
+	text-align: right;
+}
+	#filtros_box .box_extend_content .botonera.linea #filtradoForm_submit{
+		 background-color: #fff;
+		border: 1px solid red;
+    	color: red;
+    	font-family: raleway_bold;
+    	padding: 10px 30px;
+    	font-size: 1.125em;
+	}
+	
+	#filtros_box .box_extend_content .botonera.linea #filtradoForm_reset{
+  		background-color: #fff;
+    	border: medium none;
+    	color: #8f8f8f;
+    	font-family: raleway_bold;
+		font-size: 1.125em;
+    	margin-right: 20px;
+    	text-decoration: underline
+	}
 
 
 /*ESTILOS SELECT*/

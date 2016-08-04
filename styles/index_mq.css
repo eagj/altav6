@@ -4,6 +4,9 @@
 	html{
 		font-size: 15px;
 	}
+	section#buscador .cajabuscador .tipo select{
+		margin-top: 0;
+	}
 	section#buscador .cajabuscador .send::before{
 		left: 11%;
 	}	
