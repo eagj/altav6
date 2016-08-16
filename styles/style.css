@@ -224,7 +224,8 @@ header#general #menuAreaPrivada{
 header#logonav{
 	background-color: #fff;
 	height:70px;
-	position: relative;	
+	position: relative;
+	box-shadow: 1px 1px 6px #ccc;	
 }
 	header#logonav .logohead{
  		float: left;
@@ -1611,6 +1612,71 @@ aside.minifichas .minificha .fav{
 
 
 
+
+
+
+
+
+/************************* FICHA ********************************/
+section.ficha{
+	float: left;
+	margin-left: 10px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 56.66%;
+}
+	section.ficha .header_ficha{
+		display:table;
+		width:100%;
+		margin-bottom: 35px;
+	}
+	section.ficha .header_ficha .superior{
+		display:table;
+		width:100%;
+	}
+		section.ficha .header_ficha hgroup{
+			display: table-cell;
+    		vertical-align: middle;
+    		width: 73%;
+		}
+			section.ficha .header_ficha hgroup h1{
+		   		color: red;
+    			font-family: Raleway_medium;
+    			font-size: 1.5em;
+    			margin: 0;
+    			max-height: 60px;
+    			overflow: hidden;
+			}
+			section.ficha .header_ficha hgroup h2{
+				color:#848484;
+				font-size: 0.938em;
+				font-family: Raleway_medium;
+			}
+				section.ficha .header_ficha hgroup h2 span{
+					font-family: raleway_bold;
+				}
+		
+		section.ficha .header_ficha p.precio{
+		 	color: red;
+    		display: table-cell;
+    		font-size: 1.875em;
+    		text-align: right;
+    		vertical-align: middle;
+    		width: 25%
+		}
+
+
+section.ficha .foto{
+	max-height: 460px;
+    overflow: hidden;
+    width: 100%;
+}
+	section.ficha .foto img{
+		width: 100%;
+	}
+
+
+
 /* FOOTER PAGINA BUSCADOR */
 
 footer.footbusc {
@@ -1655,6 +1721,7 @@ footer.footbusc .downfoot .granja{
 /******************* FOOTER ****************/
 footer{
 	width:100%;
+	display: inline-block;
 }
 	footer .upfoot {
 	   	border-bottom: 1px solid #ccc;
