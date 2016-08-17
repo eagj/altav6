@@ -1618,28 +1618,39 @@ aside.minifichas .minificha .fav{
 
 
 /************************* FICHA ********************************/
-section.ficha{
-	float: left;
-	margin-left: 10px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	width: 56.66%;
+#ficha_inmu header#general{
+	position: fixed;
+    width: 100%;
+    z-index: 2;
 }
-	section.ficha .header_ficha{
-		display:table;
-		width:100%;
-		margin-bottom: 35px;
-	}
-	section.ficha .header_ficha .superior{
-		display:table;
-		width:100%;
-	}
-		section.ficha .header_ficha hgroup{
-			display: table-cell;
+
+#ficha_inmu header#logonav {
+    background-color: #fff;    
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 2;
+}
+.header_ficha{		
+	display: table;
+	padding:10px 0;
+    margin-bottom: 35px;
+    position: fixed;
+    top: 120px;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+}
+	.header_ficha .superior{
+		display:inline-block;
+		width:58%;
+	}	
+		.header_ficha hgroup{
+			display: inline-block;
     		vertical-align: middle;
     		width: 73%;
 		}
-			section.ficha .header_ficha hgroup h1{
+		.header_ficha hgroup h1{
 		   		color: red;
     			font-family: Raleway_medium;
     			font-size: 1.5em;
@@ -1647,24 +1658,45 @@ section.ficha{
     			max-height: 60px;
     			overflow: hidden;
 			}
-			section.ficha .header_ficha hgroup h2{
+			.header_ficha hgroup h2{
 				color:#848484;
 				font-size: 0.938em;
 				font-family: Raleway_medium;
 			}
-				section.ficha .header_ficha hgroup h2 span{
+				.header_ficha hgroup h2 span{
 					font-family: raleway_bold;
 				}
 		
-		section.ficha .header_ficha p.precio{
+		.header_ficha p.precio{
 		 	color: red;
-    		display: table-cell;
+    		display: inline-block;
     		font-size: 1.875em;
     		text-align: right;
     		vertical-align: middle;
     		width: 25%
 		}
-
+		
+.header_ficha .utils{
+	display: inline-block;
+	float: right;
+	outline: 1px solid;
+	text-align: center;
+	width: 31%;		
+	}
+	.header_ficha .utils li{
+	 	display: inline-block;
+    	font-size: 0.7em;
+    	margin-right: -3px;
+    	width: 33.3333%;
+	}
+section.ficha{
+	float: left;
+	margin-left: 10px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 56.66%;
+}
+	
 
 section.ficha .foto{
 	max-height: 460px;
