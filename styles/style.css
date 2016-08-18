@@ -1673,40 +1673,303 @@ aside.minifichas .minificha .fav{
     		font-size: 1.875em;
     		text-align: right;
     		vertical-align: middle;
-    		width: 25%
+    		width: 25%;
+			font-family: raleway_bold;
 		}
+
+.header_ficha .inferior{
+	border-top: 1px solid #ccc;
+    display: inline-block;
+    margin-top: 5px;
+    padding-top: 5px;
+    width: 58%;
+}
+	.header_ficha .inferior li{}
+		.header_ficha .inferior li span{
+			 font-family: raleway_bold;
+		}
+	
+	
+	
+	
 		
 .header_ficha .utils{
 	display: inline-block;
-	float: right;
-	outline: 1px solid;
+	float: right;	
 	text-align: center;
-	width: 31%;		
-	}
+	width: 31%;
+	margin-top: 10px;
+}
 	.header_ficha .utils li{
 	 	display: inline-block;
-    	font-size: 0.7em;
+    	font-size: 0.750em;
     	margin-right: -3px;
     	width: 33.3333%;
+    	position:relative;
+	 	padding-left: 40px;
+	 	text-align: left;
 	}
+		.header_ficha .utils li a{
+			color:#9a9b22;			
+		}		
+		.header_ficha .utils li#utils_fav a::before{
+			content:"\00a0";
+  			background: transparent url("/images/ficha/fav.png") no-repeat scroll left 0;
+			display: inline-block;
+    		height: 29px;
+    		left: 0;
+    		position: absolute;
+    		width: 32px;			
+		}		
+		.header_ficha .utils li#utils_fav a:hover::before{
+			background: transparent url("/images/ficha/fav.png") no-repeat scroll -32px 0;
+		}
+		
+		.header_ficha .utils li#utils_alert a:hover{
+			color:red;
+		}
+		.header_ficha .utils li#utils_alert a::before{
+			content:"\00a0";
+  			background: transparent url("/images/ficha/bajada_precio.png") no-repeat scroll left 0;
+			display: inline-block;
+    		height: 30px;
+    		left: 0;
+    		position: absolute;
+    		width: 31px;			
+		}
+		.header_ficha .utils li#utils_alert a:hover::before{
+			background: transparent url("/images/ficha/bajada_precio.png") no-repeat scroll -31px 0;
+		}
+		
+		.header_ficha .utils li#utils_inmusim a:hover{
+			color:red;
+		}
+		.header_ficha .utils li#utils_inmusim a::before{
+			content:"\00a0";
+  			background: transparent url("/images/ficha/inmu_simi.png") no-repeat scroll left 0;
+			display: inline-block;
+    		height: 30px;
+    		left: 0;
+    		position: absolute;
+    		width: 32px;			
+		}
+		.header_ficha .utils li#utils_inmusim a:hover::before{
+			background: transparent url("/images/ficha/inmu_simi.png") no-repeat scroll -36px 0;
+		}
+		
+/*FORMULARIO CONTACTAR*/
+aside#contact_ficha{
+  	margin-bottom: 35px;
+    position: fixed;
+    top: 181px;
+    width: 100%;
+    z-index: 1;
+}
+#ficha_inmu .contact_form{
+	position: absolute;
+    right: 37px;
+    top: -2%;
+    width: 320px;
+    z-index: 1;
+ }
+
+#ficha_inmu .contact_form .cerrar a::after{
+	background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 66%;
+    color: #414141;
+    content: "\ed6b";
+    font-family: icomoon;
+    font-size: 1.5em;
+    position: absolute;
+    right: -5px;
+    top: 12px;
+    display:none;
+}
+
+#ficha_inmu .contact_form .titulo{
+	background-color: red;
+    color: #fff;
+    float: left;
+    font-family: raleway_bold;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    padding:20px 0;
+}
+	#ficha_inmu .contact_form .titulo .ico{
+ 		display: inline-block;
+    	vertical-align: middle;
+    	margin-right: 10px;
+	}
+	#ficha_inmu .contact_form .titulo p{
+		display: inline-block;
+	}	
+	
+#ficha_inmu .contact_form .cuerpo{
+	background-color: #e1e1e1;
+    float: left;
+    padding: 15px 0 10px;
+    width: 100%;
+}	
+	
+	#ficha_inmu .contact_form .cuerpo input{
+		border: medium none;
+    	float: left;
+    	margin: 5px 3%;
+    	padding: 10px 20px;
+    	width: 94%;
+	}
+	
+	/* #ficha_inmu .contact_form .cuerpo ::-moz-placeholder{		
+		text-transform: uppercase;
+	} */
+
+#ficha_inmu .contact_form .cuerpo .avisoleg{
+	display:inline-block;
+	width:100%;
+	text-align: center;
+ 	margin: 20px 0;
+}
+
+
+#ficha_inmu .contact_form .cuerpo .avisoleg label{
+	font-family: Raleway_semibold;
+    font-size: 0.813em;   
+}
+	#ficha_inmu .contact_form .cuerpo .avisoleg label a{
+		font-family: Raleway_bold;
+		text-decoration: underline;
+		color:#414141;
+	}
+
+#ficha_inmu .contact_form .cuerpo .avisoleg input[type="checkbox"] {
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+#ficha_inmu .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before{
+   	content:"\00a0";
+	background: transparent url("/images/check_nook_red.png") no-repeat scroll 0 0;
+	display: inline-block;
+	height: 20px;
+    width: 25px;
+    margin-right: 10px;
+}
+#ficha_inmu .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before{
+	content:"\00a0";
+   	background: transparent url("/images/check_ok_red.png") no-repeat scroll 0 0;
+	display: inline-block;
+	height: 20px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+#ficha_inmu .contact_form .cuerpo p{
+	display:inline-block;
+	text-align: center;
+	width:100%;
+ 	margin-bottom: 15px;
+}
+#ficha_inmu .contact_form .cuerpo input[type="submit"]{
+ 	background-color: red;
+    border: medium none;
+    border-radius: 4px;
+    box-shadow: 0 6px 0 #c60505;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 60%;
+    margin-left: 20%;
+    font-family: raleway_bold;
+   }
+
+
+
+
+
+
+
+
 section.ficha{
 	float: left;
 	margin-left: 10px;
-	margin-top: 40px;
+	margin-top: 200px;
 	margin-bottom: 40px;
 	width: 56.66%;
 }
 	
 
 section.ficha .foto{
-	max-height: 460px;
+    max-height: 460px;
     overflow: hidden;
-    width: 100%;
+    position: relative;
+    vertical-align: middle;
+    width: 100%
 }
 	section.ficha .foto img{
 		width: 100%;
 	}
 
+section.ficha .foto .back {
+	height: 100%;
+    position: absolute;    
+}
+	section.ficha .foto .back a{
+		display: table;
+	    height: 100%;
+	    width: 100%;
+	}
+section.ficha .foto .back a::before{
+	font-family: icomoon;
+	content: "\edc2";
+	color:#fff;
+  	display: table-cell;    
+    font-size: 3em;
+    vertical-align: middle;    
+}
+
+section.ficha .foto .next {
+	 height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+	section.ficha .foto .next a{
+		display: table;
+	    height: 100%;
+	    width: 100%;
+	}
+section.ficha .foto .next a::before{
+	font-family: icomoon;
+	content: "\edba";
+	color:#fff;
+  	display: table-cell;    
+    font-size: 3em;
+    vertical-align: middle;    
+}
+
+
+/*SECTION DESCRIPCION*/
+section.descripcion{
+	width:100%;
+	font-family: raleway_medium;
+	margin-top: 20px;
+}
+	section.descripcion .titulo{
+		font-size: 1.500em;
+		margin-bottom: 20px;
+		color:#414141;
+	}
+	section.descripcion p{
+		font-size: 0.875em;
+		color:#848484;
+		margin-bottom: 10px;
+	}
 
 
 /* FOOTER PAGINA BUSCADOR */
