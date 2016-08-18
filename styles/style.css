@@ -1644,6 +1644,7 @@ aside.minifichas .minificha .fav{
 	.header_ficha .superior{
 		display:inline-block;
 		width:58%;
+		padding:18px 0;
 	}	
 		.header_ficha hgroup{
 			display: inline-block;
@@ -1651,8 +1652,7 @@ aside.minifichas .minificha .fav{
     		width: 73%;
 		}
 		.header_ficha hgroup h1{
-		   		color: red;
-    			font-family: Raleway_medium;
+		   		color: red;    			
     			font-size: 1.5em;
     			margin: 0;
     			max-height: 60px;
@@ -1661,7 +1661,6 @@ aside.minifichas .minificha .fav{
 			.header_ficha hgroup h2{
 				color:#848484;
 				font-size: 0.938em;
-				font-family: Raleway_medium;
 			}
 				.header_ficha hgroup h2 span{
 					font-family: raleway_bold;
@@ -1674,21 +1673,70 @@ aside.minifichas .minificha .fav{
     		text-align: right;
     		vertical-align: middle;
     		width: 25%;
-			font-family: raleway_bold;
+			font-family: Raleway_medium;
 		}
 
 .header_ficha .inferior{
 	border-top: 1px solid #ccc;
     display: inline-block;
     margin-top: 5px;
-    padding-top: 5px;
+    padding-top: 16px;
     width: 58%;
 }
-	.header_ficha .inferior li{}
+	.header_ficha .inferior ul{
+		float:left;
+		margin-top: 7px;
+	}
+	.header_ficha .inferior li{
+		display: inline-block;
+    	margin-right: 30px;
+	}
 		.header_ficha .inferior li span{
 			 font-family: raleway_bold;
 		}
 	
+	.header_ficha .inferior .cuota{
+		float: right;
+	}
+		.header_ficha .inferior .cuota p.cuota_text{
+			color:#8e8d8d;
+			font-family: Raleway_medium;
+			display: inline-block;
+			font-size: 0.813em;
+			margin-right: 10px;			
+		}
+			.header_ficha .inferior .cuota p.cuota_text span{
+				color:red;
+				font-family: raleway_bold;
+			}
+	
+	.header_ficha .inferior .simulador{
+		background-color: red;
+    	border-radius: 5px;
+    	display: inline-block;
+    	text-align: center;
+    	vertical-align: middle;
+    	position: relative;
+	}
+		.header_ficha .inferior .simulador p a{
+ 			color: #fff;
+    		display: inline-block;
+    		font-family: raleway_light;
+			font-size: 0.813em;
+    		line-height: 13px;
+    		padding: 6px 22px 6px 50px;
+    		vertical-align: middle;
+    		width: 100%;
+		}
+		.header_ficha .inferior .simulador a::before {    		
+    		content:"\00a0";
+    		background: red url("/images/ficha/ico_cuota.png") no-repeat scroll center top;			
+    		height: 32px;
+    		left: 18px;
+    		position: absolute;
+    		width: 27px;
+		}
+					
 	
 	
 	
@@ -1698,7 +1746,7 @@ aside.minifichas .minificha .fav{
 	float: right;	
 	text-align: center;
 	width: 31%;
-	margin-top: 10px;
+	padding: 18px 0;
 }
 	.header_ficha .utils li{
 	 	display: inline-block;
@@ -1759,20 +1807,21 @@ aside.minifichas .minificha .fav{
 		
 /*FORMULARIO CONTACTAR*/
 aside#contact_ficha{
-  	margin-bottom: 35px;
-    position: fixed;
-    top: 181px;
+  	position: fixed;
+    top: 220px;
     width: 100%;
     z-index: 1;
 }
 #ficha_inmu .contact_form{
-	position: absolute;
-    right: 37px;
-    top: -2%;
-    width: 320px;
+ 	position: absolute;
+    right: 15px;
+    width: 30%;
     z-index: 1;
  }
 
+#ficha_inmu .contact_form .cerrar{
+	display:none;
+}
 #ficha_inmu .contact_form .cerrar a::after{
 	background-color: #fff;
     border: 1px solid #ccc;
@@ -1784,7 +1833,6 @@ aside#contact_ficha{
     position: absolute;
     right: -5px;
     top: 12px;
-    display:none;
 }
 
 #ficha_inmu .contact_form .titulo{
@@ -1897,10 +1945,10 @@ aside#contact_ficha{
 
 section.ficha{
 	float: left;
-	margin-left: 10px;
-	margin-top: 200px;
+	/*margin-left: 10px;*/
+	margin-top: 290px;
 	margin-bottom: 40px;
-	width: 56.66%;
+	width: 58.66%;
 }
 	
 
