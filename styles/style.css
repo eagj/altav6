@@ -1972,14 +1972,14 @@ section.ficha .foto .back {
 	    height: 100%;
 	    width: 100%;
 	}
-section.ficha .foto .back a::before{
-	font-family: icomoon;
-	content: "\edc2";
-	color:#fff;
-  	display: table-cell;    
-    font-size: 3em;
-    vertical-align: middle;    
-}
+	section.ficha .foto .back a::before{
+		font-family: icomoon;
+		content: "\edc2";
+		color:#fff;
+	  	display: table-cell;    
+	    font-size: 3em;
+	    vertical-align: middle;    
+	}
 
 section.ficha .foto .next {
 	 height: 100%;
@@ -1992,14 +1992,14 @@ section.ficha .foto .next {
 	    height: 100%;
 	    width: 100%;
 	}
-section.ficha .foto .next a::before{
-	font-family: icomoon;
-	content: "\edba";
-	color:#fff;
-  	display: table-cell;    
-    font-size: 3em;
-    vertical-align: middle;    
-}
+	section.ficha .foto .next a::before{
+		font-family: icomoon;
+		content: "\edba";
+		color:#fff;
+	  	display: table-cell;    
+	    font-size: 3em;
+	    vertical-align: middle;    
+	}
 
 
 /*SECTION DESCRIPCION*/
@@ -2007,8 +2007,9 @@ section.descripcion{
 	width:100%;
 	font-family: raleway_medium;
 	margin-top: 20px;
+	margin-bottom: 50px;
 }
-	section.descripcion .titulo{
+	section.descripcion h3{
 		font-size: 1.500em;
 		margin-bottom: 20px;
 		color:#414141;
@@ -2018,6 +2019,140 @@ section.descripcion{
 		color:#848484;
 		margin-bottom: 10px;
 	}
+
+/* SECTION UBICACION*/
+section.ubicacion{
+	width:100%;
+	font-family: raleway_medium;
+	margin-top: 20px;
+}
+	section.ubicacion h3{
+		font-size: 1.500em;
+		margin-bottom: 10px;
+		color:#414141;
+	}
+	section.ubicacion h4{
+		font-size: 0.875em;
+	}
+	section.ubicacion h4 span{
+		font-family: raleway_bold;
+	}
+	
+	section.ubicacion .servicio_mapa{
+		width:100%;
+		margin-top: 20px;
+	}
+		section.ubicacion .servicio_mapa .servicios_menu{
+			width:100%;
+		}
+		section.ubicacion .servicio_mapa .servicios_menu ul{
+			float: left;
+			width:100%;
+			border-bottom: 1px solid #b5b5b5;
+		}
+			section.ubicacion .servicio_mapa .servicios_menu li{
+   				background-color: #e5e3e3;
+    			border-top: 4px solid #e5e3e3;
+    			float: left;
+    			margin-right: 0.5%;
+    			text-align: center;
+    			width: 19.5%;
+			}
+			section.ubicacion .servicio_mapa .servicios_menu li:last-child {
+    			float: right;
+    			margin-right: 0;
+    			width: 20%;
+			}
+				section.ubicacion .servicio_mapa .servicios_menu li a{	 		   		
+    				color: #9c9b9b;
+					float: left;
+					font-size: 0.875em;
+    				padding: 10px 0;
+    				text-align: center;
+    				width: 100%;
+				}
+				/*ICONOS SERVICIOS*/
+				section.ubicacion .servicio_mapa .servicios_menu li a::before{
+					content:"\00a0";
+				 	display: inline-block;
+			 		margin-right: 5px;
+			 		height:22px;
+			 		vertical-align: middle;
+				}
+				section.ubicacion .servicio_mapa .servicios_menu li.edu a::before{
+					background: transparent url("/images/ficha/ico_edu.png") no-repeat scroll 0 0;    				
+    				width: 29px;
+				}
+				section.ubicacion .servicio_mapa .servicios_menu li.sanit a::before{
+					background: transparent url("/images/ficha/ico_sanit.png") no-repeat scroll 0 0;
+    				width: 29px;
+				}
+				section.ubicacion .servicio_mapa .servicios_menu li.compras a::before{
+					background: transparent url("/images/ficha/ico_compras.png") no-repeat scroll 0 0;
+    				width: 29px;
+				}
+				section.ubicacion .servicio_mapa .servicios_menu li.rest a::before{
+					background: transparent url("/images/ficha/ico_rest.png") no-repeat scroll 0 0;
+    				margin-left: 10px;
+    				margin-right: 0;
+					width: 22px;
+				}
+				section.ubicacion .servicio_mapa .servicios_menu li.transp a::before{
+					background: transparent url("/images/ficha/ico_transport.png") no-repeat scroll 0 0;
+    				width: 29px;
+				}
+		
+		/* LI SELECT*/
+		section.ubicacion .servicio_mapa .servicios_menu li.select{
+ 			background-color: #fff;
+    		border-color: #b5b5b5 #bebebe #fff;
+    		border-style: solid;
+    		border-width: 4px 1px 1px;
+    		margin-bottom: -1px;
+		}
+		/*ICONOS SERVICIOS CON LI SELECT*/
+		section.ubicacion .servicio_mapa .servicios_menu li.edu.select a::before{
+					background-position: -29px 0;
+				}			
+		section.ubicacion .servicio_mapa .servicios_menu li.transp.select a::before{
+			background-position: -29px 0;
+		}
+	
+/*MAPA FICHA*/
+section.ubicacion .servicio_mapa .maparaserv{
+	float: left;
+ 	margin-top: 10px;
+	width:100%;
+}
+	section.ubicacion .servicio_mapa .maparaserv iframe{
+		width:100%;
+		height:305px;
+	}
+
+
+
+
+/*SECTION CERTIFICADO ENERGETICO*/
+h3.tipopleg{
+	width:100%;
+	background-color: #f5f5f5;
+	border-top: 1px solid #cac8c8;
+  	padding: 15px 0;
+}
+section.certificado{
+	float: left;
+ 	margin-top: 10px;
+	width:100%;
+}
+section.certificado h3{}
+
+
+
+
+
+
+
+
 
 
 /* FOOTER PAGINA BUSCADOR */

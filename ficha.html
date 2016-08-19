@@ -52,6 +52,12 @@
 	function passid(elid){
 		$(".selectBox-dropdown-menu").attr('id', elid);;
 	}
+	
+	/*ESTO ES SOLO PARA QUE SE ACTIVEN LOS BOTONES DEL MAPA EN MAQUETACION*/
+	function passselect(elclass){
+		$("li").removeClass("select");
+		$(elclass).addClass("select");
+	}
 </script>
 </head>
 <body>
@@ -192,12 +198,37 @@
 				</div>
 			</section>
 			<section class="descripcion">
-				<p class="titulo">Descripci&oacute;n</p>
+				<h3>Descripci&oacute;n</h3>
 				<p>Piso de segunda mano, interior, distribuido en sal&oacute;n, cocina, ba&ntilde;o y 2 dormitorios en finca hist&oacute;rica rehabilitada. Zona muy bien comunicada al lado del metro Pacifico y dotada de todo tipo de servicios.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt est id auctor iaculis. Vestibulum sed feugiat lorem. Vestibulum blandit pulvinar leo, ut volutpat nibh ullamcorper sit amet.</p>
 				<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse volutpat convallis velit, sit amet viverra ligula ultricies vitae. Curabitur augue tortor, tempus a mattis id, efficitur eu est. Curabitur laoreet turpis vel pulvinar dignissim.</p>
 			</section>
+			<section class="ubicacion">
+				<h3>Ubicaci&oacute;n y servicios cercanos</h3>
+				<!-- <h4><span>Lorem ipsum</span> dolore sit amet</h4> -->
+				<div class="servicio_mapa">
+					<div class="servicios_menu">
+						<ul>
+							<li class="edu" onclick="passselect('.edu');return false"><a href="#">Educativos</a></li>
+							<li class="sanit" onclick="passselect('.sanit');return false"><a href="#">Sanitarios</a></li>
+							<li class="compras" onclick="passselect('.compras');return false"><a href="#">Compras</a></li>
+							<li class="rest" onclick="passselect('.rest');return false"><a href="#">Restaurantes</a></li>
+							<li class="transp" onclick="passselect('.transp');return false"><a href="#">Transportes</a></li>
+						</ul>
+					</div>
+					<div class="maparaserv">								
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194347.38441000276!2d-3.819619853628188!3d40.438131079835216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1469084166813"  frameborder="0" style="border:0" allowfullscreen></iframe>	
+					</div>
+				</div>
+			</section>
+			<section class="certificado">
+				<h3 class="tipopleg">Certificado energ&eacute;tico</h3>
+				<div class="desple">
+					
+				</div>
+			</section>
 		</section>
+		
 	</div>
 	<footer>
 		<div class="contentgeneric">
