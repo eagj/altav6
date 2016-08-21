@@ -1618,6 +1618,38 @@ aside.minifichas .minificha .fav{
 
 
 /************************* FICHA ********************************/
+/*H3 TIPOPLEG*/
+#ficha_inmu h3.tipopleg a{
+	display:inline-block;
+	width:100%;
+	background-color: #f5f5f5;
+	border-top: 1px solid #cac8c8;
+  	padding: 15px 0;
+  	text-indent: 15px;
+  	position:relative;
+  	color:#848484;
+}
+#ficha_inmu h3.tipopleg a::after{
+    color: #999999;
+    content: "\edbf";
+    font-family: icomoon;
+    position: absolute;
+    right: 30px;
+}
+
+#ficha_inmu .box_tipodesp{
+	border-bottom: 1px solid #cac8c8;
+    float: left;
+    margin-top: 30px;
+    padding-bottom: 26px;
+    width: 100%;
+}
+#ficha_inmu .box_tipodesp .desple {
+    margin-top: 30px;
+}
+
+
+
 #ficha_inmu header#general{
 	position: fixed;
     width: 100%;
@@ -2133,24 +2165,85 @@ section.ubicacion .servicio_mapa .maparaserv{
 
 
 /*SECTION CERTIFICADO ENERGETICO*/
-h3.tipopleg{
-	width:100%;
-	background-color: #f5f5f5;
-	border-top: 1px solid #cac8c8;
-  	padding: 15px 0;
-}
-section.certificado{
+
+section.certificado .certificadobox{
 	float: left;
- 	margin-top: 10px;
-	width:100%;
+    margin-left: 135px;
 }
-section.certificado h3{}
+	section.certificado .certificadobox  img{
+		display:inline-block;
+		margin-right: 35px;
+		vertical-align: middle;
+	}
+	section.certificado .certificadobox p{
+		color:#b2b2b2;
+		font-size: 0.875em;
+	  	width: 265px;
+	  	display:inline-block;
+	  	vertical-align: middle;
+	}
+		section.certificado .certificadobox p span{
+			font-family: raleway_bold;
+		}
 
 
 
 
+/*SECTION DESCARGAS*/
+section.descargas .descboxes{
+	text-align: center;
+}
+	section.descargas .descboxes .descbox{
+		float:left;
+    	width: 25%;    	
+    	text-align: center;
+	}
+		section.descargas .descboxes .descbox p{
+			color:#414141;
+			font-family: raleway_medium;
+			font-size: 0.875em;
+			margin-top: 20px;    
+		}
+			section.descargas .descboxes .descbox p span{
+				font-family: raleway_bold;
+			}
+			
+		section.descargas .descboxes .descbox.calidades p{
+			margin-left: -18px;
+		}		
+		section.descargas .descboxes .descbox.epub p{
+ 			margin-left: -15px;
+		}
+		section.descargas .descboxes .descbox.pdf p{
+ 			margin-left: -8px;
+		}
 
 
+
+
+/*SECTION INFO COMPLEMENTARIA*/
+section.infocomple .desple .bloque{
+	margin-left: 15px;
+	margin-bottom: 35px;
+}
+section.infocomple .desple .bloque p.titulo{
+	color: #848484;
+    font-family: raleway_bold;
+    font-size: 1.125em;
+    line-height: 30px;
+}
+	section.infocomple .desple .bloque p.titulo span{
+		color:red;
+	}
+	section.infocomple .desple .bloque p.info{
+		margin-left: 40px;		
+		color:#b2b1b1;
+		line-height: 30px;
+	}
+		section.infocomple .desple .bloque p.info span{
+			font-family: raleway_bold;
+			color: #848484;
+		}
 
 
 
