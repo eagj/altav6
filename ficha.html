@@ -282,9 +282,129 @@
 			<section class="propietario box_tipodesp">
 				<h3 class="tipopleg"><a href="">Propietario</a></h3>
 				<div class="desple">
+					<div class="propi">
+						<div class="texto">
+							<p class="propie">SAREB</p>
+							<p class="nifpropi">CIF: A86602158</p>
+						</div>
+						<div class="logopropi">
+							<img src="http://www.altamirainmuebles.com/images/propietario_sareb.png" alt="" />
+						</div>
+					</div>
 				</div>
-		</section>
+			</section>
+			<section class="campa_asoc box_tipodesp">
+				<h3 class="tipopleg"><a href="">Campa&ntilde;as asociadas</a></h3>
+				<div class="desple">
+					<div class="box_campa">
+						<div class="logo_campa">
+							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/20_es.jpg" alt="" />
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<p><a href="">Ver m&aacute;s inmuebles</a></p>
+						</div>
+					</div>
+					<div class="box_campa">
+						<div class="logo_campa">
+							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/39_es.jpg" alt="" />
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<p><a href="">Ver m&aacute;s inmuebles</a></p>
+						</div>
+						<div class="logo_campa">
+							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/42_es.jpg" alt="" />
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<p><a href="">Ver m&aacute;s inmuebles</a></p>
+						</div>											
+					</div>				
+				</div>
+			</section>
+			<section class="utils">
+				<div class="bloque">
+					<a href="#"><img src="/images/ficha/ico_print.png" alt="Imprimir ficha" /><p>Imprimir</p></a>					
+				</div>
+				<div class="bloque">
+					<a href="#"><img src="/images/ficha/ico_share.png" alt="Compartir ficha" /><p>Compartir</p></a>					
+				</div>
+				<div class="bloque">
+					<a href="#"><img src="/images/ficha/ico_volver.png" alt="Volver" /><p>Volver a<br />la promoci&oacute;n</p></a>					
+				</div>
+			</section>
+		</section>		
 	</div>
+	<section class="inmusimi">
+		<div class="contentgeneric">
+			<h3>Inmuebles similares</h3>
+			<div class="minificha">
+				<div class="fav active">
+					<a title="añadir o quitar favorito" href="">&nbsp;</a>
+				</div>
+				<div class="foto">
+					<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg"></a> 
+				</div>
+				<div class="info">
+					<h2>Puerta de San Fernado SCMV FASE I</h2>
+					<h3>desde <span>151.550&euro;</span></h3>
+					<div class="detalles">
+						<ul>
+							<li class="superf">63 <span>m<sup>2</sup></span></li>
+							<li class="hab">3 <span>hab.</span></li>
+							<li class="ban">2 <span>ba&ntilde;os</span></li>
+						</ul>					
+					</div>
+					<p class="enlace">
+						<a href="">Ver inmueble</a>
+					</p>
+				</div>			
+			</div>
+			
+			<div class="minificha">
+				<div class="fav">
+					<a href="">&nbsp;</a>
+				</div>
+				<div class="foto">
+					<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/inmuebles/fotos/grandes/97/53297_6.jpg"></a> 
+				</div>
+				<div class="info">
+					<h2>Piso en Madrid (Madrid)</h2>
+					<h3><span>87.900&euro;</span></h3>
+					<div class="descuento">
+						<p>Descuento <span>-15%</span></p>
+					</div>
+					<div class="detalles">
+						<ul>
+							<li class="superf">68 <span>m<sup>2</sup></span></li>
+							<li class="hab">3 <span>hab.</span></li>
+							<li class="ban">1 <span>ba&ntilde;os</span></li>
+						</ul>					
+					</div>
+					<p class="enlace">
+						<a href="">Ver inmueble</a>
+					</p>
+				</div>			
+			</div>
+			<div class="minificha">
+			<div class="fav">
+				<a href="">&nbsp;</a>
+			</div>
+			<div class="foto">
+				<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/30/14830_12.jpg"></a> 
+			</div>
+			<div class="info">
+				<h2>Promoci&oacute;n Mirador de Valdebebas</h2>
+				<h3>desde <span>151.550&euro;</span></h3>
+				<div class="detalles">
+					<ul>
+						<li class="superf">63 <span>m<sup>2</sup></span></li>
+						<li class="hab">3 <span>hab.</span></li>
+						<li class="ban">2 <span>ba&ntilde;os</span></li>
+					</ul>					
+				</div>
+				<p class="enlace">
+					<a href="">Ver inmueble</a>
+				</p>
+			</div>			
+		</div>
+		</div>
+	</section>	
 	<footer>
 		<div class="contentgeneric">
 			<div class="upfoot">			
@@ -346,16 +466,33 @@
 			mobile: false,
 		});
 		
-		$("#bgimage").vegas({
-			timer:false,
-			//delay:10000,
-			transition: 'none',
-			//transitionDuration:3000,
-		    slides: [
-				
-					{ src: "/images/bg-home.jpg"}
-		    ]
-		});		 
+//FUNCION PARA QUE SE CAMBIE EL FIXED DEL FORMULARIO AL LLEGAR ABAJO
+var windw = this;
+$.fn.followTo = function ( pos ) {
+    var $this = this,
+        $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'absolute',
+                zIndex:0,
+                top: pos
+                
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                zIndex:'2',
+                top: 220
+                
+            });
+        }
+    });
+};
+
+$('#contact_ficha').followTo(2500);
+
 	</script>
 </body>
 </html>

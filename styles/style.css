@@ -1670,7 +1670,7 @@ aside.minifichas .minificha .fav{
     position: fixed;
     top: 120px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     background-color: #fff;
 }
 	.header_ficha .superior{
@@ -2245,6 +2245,243 @@ section.infocomple .desple .bloque p.titulo{
 			color: #848484;
 		}
 
+
+/*SECTION PROPIETARIO*/
+section.propietario .propi{}
+	section.propietario .propi .texto{
+    	color: #848484;
+    	font-family: raleway_bold;
+    	margin-left: 55px;
+    	width: 45%;
+    	display:inline-block;
+	}
+		section.propietario .propi .texto p{
+			line-height: 30px;
+		}
+	section.propietario .propi .logopropi{
+		display:inline-block;
+	}
+
+
+/*SECTION CAMAPANAS ASOCIADAS*/
+	section.campa_asoc .box_campa .logo_campa{
+	 	float: left;
+    	margin-left: 8.33333%;
+    	width: 25%;
+    	margin-bottom: 20px;
+	}
+	section.campa_asoc .box_campa p{
+		color:#848484;
+		font-size: 0.750em;
+	}
+	section.campa_asoc .box_campa p a{
+	 	color: red;
+    	display: inline-block;
+	   	font-family: raleway_bold;
+    	font-size: 1.25em;
+    	margin-top: 15px;
+    	text-decoration: underline;
+    	width: 100%;
+	}
+
+
+/* SECTION UTILIDADES INFERIORES */
+section.utils{
+	float: left;
+	width:100%;
+}
+	section.utils .bloque{
+		float: left;
+    	margin-top: 30px;
+    	text-align: center;
+    	width: 33.3333%;
+	}
+		section.utils .bloque a{
+   			color: #545454;
+    		display: inline-block;
+    		vertical-align: middle;
+		}
+		section.utils .bloque a img{
+ 			margin-right: 20px;
+    		vertical-align: middle;
+		}
+		
+		section.utils .bloque a p{
+			display: inline-block;
+    		font-family: raleway_medium;
+    		font-size: 0.75em;
+    		text-align: left;
+    		vertical-align: middle;
+		}
+
+/*SECTION INMUEBLES SIMILARES*/
+section.inmusimi{
+  	background-color: #eeeeee;
+    float: left;
+    width: 100%;
+	padding: 40px 0;
+	margin-bottom:50px
+}
+	section.inmusimi h3{
+		color:#414141;
+		font-size: 1.313em;
+		font-family: raleway_medium;
+	}
+/*minificha*/
+section.inmusimi .minificha{	
+   	background-color: #fff;
+    border-bottom: 1px solid #c7c7c7;
+    float: left;
+    height: 350px;
+    margin-right: 1%;
+    margin-top: 20px;
+    padding: 5px 10px;
+    position: relative;
+    width: 32%;
+}
+
+
+section.inmusimi .minificha .fav{
+	font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: 207px;
+}	
+	section.inmusimi .minificha .fav a:before{
+		font-family: icomoon;
+		content:"\ecdf";
+		color:#d1d1d1;
+	}
+	section.inmusimi .minificha .fav.active a:before{
+		color:#dccf03;
+	}
+
+	section.inmusimi .minificha .foto{
+		display: inline-block;
+    	height: 200px;
+    	overflow: hidden;
+    	vertical-align: middle;
+    	width: 100%;
+	}
+		section.inmusimi .minificha .foto img{
+			max-width: 100%;
+		}
+	
+	section.inmusimi .minificha .info{
+	 	/* float: left; */
+	 	display:table-cell;
+	 	vertical-align: top;
+		padding-left: 3%;
+    	width: 63%;
+	}
+		section.inmusimi .minificha .info h2{
+			color: red;
+    		font-family: raleway;
+    		font-size: 1em;
+    		margin-bottom: 5px;
+    		margin-top: 5px;
+    		max-height: 36px;
+    		overflow: hidden;
+    		width: 89%
+		}
+		section.inmusimi .minificha .info h3{
+			font-size: 1em;
+		 	margin: 10px 0;
+		}
+			section.inmusimi .minificha .info h3 span{
+				font-family: raleway_bold;
+				font-size: 1.6em;
+			}
+		
+		section.inmusimi .minificha .info .descuento{
+			background-color: rgba(255, 255, 255, 0.8);
+    		border-bottom: 1px solid #7a8e0e;
+    		border-top: 1px solid #7a8e0e;
+    		color: #7a8e0e;
+    		left: 10px;
+    		margin-bottom: 10px;
+    		padding: 5px;
+    		position: absolute;
+    		text-align: center;
+    		top: 158px;
+    		width: 95%;
+    		z-index: 1;
+		}
+			section.inmusimi .minificha .info .descuento p{
+				display:inline-block;
+			}
+			section.inmusimi .minificha .info .descuento p::before {
+    			background: transparent url("/images/ico_descuento.png") no-repeat scroll center center;
+				content: "\00a0";
+    			display: inline-block;
+    			height: 35px;
+    			margin-right: 10px;
+    			vertical-align: middle;
+    			width: 35px;
+			}
+				asection.inmusimi .minificha .info .descuento p span{
+					font-family: raleway_bold;
+				}
+		
+		section.inmusimi .minificha .info .detales{
+			display: block;
+    		margin: 10px 0;
+		}
+			section.inmusimi .minificha .info .detalles{
+				font-size: 0.9em;
+			}
+				section.inmusimi .minificha .info .detalles li{
+					display:inline-block;
+					margin-right: -3px;
+					width: 30%
+				}
+				section.inmusimi .minificha .info .detalles li:nth-child(1){
+					width:40%
+				}
+					section.inmusimi .minificha .info .detalles li span{
+						font-family: raleway_bold;
+						font-size: 0.8em;
+					}
+					
+				/*ICOS DETALLES*/
+				section.inmusimi .minificha .info .detalles li.superf::before{
+				 	content:"\00a0";
+				 	background: transparent url("/images/ico_m2_peq.png") no-repeat scroll center center;    
+    				display: inline-block;
+    				height: 31px;
+    				margin-right: 5px;
+    				vertical-align: middle;
+					width: 17px;					 
+				}
+				section.inmusimi .info .detalles li.hab::before{
+					content:"\00a0";
+					background: transparent url("/images/ico_habitaciones_peq.png") no-repeat scroll center center;    
+    				display: inline-block;
+    				height: 21px;
+    				margin-right: 5px;
+    				vertical-align: middle;
+    				width: 19px;
+				}
+				section.inmusimi .minificha .info .detalles li.ban::before{
+					content:"\00a0";
+					 background: transparent url("/images/ico_banos_peq.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 23px;
+    				margin-right: 5px;
+    				vertical-align: middle;
+    				width: 19px;	
+				}
+			
+	section.inmusimi .minificha .info p.enlace{
+ 		bottom: 0;
+    	margin: 10px 0;
+    	position: absolute;		
+	}
+		section.inmusimi .minificha .info p.enlace a{
+			color: red;
+    		font-size: 0.9em;
+    		text-decoration: underline;
+		}
 
 
 
