@@ -502,7 +502,8 @@ $.fn.followTo = function ( pos ) {
   $window = $(windw);
     
     $window.scroll(function(e){
-        if ($window.scrollTop() > 100) {
+        if ($window.scrollTop() > 10) {
+        	$('#logonav').hide();      	
             $this.css({
                 position: 'fixed',
                 zIndex:3,
@@ -510,11 +511,11 @@ $.fn.followTo = function ( pos ) {
                 
             });
         } else {
+        	$('#logonav').show();
             $this.css({
                 position: 'absolute',
                 zIndex:'0',
-                top: 120
-                
+                top: 120                
             });
         }
     });
