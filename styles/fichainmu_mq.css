@@ -1,0 +1,28 @@
+@media (max-width: 1134px){
+	.header_ficha .utils{
+		width:33%;
+	}
+	.header_ficha .utils li{
+		text-align: center;
+	}
+	.header_ficha .utils li span{
+		display:inline-block;
+		width:100%;
+		margin-top: 10px;
+	}	
+
+	.header_ficha .utils li a::before{
+		position:relative !important;
+	}
+}
+@media (max-width: 1024px){
+	#ficha_inmu header#logonav{
+		top: 50px;
+	}
+	.header_ficha{
+		top:120px;
+	}
+	.header_ficha .utils {
+    	width: 35%;
+	}
+}

@@ -1661,7 +1661,7 @@ aside.minifichas .minificha .fav{
     position: fixed;
     top: 50px;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 .header_ficha{		
 	display: table;
@@ -1839,8 +1839,9 @@ aside.minifichas .minificha .fav{
 		
 /*FORMULARIO CONTACTAR*/
 aside#contact_ficha{
-  	position: fixed;
-    top: 220px;
+  	position: absolute;
+    /* top: 220px; */
+   top:290px;
     width: 100%;
     z-index: 1;
 }
@@ -1977,10 +1978,10 @@ aside#contact_ficha{
 
 section.ficha{
 	float: left;
-	/*margin-left: 10px;*/
+	margin-left: 1%;
 	margin-top: 290px;
 	margin-bottom: 40px;
-	width: 58.66%;
+	width: 57.66%;
 }
 	
 
@@ -2032,6 +2033,156 @@ section.ficha .foto .next {
 	    font-size: 3em;
 	    vertical-align: middle;    
 	}
+
+/*SECTION CARACTERISTICAS*/
+section.caract{
+	 margin: 40px 0;
+}
+	section.caract .detalles{
+		 display: inline-block;
+    	vertical-align: top;
+    	width: 80%;
+	}
+		section.caract .detalles ul{}
+			section.caract .detalles ul li{
+				color: #414141;
+    			display: inline-block;
+    			font-size: 0.8em;
+    			margin-right: 20px;
+    			margin-bottom: 20px;
+    			width: 115px;
+			}
+				section.caract .detalles ul li span{
+					font-family: raleway_bold;
+				}
+			
+			/*ICOS DETALLES*/
+				section.caract .detalles ul li.superf::before{
+				 	content:"\00a0";
+				 	background: transparent url("/images/ico_m2.png") no-repeat scroll center center;    
+    				display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+					width: 31px;					 
+				}
+				section.caract .detalles ul li.hab::before{
+					content:"\00a0";
+					background: transparent url("/images/ico_habitaciones.png") no-repeat scroll center center;    
+    				display: inline-block;
+    				height: 21px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 35px;
+				}
+				section.caract .detalles ul li.ban::before{
+					content:"\00a0";
+					 background: transparent url("/images/ico_banos.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 23px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 35px;	
+				}
+				section.caract .detalles ul li.garaje::before{
+					content:"\00a0";
+					 background: transparent url("/images/ficha/ico_garaje.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 31px;	
+				}
+				section.caract .detalles ul li.garajeopc::before{
+					content:"\00a0";
+					 background: transparent url("/images/ficha/ico_garajeopc.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 31px;	
+				}
+				section.caract .detalles ul li.piscina::before{
+					content:"\00a0";
+					 background: transparent url("/images/ficha/ico_piscina.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 31px;	
+				}
+				section.caract .detalles ul li.airac::before{
+					content:"\00a0";
+					 background: transparent url("/images/ficha/ico_ac.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 20px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 35px;	
+				}
+				section.caract .detalles ul li.ascensor::before{
+					content:"\00a0";
+					background: transparent url("/images/ficha/ico_ascensor.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 21px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 35px;	
+				}
+				section.caract .detalles ul li.calefaccion::before{
+					content:"\00a0";
+					background: transparent url("/images/ficha/ico_calef.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 31px;	
+				}
+				section.caract .detalles ul li.terraza::before{
+					content:"\00a0";
+					 background: transparent url("/images/ficha/ico_terraza.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 31px;	
+				}
+				section.caract .detalles ul li.trastero::before{
+					content:"\00a0";
+					 background: transparent url("/images/ficha/ico_trastero.png") no-repeat scroll center center;    
+					display: inline-block;
+    				height: 31px;
+    				margin-right: 10px;
+    				vertical-align: middle;
+    				width: 31px;	
+				}
+				
+				
+				
+			
+section.caract .video{
+	display:inline-block;
+}
+	section.caract .video a{
+ 		 border: 1px solid #6c6c6c;
+    	border-radius: 6px;
+    	color: red;
+    	font-family: raleway_bold;
+    	font-size: 0.875em;
+    	padding: 10px 20px 10px 40px;
+    	position: relative;
+    	vertical-align: middle;
+	}
+	section.caract .video a::before {
+    	background: transparent url("/images/ficha/ico_vervideo.png") no-repeat scroll 0 0;
+    	content: "\00a0";
+	  	height: 23px;
+		left: 10px;
+    	position: absolute;
+    	top: 6px;
+    	vertical-align: middle;
+    	width: 23px;
+}
 
 
 /*SECTION DESCRIPCION*/
@@ -2327,7 +2478,59 @@ section.inmusimi{
 		font-size: 1.313em;
 		font-family: raleway_medium;
 	}
+section.inmusimi .bloqueminifichas{
+	display: table;
+}
+section.inmusimi .back {
+	height: 100%;
+    position: absolute;    
+}
+	section.inmusimi .back a{
+		display: table;
+	    height: 100%;
+	    width: 100%;
+	}
+	section.inmusimi .back a::before{
+		font-family: icomoon;
+		content: "\edc2";
+		color:#cdcdcd;
+	  	display: table-cell;    
+	    font-size: 3em;
+	    vertical-align: middle;    
+	}
+		section.inmusimi .back a:hover::before{
+			color:#333;
+		}
+
+section.inmusimi .next {
+	 height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+	section.inmusimi .next a{
+		display: table;
+	    height: 100%;
+	    width: 100%;
+	}
+	section.inmusimi .next a::before{
+		font-family: icomoon;
+		content: "\edba";
+		color:#cdcdcd;
+	  	display: table-cell;    
+	    font-size: 3em;
+	    vertical-align: middle;    
+	}
+		section.inmusimi .next a:hover::before{
+			color:#333;
+		}
+	
+	
 /*minificha*/
+section.inmusimi .bloqueminifichas .minifichas{
+	margin-left: 4%;
+    width: 94%;
+}
 section.inmusimi .minificha{	
    	background-color: #fff;
     border-bottom: 1px solid #c7c7c7;
@@ -2382,7 +2585,7 @@ section.inmusimi .minificha .fav{
     		margin-top: 5px;
     		max-height: 36px;
     		overflow: hidden;
-    		width: 89%
+    		width: 89%;
 		}
 		section.inmusimi .minificha .info h3{
 			font-size: 1em;
@@ -2471,6 +2674,7 @@ section.inmusimi .minificha .fav{
     				vertical-align: middle;
     				width: 19px;	
 				}
+				
 			
 	section.inmusimi .minificha .info p.enlace{
  		bottom: 0;
