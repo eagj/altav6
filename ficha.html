@@ -133,7 +133,11 @@
 					<h1>General Romero Basart, N&ordm;123</h1>
 					<h2>Madrid (<span>Madrid</span>)</h2>
 				</hgroup>
-				<p class="precio">81.800&euro;</p>
+				<div class="precios">
+					<p class="antes">antes <span>250.000&euro;</span></p>
+					<p class="descuen">20% de Descuento</p>
+					<p class="precio">81.800&euro;</p>
+				</div>
 			</div>
 			<div class="utils">
 				<ul>
@@ -502,27 +506,40 @@ $.fn.followTo = function ( pos ) {
   $window = $(windw);
     
     $window.scroll(function(e){
-        if ($window.scrollTop() > 10) {
-        	$('#logonav').hide();      	
+        if ($window.scrollTop() > 100) {
+        	$('#logonav').hide();
+        	$('.inferior').hide();      	
             $this.css({
                 position: 'fixed',
                 zIndex:3,
+                boxShadow :'1px 1px 6px #ccc',
                 top: pos
                 
             });
         } else {
         	$('#logonav').show();
+        	$('.inferior').show();
             $this.css({
                 position: 'absolute',
-                zIndex:'0',
+                zIndex:'1',
+             	boxShadow :'0px 0px 0px #fff',
                 top: 120                
             });
-        }
+        }        
     });
 };
-
-$('.header_ficha').followTo(50);
-
+//MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
+var mediaquery = window.matchMedia("(min-width: 1024px)"),
+	content = document.querySelector("body");
+    function handleOrientationChange(mediaquery) {
+      if (mediaquery.matches) {
+        $('.header_ficha').followTo(50);
+      } else {
+       $('.header_ficha').followTo(33);
+      }
+    }
+    handleOrientationChange(mediaquery);
+    mediaquery.addListener(handleOrientationChange);
 </script>
 
 </body>

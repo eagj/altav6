@@ -1,9 +1,13 @@
 @media (max-width: 1134px){
-	.header_ficha .utils{
-		width:33%;
+	aside#contact_ficha{
+	}
+	.header_ficha .utils {
+    	width: 35%;
+    	padding-top: 5px;
 	}
 	.header_ficha .utils li{
 		text-align: center;
+	    margin-top: 10px;
 	}
 	.header_ficha .utils li span{
 		display:inline-block;
@@ -14,15 +18,51 @@
 	.header_ficha .utils li a::before{
 		position:relative !important;
 	}
+	section.caract .detalles{
+		width:78%;
+	}
 }
-@media (max-width: 1024px){
+/* iPads (portrait and landscape) */
+@media (max-width: 1024px){	
+	
+	html{
+		font-size: 15px;
+	}
+	section#buscador .cajabuscador .tipo select{
+		margin-top: 0;
+	}
+	section#buscador .cajabuscador .send::before{
+		left: 11%;
+	}	
+}
+
+/* tablets menos de 1024 */
+@media (max-width: 1023px){	
+	
+	html{
+		font-size: 12px;
+	}
 	#ficha_inmu header#logonav{
-		top: 50px;
+		top: 33px;
 	}
 	.header_ficha{
 		top:120px;
+	}	
+	section.ficha{
+		width: 58.66%;
 	}
-	.header_ficha .utils {
-    	width: 35%;
+	section.ubicacion .servicio_mapa .servicios_menu li a{
+		font-size: 0.8em;
+	}
+	section.caract .detalles ul li{
+		font-size: 0.7em;
+	}
+	
+}
+
+/* mobile menos de 1023 */
+@media (max-width: 1022px){
+	html{
+		font-size: 14px;
 	}
 }

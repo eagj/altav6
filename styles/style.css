@@ -1653,7 +1653,7 @@ aside.minifichas .minificha .fav{
 #ficha_inmu header#general{
 	position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
 }
 
 #ficha_inmu header#logonav {
@@ -1665,7 +1665,7 @@ aside.minifichas .minificha .fav{
 }
 .header_ficha{		
 	display: table;
-	padding:10px 0;
+	/* padding:10px 0; */
     margin-bottom: 35px;
     position: fixed;
     top: 120px;
@@ -1674,12 +1674,15 @@ aside.minifichas .minificha .fav{
     background-color: #fff;
 }
 	.header_ficha .superior{
-		display:inline-block;
+		display: table;
 		width:58%;
 		padding:18px 0;
+		height: 109px;
+		 margin-left: 1%;
+		
 	}	
 		.header_ficha hgroup{
-			display: inline-block;
+			display: table-cell;
     		vertical-align: middle;
     		width: 73%;
 		}
@@ -1698,22 +1701,51 @@ aside.minifichas .minificha .fav{
 					font-family: raleway_bold;
 				}
 		
+		.header_ficha .precios{
+			display:table-cell;
+			width: 25%;
+			vertical-align: middle;
+		}
+		.header_ficha p.antes{
+		 	color: #848484;
+    		display: inline-block;
+    		font-size: .9em;
+    		text-align: right;
+    		vertical-align: middle;
+    		width: 100%;
+			font-family: Raleway;
+		}
+			.header_ficha p.antes span{
+				text-decoration: line-through;
+			}
+		.header_ficha p.descuen{
+		 	color: #9a9b23;
+    		display: inline-block;
+    		font-size: .9em;
+    		text-align: right;
+    		vertical-align: middle;
+    		width:100%;
+			font-family: Raleway_medium;
+		}
 		.header_ficha p.precio{
 		 	color: red;
     		display: inline-block;
     		font-size: 1.875em;
     		text-align: right;
     		vertical-align: middle;
-    		width: 25%;
+    		width: 100%;
 			font-family: Raleway_medium;
 		}
 
 .header_ficha .inferior{
+	background-color: #fff;
 	border-top: 1px solid #ccc;
     display: inline-block;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     padding-top: 16px;
+ 	padding-bottom: 10px;
     width: 58%;
+    margin-left: 1%;
 }
 	.header_ficha .inferior ul{
 		float:left;
@@ -1729,6 +1761,7 @@ aside.minifichas .minificha .fav{
 	
 	.header_ficha .inferior .cuota{
 		float: right;
+		padding-bottom: 10px;
 	}
 		.header_ficha .inferior .cuota p.cuota_text{
 			color:#8e8d8d;
@@ -1774,11 +1807,15 @@ aside.minifichas .minificha .fav{
 	
 		
 .header_ficha .utils{
-	display: inline-block;
-	float: right;	
+	/* display: inline-block;
+	float: right;*/	
+	position: absolute;
 	text-align: center;
-	width: 31%;
-	padding: 18px 0;
+	width: 32%;	
+	padding: 35px 0 0;    
+    right: 0;    
+    top: 0;
+    
 }
 	.header_ficha .utils li{
 	 	display: inline-block;
@@ -1841,15 +1878,15 @@ aside.minifichas .minificha .fav{
 aside#contact_ficha{
   	position: absolute;
     /* top: 220px; */
-   top:290px;
+   	top:230px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 #ficha_inmu .contact_form{
  	position: absolute;
     right: 15px;
     width: 30%;
-    z-index: 1;
+   
  }
 
 #ficha_inmu .contact_form .cerrar{
