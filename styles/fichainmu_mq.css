@@ -5,6 +5,9 @@
     	width: 35%;
     	padding-top: 5px;
 	}
+	.header_ficha.stick .utils{
+		 padding-top: 0;
+	}
 	.header_ficha .utils li{
 		text-align: center;
 	    margin-top: 10px;
@@ -22,7 +25,7 @@
 		width:78%;
 	}
 }
-/* iPads (portrait and landscape) */
+/* iPads (portrait) */
 @media (max-width: 1024px){	
 	
 	html{
@@ -46,7 +49,7 @@
 		top: 33px;
 	}
 	.header_ficha{
-		top:120px;
+		top:65px;
 	}	
 	section.ficha{
 		width: 58.66%;
@@ -60,7 +63,105 @@
 	
 }
 
-/* mobile menos de 1023 */
+/* IPAD VERTICAL */
+@media (max-width: 940px){	
+	aside#contact_ficha{
+		display:none;
+	}
+	.header_ficha .superior{
+		width:98%;
+		margin-top: 60px;
+	}
+	.header_ficha .inferior{
+		width:98%;
+	}
+	.header_ficha .utils{
+		top: -40px;
+		background-color: #f3f3f3;
+		width:100%;
+	}
+		.header_ficha .utils li {
+	    	display: inline-block;
+	    	font-size: 0.75em;
+	    	margin-right: -3px;
+	    	padding-left: 40px;
+	    	position: relative;
+	    	text-align: center;
+	    	width: 33.3333%;
+		}
+		.header_ficha .utils li span{
+	    	display: inline-block;
+    		width: auto;
+    		margin-top: 3px;
+    		padding-bottom: 10px
+		}
+			.header_ficha .utils li a::before{
+				position:absolute !important;
+				left:inherit;
+			}
+			.header_ficha .utils li#utils_inmusim a::before, .header_ficha .utils li#utils_alert a::before, .header_ficha .utils li#utils_fav a::before {
+				left:inherit;
+				margin-left: -40px;
+			}
+	section.ficha{
+		width:98%;
+	}
+	section.caract .detalles{		
+    	width: 81%;
+    	margin-left: 2%;
+	}
+	
+	.contactar_responsive{
+	 	background-color: red;
+    	display: block;
+    	position: fixed;
+    	text-align: center;
+    	top: calc(100% - 50px);
+    	vertical-align: middle;
+    	width: 100%;
+    	z-index: 10;
+	}
+		.contactar_responsive a{
+			float: left;
+    		padding: 10px 0;
+    		text-align: center;
+    		width: 100%;
+		}
+		.contactar_responsive .ico{
+			display: inline-block;
+    		vertical-align: middle;
+		}
+		.contactar_responsive p{
+			color: #fff;
+    		display: inline-block;
+    		font-family: raleway_bold;
+    		font-size: 1.5em;
+    		margin-left: 15px;
+    		text-transform: uppercase;
+    		vertical-align: middle;
+		}
+		section.inmusimi .bloqueminifichas .minifichas .minificha{
+			width:48%;
+		}
+		section.inmusimi .bloqueminifichas .minifichas .minificha:nth-child(3) {
+    		display: none;
+		}
+	#ficha_inmu footer{
+		padding-bottom: 50px;
+	}
+	/*STICK*/	
+	.header_ficha.stick{
+		top: 8px;
+	}
+		.header_ficha.stick .utils{
+			    top: -50px;
+		}
+		.header_ficha.stick .superior{
+			margin-top: 70px;
+		}
+	
+}
+
 @media (max-width: 1022px){
 	html{
 		font-size: 14px;

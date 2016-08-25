@@ -148,8 +148,10 @@
 			</div>
 			<div class="inferior">
 				<ul>
-					<li>80 <span>m<sup>2</sup></span></li>
+					<li>63 <span>m<sup>2</sup></span></li>
 					<li>3 <span>hab.</span></li>
+					<li>2 <span>ba&ntilde;os</span></li>
+					<li><span>Garaje</span></li>
 				</ul>
 				<div class="cuota">
 					<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
@@ -492,6 +494,14 @@
 			</div>
 		</div>
 	</footer>
+	<div class="contactar_responsive">
+		<a href="#">
+			<div class="ico">
+				<img alt="Contactar" src="/images/ico_sobre_contact.png">
+			</div>
+			<p>&iexcl;Cont&aacute;ctanos!</p>
+		</a>
+	</div>
 </div>
 <script src="/include/jquery/vegas/vegas.js"></script>
 <script>
@@ -506,25 +516,15 @@ $.fn.followTo = function ( pos ) {
   $window = $(windw);
     
     $window.scroll(function(e){
-        if ($window.scrollTop() > 100) {
-        	$('#logonav').hide();
-        	$('.inferior').hide();      	
-            $this.css({
-                position: 'fixed',
-                zIndex:3,
-                boxShadow :'1px 1px 6px #ccc',
-                top: pos
-                
-            });
+        if ($window.scrollTop() > 30) {
+        	$("#logonav").addClass("hide");
+        	$(".header_ficha").addClass("stick");
+        	$("#contact_ficha").addClass("stick");
+        	
         } else {
-        	$('#logonav').show();
-        	$('.inferior').show();
-            $this.css({
-                position: 'absolute',
-                zIndex:'1',
-             	boxShadow :'0px 0px 0px #fff',
-                top: 120                
-            });
+        	$( "#logonav" ).removeClass("hide");
+        	$(".header_ficha").removeClass("stick");
+        	$("#contact_ficha").removeClass("stick");
         }        
     });
 };
@@ -533,13 +533,16 @@ var mediaquery = window.matchMedia("(min-width: 1024px)"),
 	content = document.querySelector("body");
     function handleOrientationChange(mediaquery) {
       if (mediaquery.matches) {
-        $('.header_ficha').followTo(50);
+        $('').followTo(50);
       } else {
-       $('.header_ficha').followTo(33);
+       $('').followTo(33);
       }
-    }
-    handleOrientationChange(mediaquery);
-    mediaquery.addListener(handleOrientationChange);
+     }
+handleOrientationChange(mediaquery);
+mediaquery.addListener(handleOrientationChange);
+
+
+   
 </script>
 
 </body>

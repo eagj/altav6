@@ -1663,6 +1663,7 @@ aside.minifichas .minificha .fav{
     width: 100%;
     z-index: 3;
 }
+
 .header_ficha{		
 	display: table;
 	/* padding:10px 0; */
@@ -1750,6 +1751,7 @@ aside.minifichas .minificha .fav{
 	.header_ficha .inferior ul{
 		float:left;
 		margin-top: 7px;
+		width: 60%;
 	}
 	.header_ficha .inferior li{
 		display: inline-block;
@@ -1876,7 +1878,7 @@ aside.minifichas .minificha .fav{
 		
 /*FORMULARIO CONTACTAR*/
 aside#contact_ficha{
-  	position: absolute;
+  	position: fixed;
     /* top: 220px; */
    	top:230px;
     width: 100%;
@@ -2725,7 +2727,40 @@ section.inmusimi .minificha .fav{
 		}
 
 
+.contactar_responsive{
+	display:none;
+}
 
+
+/*STICK & HIDE*/
+#ficha_inmu header#logonav.hide{
+	display:none;
+}
+.header_ficha.stick .superior{
+  	height: auto;
+    padding: 0
+}
+.header_ficha.stick .inferior{
+	border: medium none;
+    padding-top: 0;	
+}
+.header_ficha.stick .inferior .cuota{
+	display:none;
+}
+.header_ficha.stick .utils{
+	padding-top:20px
+}
+
+.header_ficha.stick{
+	top:50px;
+	z-index:3;
+	box-shadow:-1px 1px 6px #ccc;
+}
+
+#contact_ficha.stick{
+	position:fixed;
+	top: 175px;
+}
 /* FOOTER PAGINA BUSCADOR */
 
 footer.footbusc {
