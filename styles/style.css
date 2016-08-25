@@ -2510,7 +2510,9 @@ section.inmusimi{
     float: left;
     width: 100%;
 	padding: 40px 0;
-	margin-bottom:50px
+	margin-bottom:50px;
+	position:relative;
+	z-index: 2;
 }
 	section.inmusimi h3{
 		color:#414141;

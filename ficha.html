@@ -542,6 +542,20 @@ handleOrientationChange(mediaquery);
 mediaquery.addListener(handleOrientationChange);
 
 
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+});
+	
    
 </script>
 
