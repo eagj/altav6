@@ -58,6 +58,15 @@
 		$("li").removeClass("select");
 		$(elclass).addClass("select");
 	}
+	
+	function showformficha(){
+		$(".lightcontact").show();
+		$("#contact_ficha").show();				
+	}
+	function hideformficha(){
+		$(".lightcontact").hide();
+		$("#contact_ficha").hide();				
+	}	
 </script>
 </head>
 <body>
@@ -156,7 +165,7 @@
 				<div class="cuota">
 					<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
 					<div class="simulador">
-						<p><a href="#">Simulador<br /> de cuotas</a></p>
+						<p><a href="#"><span>Simulador<br /> de cuotas</span></a></p>
 					</div>
 				</div>
 			</div>
@@ -167,7 +176,7 @@
 		<div class="contentgeneric">
 			<div class="contact_form" id="contacto">
 				<div class="cerrar">
-					<a href="#" onclick="hideform();return false">&nbsp;</a>
+					<a href="#" onclick="hideformficha();return false">&nbsp;</a>
 				</div>
 				<div class="titulo">
 					<div class="ico"><img src="/images/ico_sobre_contact.png" alt="Contactar" /></div>
@@ -219,8 +228,13 @@
 						<li class="trastero"><span>Trastero</span></li>
 					</ul>					
 				</div>
-				<div class="video">
-					<a href="#">Ver video</a>
+				<div class="botones">
+					<div class="vermapa">
+						<a href="#">Ubicaci&oacute;n</a>
+					</div>
+					<div class="video">
+						<a href="#">Ver video</a>
+					</div>
 				</div>
 			</section>
 			<section class="descripcion">
@@ -335,12 +349,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 							<p><a href="">Ver m&aacute;s inmuebles</a></p>
 						</div>
-						<div class="logo_campa">
-							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/42_es.jpg" alt="" />
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-							<p><a href="">Ver m&aacute;s inmuebles</a></p>
-						</div>											
-					</div>				
+					</div>							
 				</div>
 			</section>
 			<section class="utils">
@@ -495,13 +504,14 @@
 		</div>
 	</footer>
 	<div class="contactar_responsive">
-		<a href="#">
+		<a href="#" onclick="showformficha();return false">
 			<div class="ico">
 				<img alt="Contactar" src="/images/ico_sobre_contact.png">
 			</div>
 			<p>&iexcl;Cont&aacute;ctanos!</p>
 		</a>
 	</div>
+	<div class="lightcontact"></div>
 </div>
 <script src="/include/jquery/vegas/vegas.js"></script>
 <script>
@@ -529,7 +539,7 @@ $.fn.followTo = function ( pos ) {
     });
 };
 //MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
-var mediaquery = window.matchMedia("(min-width: 1024px)"),
+var mediaquery = window.matchMedia("(min-width: 7px)"),
 	content = document.querySelector("body");
     function handleOrientationChange(mediaquery) {
       if (mediaquery.matches) {

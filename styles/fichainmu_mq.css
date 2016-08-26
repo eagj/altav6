@@ -92,8 +92,8 @@
 		.header_ficha .utils li span{
 	    	display: inline-block;
     		width: auto;
-    		margin-top: 3px;
-    		padding-bottom: 10px
+    		margin-top: 0px;
+    		padding-bottom: 14px;
 		}
 			.header_ficha .utils li a::before{
 				position:absolute !important;
@@ -102,6 +102,7 @@
 			.header_ficha .utils li#utils_inmusim a::before, .header_ficha .utils li#utils_alert a::before, .header_ficha .utils li#utils_fav a::before {
 				left:inherit;
 				margin-left: -40px;
+			    top: -3px;
 			}
 	section.ficha{
 		width:98%;
@@ -149,12 +150,26 @@
 	#ficha_inmu footer{
 		padding-bottom: 50px;
 	}
+	aside#contact_ficha {
+    	display: none;
+    	z-index: 11;
+    	width: 90%;
+    	left: 9%;
+    	position: fixed;
+    	top: 10% !important;
+	}
+	aside#contact_ficha .contact_form{
+		width:100%;
+	}
+		#ficha_inmu .contact_form .cerrar{
+			display:inline-block;
+		}
 	/*STICK*/	
 	.header_ficha.stick{
 		top: 8px;
 	}
 		.header_ficha.stick .utils{
-			    top: -50px;
+			    top: -46px;
 		}
 		.header_ficha.stick .superior{
 			margin-top: 70px;
@@ -162,8 +177,191 @@
 	
 }
 
-@media (max-width: 1022px){
-	html{
-		font-size: 14px;
+/* MQ para 465 de maximo */
+@media (max-width: 465px){
+	.header_ficha .superior{
+		margin-top: 10px;
 	}
+	.header_ficha hgroup{
+		display:inline-block;
+		width:100%;
+	}
+		.header_ficha hgroup h1{
+			width: 80%;
+		}
+	.header_ficha .precios{
+		border-top: 1px solid #ccc;
+    	display: inline-block;
+    	width: 100%;
+    	margin-top: 10px;
+    	padding-top: 5px;
+	}
+	.header_ficha p{
+		text-align:left !important;
+	}
+	.header_ficha .precios p.antes, .header_ficha .precios p.descuen{
+		font-size: 1em;
+	}
+	.header_ficha .inferior {
+    	width: 98%;
+    	position: absolute;
+    	top: 53px;
+    	border: none;
+    	background-color: transparent;
+	}
+		.header_ficha .inferior ul{
+			display:none;
+		}	
+		.header_ficha .inferior .cuota p.cuota_text{
+			font-size: 1em;
+		}
+	
+	.header_ficha .utils{
+		background: transparent;
+		top:0;
+	}
+	.header_ficha .utils li#utils_inmusim, .header_ficha .utils li#utils_alert{
+		display:none;
+	}
+	.header_ficha .utils li#utils_fav{
+    	position: absolute;
+    	right: 10px;
+	    text-align: right;
+	}
+    
+		.header_ficha .utils li span{
+			display:none;
+		}
+		
+	.header_ficha .inferior .simulador{
+		background-color: transparent;
+	}
+	.header_ficha .inferior .simulador p a {
+		padding:0;
+	}
+	.header_ficha .inferior .simulador a::before{
+		background:transparent url("/images/ficha/ico_cuota_mobile.png") no-repeat scroll center top;
+	    display: inline-block;
+    	position: relative;
+    	left: -5px;
+	}
+		.header_ficha .inferior .simulador a span{
+			display:none;
+		}
+		
+	/*STICK*/
+	.header_ficha.stick .superior{
+		margin-top: 30px;
+	}
+	.header_ficha.stick .utils{
+		margin-top: 38px;
+	}
+		
+		section.ficha{
+			margin-top: 220px;
+		}
+		
+		
+		
+		
+	section.caract{
+    	margin: 20px 0;
+	}
+		section.caract .detalles{
+	    	width: 99%;
+    		margin-left: 2%;
+		}
+			section.caract .detalles ul {
+    			padding: 0 6%;
+			}
+				section.caract .detalles ul li{
+					margin-right: 0;
+				}
+				
+	section.caract .botones{
+		width:100%;
+		text-align: center;
+		margin:10px 0;
+	}
+		section.caract .botones .vermapa{
+			display:inline-block;
+		    margin-right: 6%;
+		}			
+	
+	#ficha_inmu .box_tipodesp{
+		margin-top: 20px;
+	}
+				
+	section.ubicacion{
+		display:none;
+	}
+	section.descripcion{
+		margin-bottom: 0;
+	}
+	section.certificado .certificadobox{
+		margin-left: 15px;
+	}
+	section.certificado .certificadobox  img{
+    	margin-right: 10px;
+	}
+	section.certificado .certificadobox p{
+    	font-size: 1em;
+    	width: 255px;
+	}
+	
+	section.descargas .descboxes .descbox{
+		width:50%;
+		margin-bottom: 20px;
+	}
+	
+	section.propietario .propi .texto{
+		margin-left: 15px;
+	}
+	section.propietario .propi .logopropi {
+    	display: inline-block;
+    	width: 50%;
+    	text-align: center;
+	}
+		section.propietario .propi .logopropi img{
+			width:100%;
+		}
+		
+	section.campa_asoc .box_campa{
+		text-align: center;
+	}
+	
+	section.inmusimi h3{
+		text-indent: 15px;
+	}
+	section.inmusimi .bloqueminifichas .minifichas .minificha {
+    	width: 89%;
+    	margin-left: 4%;
+    }
+	section.inmusimi .bloqueminifichas .minifichas .minificha:nth-child(2) {
+    	display: none;
+	}
+	
+}
+
+
+/* mobile 320px y menos*/
+@media (max-width: 320px){
+	html{
+		font-size: 11px;
+	}
+	header#logonav .logohead{
+		width:40%;
+	}
+		header#logonav .logohead img{
+			width:100%;
+		}
+	
+	.contact_responsive{
+		left:62%;
+	}
+		
+	header nav#responsive p{
+		padding-top: 20px;
+	}
+	
 }

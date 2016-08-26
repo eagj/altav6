@@ -2199,6 +2199,34 @@ section.caract{
 				
 				
 			
+section.caract .botones{
+	display:inline-block;
+}
+section.caract .vermapa{
+	display:none;
+}
+	section.caract .vermapa a{
+		background-color: red;
+    	border: 1px solid red;
+    	border-radius: 6px;
+    	color: #fff;
+    	font-family: raleway_bold;
+    	font-size: 0.875em;
+    	padding: 10px 20px 10px 40px;
+    	position: relative;
+    	vertical-align: middle;
+	}
+	section.caract .vermapa a::before {
+    	background: transparent url("/images/ficha/ico_vermapa.png") no-repeat scroll 0 0;
+    	content: "\00a0";
+	  	height: 23px;
+		left: 10px;
+    	position: absolute;
+    	top: 6px;
+    	vertical-align: middle;
+    	width: 23px;
+}
+	
 section.caract .video{
 	display:inline-block;
 }
@@ -2454,10 +2482,10 @@ section.propietario .propi{}
 
 
 /*SECTION CAMAPANAS ASOCIADAS*/
-	section.campa_asoc .box_campa .logo_campa{
+	section.campa_asoc .box_campa{
 	 	float: left;
     	margin-left: 8.33333%;
-    	width: 25%;
+    	width: 40%;
     	margin-bottom: 20px;
 	}
 	section.campa_asoc .box_campa p{
@@ -2762,6 +2790,18 @@ section.inmusimi .minificha .fav{
 #contact_ficha.stick{
 	position:fixed;
 	top: 175px;
+}
+
+
+
+.lightcontact{
+	display:none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 10;
 }
 /* FOOTER PAGINA BUSCADOR */
 
