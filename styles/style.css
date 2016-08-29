@@ -1756,7 +1756,7 @@ aside.minifichas .minificha .fav{
 	.header_ficha .inferior ul{
 		float:left;
 		margin-top: 7px;
-		width: 60%;
+		width: 50%;
 	}
 	.header_ficha .inferior li{
 		display: inline-block;
@@ -2042,7 +2042,9 @@ section.ficha .foto{
 
 section.ficha .foto .back {
 	height: 100%;
-    position: absolute;    
+    left: 1px;
+    position: absolute;
+    width: 60px;
 }
 	section.ficha .foto .back a{
 		display: table;
@@ -2055,14 +2057,18 @@ section.ficha .foto .back {
 		color:#fff;
 	  	display: table-cell;    
 	    font-size: 3em;
-	    vertical-align: middle;    
+	    vertical-align: middle;
+	    text-align: center;
+	    padding-left: 0.3em;    
 	}
 
 section.ficha .foto .next {
-	 height: 100%;
+	height: 100%;
     position: absolute;
-    right: 0;
+    right: 4px;
+    text-align: center;
     top: 0;
+    width: 60px;
 }
 	section.ficha .foto .next a{
 		display: table;
@@ -2075,7 +2081,8 @@ section.ficha .foto .next {
 		color:#fff;
 	  	display: table-cell;    
 	    font-size: 3em;
-	    vertical-align: middle;    
+	    vertical-align: middle;
+	    padding-right: 0.3em;    
 	}
 
 /*SECTION CARACTERISTICAS*/
@@ -2205,7 +2212,8 @@ section.caract{
 				
 			
 section.caract .botones{
-	display:inline-block;
+	/*display:inline-block;*/
+	float: right;
 }
 section.caract .vermapa{
 	display:none;
@@ -2288,6 +2296,7 @@ section.descripcion{
 		font-size: 0.875em;
 		color:#848484;
 		margin-bottom: 10px;
+		line-height: 1.5em;
 	}
 
 /* SECTION UBICACION*/
@@ -2571,10 +2580,13 @@ section.inmusimi{
 	}
 section.inmusimi .bloqueminifichas{
 	display: table;
+	position: relative;
 }
 section.inmusimi .back {
 	height: 100%;
-    position: absolute;    
+    position: absolute;
+    width: 5%;
+    z-index: 2;   
 }
 	section.inmusimi .back a{
 		display: table;
@@ -2594,10 +2606,11 @@ section.inmusimi .back {
 		}
 
 section.inmusimi .next {
-	 height: 100%;
+	height: 100%;
     position: absolute;
     right: 0;
-    top: 0;
+    width: 5%;
+    z-index: 2;
 }
 	section.inmusimi .next a{
 		display: table;
@@ -2610,7 +2623,8 @@ section.inmusimi .next {
 		color:#cdcdcd;
 	  	display: table-cell;    
 	    font-size: 3em;
-	    vertical-align: middle;    
+	    vertical-align: middle;
+	    text-align: right;    
 	}
 		section.inmusimi .next a:hover::before{
 			color:#333;
@@ -2619,8 +2633,8 @@ section.inmusimi .next {
 	
 /*minificha*/
 section.inmusimi .bloqueminifichas .minifichas{
-	margin-left: 4%;
-    width: 94%;
+ 	margin-left: 5%;
+    width: 90%;
 }
 section.inmusimi .minificha{	
    	background-color: #fff;
@@ -2629,7 +2643,7 @@ section.inmusimi .minificha{
     height: 350px;
     margin-right: 1%;
     margin-top: 20px;
-    padding: 5px 10px;
+    padding:10px;
     position: relative;
     width: 32%;
 }
@@ -2638,8 +2652,8 @@ section.inmusimi .minificha{
 section.inmusimi .minificha .fav{
 	font-size: 1.5em;
     position: absolute;
-    right: 0;
-    top: 207px;
+    right: 10px;
+	top: 220px;
 }	
 	section.inmusimi .minificha .fav a:before{
 		font-family: icomoon;
