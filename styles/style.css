@@ -2527,9 +2527,11 @@ section.propietario .propi{}
 section.utils{
 	float: left;
 	width:100%;
+	text-align: center;
 }
 	section.utils .bloque{
-		float: left;
+ 		display: inline-block;
+	   	margin-left: -3px;
     	margin-top: 30px;
     	text-align: center;
     	width: 33.3333%;
