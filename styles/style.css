@@ -1619,7 +1619,7 @@ aside.minifichas .minificha .fav{
 
 /************************* FICHA ********************************/
 /*H3 TIPOPLEG*/
-#ficha_inmu h3.tipopleg a{
+.tipoficha h3.tipopleg a{
 	display:inline-block;
 	width:100%;
 	background-color: #f5f5f5;
@@ -1629,7 +1629,7 @@ aside.minifichas .minificha .fav{
   	position:relative;
   	color:#848484;
 }
-#ficha_inmu h3.tipopleg a::after{
+.tipoficha h3.tipopleg a::after{
     color: #999999;
     content: "\edbf";
     font-family: icomoon;
@@ -1637,26 +1637,26 @@ aside.minifichas .minificha .fav{
     right: 30px;
 }
 
-#ficha_inmu .box_tipodesp{
+.tipoficha .box_tipodesp{
 	border-bottom: 1px solid #cac8c8;
     float: left;
     margin-top: 30px;
     padding-bottom: 26px;
     width: 100%;
 }
-#ficha_inmu .box_tipodesp .desple {
+.tipoficha .box_tipodesp .desple {
     margin-top: 30px;
 }
 
 
 
-#ficha_inmu header#general{
+.tipoficha header#general{
 	position: fixed;
     width: 100%;
     z-index: 4;
 }
 
-#ficha_inmu header#logonav {
+.tipoficha header#logonav {
     background-color: #fff;    
     position: fixed;
     top: 50px;
@@ -1685,7 +1685,7 @@ aside.minifichas .minificha .fav{
 		.header_ficha hgroup{
 			display: table-cell;
     		vertical-align: middle;
-    		width: 73%;
+    		width: 70%;
 		}
 		.header_ficha hgroup h1{
 		   		color: red;    			
@@ -1704,7 +1704,7 @@ aside.minifichas .minificha .fav{
 		
 		.header_ficha .precios{
 			display:table-cell;
-			width: 25%;
+			width: 28%;
 			vertical-align: middle;
 		}
 		.header_ficha p.antes{
@@ -1737,6 +1737,11 @@ aside.minifichas .minificha .fav{
     		width: 100%;
 			font-family: Raleway_medium;
 		}
+			.header_ficha p.precio span{
+				color: #848484;
+    			display: inline-block;
+    			font-size: .6em;
+			}
 
 .header_ficha .inferior{
 	background-color: #fff;
@@ -1884,17 +1889,17 @@ aside#contact_ficha{
     width: 100%;
     z-index: 2;
 }
-#ficha_inmu .contact_form{
+.tipoficha .contact_form{
  	position: absolute;
     right: 15px;
     width: 30%;
    
  }
 
-#ficha_inmu .contact_form .cerrar{
+.tipoficha .contact_form .cerrar{
 	display:none;
 }
-#ficha_inmu .contact_form .cerrar a::after{
+.tipoficha .contact_form .cerrar a::after{
 	background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 66%;
@@ -1907,7 +1912,7 @@ aside#contact_ficha{
     top: 12px;
 }
 
-#ficha_inmu .contact_form .titulo{
+.tipoficha .contact_form .titulo{
 	background-color: red;
     color: #fff;
     float: left;
@@ -1918,23 +1923,23 @@ aside#contact_ficha{
     width: 100%;
     padding:20px 0;
 }
-	#ficha_inmu .contact_form .titulo .ico{
+	.tipoficha .contact_form .titulo .ico{
  		display: inline-block;
     	vertical-align: middle;
     	margin-right: 10px;
 	}
-	#ficha_inmu .contact_form .titulo p{
+	.tipoficha .contact_form .titulo p{
 		display: inline-block;
 	}	
 	
-#ficha_inmu .contact_form .cuerpo{
+.tipoficha .contact_form .cuerpo{
 	background-color: #e1e1e1;
     float: left;
     padding: 15px 0 10px;
     width: 100%;
 }	
 	
-	#ficha_inmu .contact_form .cuerpo input{
+	.tipoficha .contact_form .cuerpo input{
 		border: medium none;
     	float: left;
     	margin: 5px 3%;
@@ -1942,11 +1947,11 @@ aside#contact_ficha{
     	width: 94%;
 	}
 	
-	/* #ficha_inmu .contact_form .cuerpo ::-moz-placeholder{		
+	/* .tipoficha .contact_form .cuerpo ::-moz-placeholder{		
 		text-transform: uppercase;
 	} */
 
-#ficha_inmu .contact_form .cuerpo .avisoleg{
+.tipoficha .contact_form .cuerpo .avisoleg{
 	display:inline-block;
 	width:100%;
 	text-align: center;
@@ -1954,23 +1959,23 @@ aside#contact_ficha{
 }
 
 
-#ficha_inmu .contact_form .cuerpo .avisoleg label{
+.tipoficha .contact_form .cuerpo .avisoleg label{
 	font-family: Raleway_semibold;
     font-size: 0.813em;   
 }
-	#ficha_inmu .contact_form .cuerpo .avisoleg label a{
+	.tipoficha .contact_form .cuerpo .avisoleg label a{
 		font-family: Raleway_bold;
 		text-decoration: underline;
 		color:#414141;
 	}
 
-#ficha_inmu .contact_form .cuerpo .avisoleg input[type="checkbox"] {
+.tipoficha .contact_form .cuerpo .avisoleg input[type="checkbox"] {
     left: 0;
     position: absolute;
     visibility: hidden;
 }
 
-#ficha_inmu .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before{
+.tipoficha .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before{
    	content:"\00a0";
 	background: transparent url("/images/check_nook_red.png") no-repeat scroll 0 0;
 	display: inline-block;
@@ -1978,7 +1983,7 @@ aside#contact_ficha{
     width: 25px;
     margin-right: 10px;
 }
-#ficha_inmu .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before{
+.tipoficha .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before{
 	content:"\00a0";
    	background: transparent url("/images/check_ok_red.png") no-repeat scroll 0 0;
 	display: inline-block;
@@ -1988,13 +1993,13 @@ aside#contact_ficha{
 }
 
 
-#ficha_inmu .contact_form .cuerpo p{
+.tipoficha .contact_form .cuerpo p{
 	display:inline-block;
 	text-align: center;
 	width:100%;
  	margin-bottom: 15px;
 }
-#ficha_inmu .contact_form .cuerpo input[type="submit"]{
+.tipoficha .contact_form .cuerpo input[type="submit"]{
  	background-color: red;
     border: medium none;
     border-radius: 4px;
@@ -2231,7 +2236,7 @@ section.caract .video{
 	display:inline-block;
 }
 	section.caract .video a{
- 		 border: 1px solid #6c6c6c;
+	 	border: 1px solid #6c6c6c;
     	border-radius: 6px;
     	color: red;
     	font-family: raleway_bold;
@@ -2249,7 +2254,22 @@ section.caract .video{
     	top: 6px;
     	vertical-align: middle;
     	width: 23px;
-}
+	}
+	section.caract .video a:hover{
+		background-color: red;
+    	border: 1px solid red;
+    	border-radius: 6px;
+    	color: #fff;
+    	font-family: raleway_bold;
+    	font-size: 0.875em;
+    	padding: 10px 20px 10px 40px;
+    	position: relative;
+    	vertical-align: middle;
+	}
+		section.caract .video a:hover::before{
+			background-position:-23px 0 ;
+		}
+	
 
 
 /*SECTION DESCRIPCION*/
@@ -2763,7 +2783,7 @@ section.inmusimi .minificha .fav{
 
 
 /*STICK & HIDE*/
-#ficha_inmu header#logonav.hide{
+.tipoficha header#logonav.hide{
 	display:none;
 }
 .header_ficha.stick .superior{
@@ -2803,6 +2823,208 @@ section.inmusimi .minificha .fav{
     background-color: rgba(0, 0, 0, .8);
     z-index: 10;
 }
+
+
+
+
+
+
+
+
+
+/***************************** FICHA PROMOCION ******************************/
+#ficha_promo section.ficha{
+	 margin-top: 250px;
+}
+
+section.list_inmus{
+	width:100%;
+	font-family: raleway_medium;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+	section.list_inmus h3{
+		font-size: 1.500em;
+		margin-bottom: 20px;
+		color:#414141;
+	}
+	
+
+section.list_inmus .linea.cabecera{
+	background-color: #6d6c6c;
+	 padding: 5px 0;
+}
+	section.list_inmus .linea.cabecera .bloque p{
+		color:#fff;
+	}
+section.list_inmus .linea{
+	display: block;
+    width: 100%;
+    padding:10px 0;    
+}
+
+section.list_inmus .linea:nth-of-type(2n) {
+	background-color: #f4f4f4;
+}
+section.list_inmus .linea .bloque{
+ 	display: inline-block; 
+    margin-right: -5px;
+    text-align: center;
+    width: 20%;
+}
+	section.list_inmus .linea .bloque p{
+		color:#848484;
+	}
+		section.list_inmus .linea .bloque p span{
+			font-family: raleway_bold;
+		}
+	section.list_inmus .linea .bloque a{
+		text-decoration: underline;
+		color:red;	
+	 	font-family: raleway_bold;	
+	}
+
+
+section.list_inmus .formlistado{
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 #ccc;
+	margin-top: 10px;
+ 	margin-bottom: -15px;
+ 	display:none; 	
+}
+	section.list_inmus .formlistado .formhead{
+ 		border-bottom: 1px solid red;    	
+    	display: block;
+    	padding: 20px 0 10px;
+	}
+		section.list_inmus .formlistado .formhead img{
+	  		 display: inline-block;
+    		margin: 0 20px 0 10px;
+    		vertical-align: middle
+		}
+		section.list_inmus .formlistado .formhead p.titulo{
+	 		color: red;
+    		display: inline-block;
+    		font-family: raleway_bold;
+    		font-size: 1.25em;
+    		vertical-align: middle;
+    		text-transform: uppercase;
+		}
+		section.list_inmus .formlistado .formhead p.cerrar{
+			float: right;
+			margin-right: 10px;
+		}
+			section.list_inmus .formlistado .formhead p.cerrar a{
+				color: red;
+    			font-family: raleway_bold;
+    			font-size: 1.25em;
+    			margin-right: 10px;
+			}	
+	
+	section.list_inmus .formlistado form{
+		margin: 10px 5%;
+    	padding-bottom: 16px;
+    	width: 90%;
+    }
+		section.list_inmus .formlistado form input{
+  	 		border: 1px solid #aaaaaa;
+    		margin: 5px 1% 5px 0;
+    		padding: 5px 0;
+    		text-indent: 15px;
+    		width: 48%;    		
+		 	border-radius: 0;
+    		-webkit-appearance: none;
+		}
+
+	/*ESTILOS AL PLACEHOLDER*/
+	section.list_inmus .formlistado form input::-moz-placeholder{
+		text-transform: uppercase;
+		color:#cfcbcb;
+		opacity:1;
+		font-size: 1.125em;
+	}
+	section.list_inmus .formlistado form input::-webkit-input-placeholder{
+		text-transform: uppercase;
+		color:#cfcbcb;
+		opacity:1;
+		font-size: 1.125em;
+	}
+	section.list_inmus .formlistado form input:-ms-input-placeholder{
+		text-transform: uppercase;
+		color:#cfcbcb;
+		opacity:1;
+		font-size: 1.125em;
+	}
+		
+
+
+section.list_inmus .formlistado form .avisoleg{
+	display:inline-block;
+	width:100%;
+	text-align: left;
+ 	margin: 20px 0;
+}
+
+
+section.list_inmus .formlistado form .avisoleg label{
+	font-family: Raleway_semibold;
+    font-size: 0.813em;   
+}
+	section.list_inmus .formlistado form .avisoleg label a{
+		font-family: Raleway_bold;
+		text-decoration: underline;
+		color:#414141;
+	}
+
+section.list_inmus .formlistado form .avisoleg input[type="checkbox"] {
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+section.list_inmus .formlistado form .avisoleg input[type="checkbox"] ~ label::before{
+   	content:"\00a0";
+	 background: transparent url("/images/check_nook_red.png") no-repeat scroll 0 0 / contain ;    
+    display: inline-block;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 20px;
+}
+section.list_inmus .formlistado form input[type="checkbox"]:checked ~ label::before{
+	content:"\00a0";
+   	background: transparent url("/images/check_ok_red.png") no-repeat scroll 0 0 / contain ;
+	display: inline-block;
+	height: 15px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+section.list_inmus .formlistado form .capt{
+	display: inline-block;
+    width: 50%;
+}
+section.list_inmus .formlistado form .enviar{
+	display: inline-block;
+    text-align: right;
+    width: 47%;
+}
+section.list_inmus .formlistado form .enviar input[type="submit"] {
+    background-color: red;
+    border: medium none;
+    border-radius: 4px;
+    box-shadow: 0 6px 0 #c60505;
+    color: #fff;
+    font-family: raleway_bold;
+    font-size: 1.2em;
+    margin-left: 20%;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 60%;
+}				
+
+
+
 /* FOOTER PAGINA BUSCADOR */
 
 footer.footbusc {

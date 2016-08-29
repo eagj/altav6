@@ -5,7 +5,7 @@
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
   	<!-- Desactivar la deteccion automatica de numeros de teléfono -->
     <meta name="format-detection" content="telephone=no">
-	<title>Ficha inmueble</title>
+	<title>Ficha promocion</title>
 	<link rel="icon" type="image/png" href="favicon.ico" />
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  	<!-- selectbox-->
@@ -66,11 +66,19 @@
 	function hideformficha(){
 		$(".lightcontact").hide();
 		$("#contact_ficha").hide();				
-	}	
+	}
+	
+	/*PARA MOSTRAR Y OCULTAR LOS FORMULARIOS DE LA TABLA DE INMUEBLES*/
+	function showformlistado(listid){
+		$(listid).show();
+	}
+	function hideformlistado(listid){
+		$(listid).hide();
+	}
 </script>
 </head>
 <body>
-<div id="ficha_inmu" class="tipoficha">
+<div id="ficha_promo" class="tipoficha">
 	<header id="general">
 		<div class="contentgeneric">
 			<p class="visitados" id="pUltimosVisitados">
@@ -145,17 +153,17 @@
 				<div class="precios">
 					<p class="antes">antes <span>250.000&euro;</span></p>
 					<p class="descuen">20% de Descuento</p>
-					<p class="precio">81.800&euro;</p>
+					<p class="precio"><span>desde</span> 81.800&euro;</p>
 				</div>
 			</div>
 			<div class="utils">
 				<ul>
 					<li id="utils_fav"><a href="#"><span>A&ntilde;adir<br />a favoritos</span></a></li>
-					<li id="utils_alert"><a href="#"><span>Alerta bajada<br />de precio</span></a></li>
-					<li id="utils_inmusim"><a href="#"><span>Inmuebles<br />similares</span></a></li>
+					<!-- <li id="utils_alert"><a href="#"><span>Alerta bajada<br />de precio</span></a></li>
+					<li id="utils_inmusim"><a href="#"><span>Inmuebles<br />similares</span></a></li> -->
 				</ul>
 			</div>
-			<div class="inferior">
+			<!-- <div class="inferior">
 				<ul>
 					<li>63 <span>m<sup>2</sup></span></li>
 					<li>3 <span>hab.</span></li>
@@ -168,7 +176,7 @@
 						<p><a href="#"><span>Simulador<br /> de cuotas</span></a></p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>				
 	</header>
 	<!--FORMULARIO CONTACTO-->
@@ -213,7 +221,7 @@
 				</div>
 			</section>
 			<section class="caract">
-				<div class="detalles">
+				<!-- <div class="detalles">
 					<ul>
 						<li class="superf">63 <span>m<sup>2</sup></span></li>
 						<li class="hab">3 <span>hab.</span></li>
@@ -227,7 +235,7 @@
 						<li class="terraza"><span>Terraza</span></li>
 						<li class="trastero"><span>Trastero</span></li>
 					</ul>					
-				</div>
+				</div> -->
 				<div class="botones">
 					<div class="vermapa">
 						<a href="#">Ubicaci&oacute;n</a>
@@ -243,9 +251,162 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt est id auctor iaculis. Vestibulum sed feugiat lorem. Vestibulum blandit pulvinar leo, ut volutpat nibh ullamcorper sit amet.</p>
 				<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse volutpat convallis velit, sit amet viverra ligula ultricies vitae. Curabitur augue tortor, tempus a mattis id, efficitur eu est. Curabitur laoreet turpis vel pulvinar dignissim.</p>
 			</section>
+			<section class="list_inmus">
+				<h3>Listado de inmuebles de la promoci&oacute;n</h3>
+				
+				<div class="linea cabecera">
+					<div class="bloque tipo">
+						<p>Tipo</p>
+					</div>
+					<div class="bloque superficie">
+						<p>Superficie</p>
+					</div>
+					<div class="bloque habitaciones">
+						<p>N&deg; Habitaciones</p>
+					</div>
+					<div class="bloque precio">
+						<p>Precio</p>
+					</div>
+					<div class="bloque enlace">
+						<p>&nbsp;</p>
+					</div>
+				</div>
+				<div id="linea1" class="linea">
+					<div class="bloque tipo">
+						<p><a href="">Piso</a></p>
+					</div>
+					<div class="bloque superficie">
+						<p>150 <span>m<sup>2</sup></span></p>
+					</div>
+					<div class="bloque habitaciones">
+						<p>2</p>
+					</div>
+					<div class="bloque precio">
+						<p>150.000&euro;</p>
+					</div>
+					<div class="bloque enlace">
+						<p><a href="#" onclick="showformlistado('#formlistado1'); return false">Consultar</a></p>
+					</div>
+					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					<div id="formlistado1" class="formlistado">
+						<div class="formhead">
+							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado1'); return false">X</a></p>
+						</div>
+						<form action="" method="get">
+		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+				   			<div class="avisoleg">
+				   				<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					  			<input type="checkbox" id="politi1" name="politi1">
+					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					  			<label for="politi1">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+					  		</div>
+					  		<div class="capt">
+					  			Aqui va el captcha robot
+					  		</div>
+					  		<div class="enviar">
+					  			<input type="submit" value="enviar">
+					  		</div>
+						</form>
+					</div>					
+				</div>
+				
+				<div id="linea2" class="linea">
+					<div class="bloque tipo">
+						<p><a href="">Piso</a></p>
+					</div>
+					<div class="bloque superficie">
+						<p>150 <span>m<sup>2</sup></span></p>
+					</div>
+					<div class="bloque habitaciones">
+						<p>2</p>
+					</div>
+					<div class="bloque precio">
+						<p>150.000&euro;</p>
+					</div>
+					<div class="bloque enlace">
+						<p><a href="" onclick="showformlistado('#formlistado2'); return false">Consultar</a></p>
+					</div>
+					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					<div id="formlistado2" class="formlistado">
+						<div class="formhead">
+							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado2'); return false">X</a></p>
+						</div>
+						<form action="" method="get">
+		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+				   			<div class="avisoleg">
+					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					  			<input type="checkbox" id="politi2" name="politi2">
+					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					  			<label for="politi2">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+					  		</div>
+					  		<div class="capt">
+					  			Aqui va el captcha robot
+					  		</div>
+					  		<div class="enviar">
+					  			<input type="submit" value="enviar">
+					  		</div>
+						</form>									
+					</div>						
+				</div>
+				
+				<div id="linea3" class="linea">
+					<div class="bloque tipo">
+						<p><a href="">Piso</a></p>
+					</div>
+					<div class="bloque superficie">
+						<p>150 <span>m<sup>2</sup></span></p>
+					</div>
+					<div class="bloque habitaciones">
+						<p>2</p>
+					</div>
+					<div class="bloque precio">
+						<p>150.000&euro;</p>
+					</div>
+					<div class="bloque enlace">
+						<p><a href="" onclick="showformlistado('#formlistado3'); return false">Consultar</a></p>
+					</div>
+					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					<div id="formlistado3" class="formlistado">
+						<div class="formhead">
+							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado3'); return false">X</a></p>
+						</div>
+						<form action="" method="get">
+		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+				   			<div class="avisoleg">
+					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					  			<input type="checkbox" id="politi3" name="politi3">
+					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+					  			<label for="politi3">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+					  		</div>
+					  		<div class="capt">
+					  			Aqui va el captcha robot
+					  		</div>
+					  		<div class="enviar">
+					  			<input type="submit" value="enviar">
+					  		</div>
+						</form>									
+					</div>						
+				</div>
+				
+				
+			</section>
 			<section class="ubicacion box_tipodesp">
-				<h3 class="tipopleg"><a href="">Ubicaci&oacute;n y servicios cercanos</a></h3>
-				<!-- <h4><span>Lorem ipsum</span> dolore sit amet</h4> -->
+				<h3 class="tipopleg"><a href="">Ubicaci&oacute;n y servicios cercanos</a></h3>				
 				<div class="servicio_mapa">
 					<div class="servicios_menu">
 						<ul>

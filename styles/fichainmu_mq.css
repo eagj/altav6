@@ -8,6 +8,9 @@
 	.header_ficha.stick .utils{
 		 padding-top: 0;
 	}
+	#ficha_promo .utils li{
+		margin-top: 5px;
+	}
 	.header_ficha .utils li{
 		text-align: center;
 	    margin-top: 10px;
@@ -46,6 +49,9 @@
 		font-size: 12px;
 	}
 	#ficha_inmu header#logonav{
+		top: 33px;
+	}
+	#ficha_promo header#logonav{
 		top: 33px;
 	}
 	.header_ficha{
@@ -341,6 +347,14 @@
     	display: none;
 	}
 	
+	/*FICHA PROMO*/
+	.bloque{
+		width:33.3333333% !important;
+	}
+	.bloque.habitaciones, .bloque.enlace{
+		display:none !important;
+	}
+	
 }
 
 
@@ -362,6 +376,16 @@
 		
 	header nav#responsive p{
 		padding-top: 20px;
+	}
+	section.caract .detalles ul{
+		text-align: center;
+	}
+	section.campa_asoc .box_campa{
+	    width: 50%;
+		margin-left: 0;
+	}
+	section.campa_asoc .box_campa:last-child{
+		float:right;
 	}
 	
 }
