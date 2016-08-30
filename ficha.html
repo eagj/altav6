@@ -518,18 +518,51 @@
 		});
 		
 
-//MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
-var mediaquery = window.matchMedia("(min-width: 700px)"),
+//ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
+var mediaquery = window.matchMedia("(min-width: 768px)"),
 	content = document.querySelector("body");
     function handleOrientationChange(mediaquery) {
-      if (mediaquery.matches) {
-       		$("#logonav").addClass("hide");
-        	$(".header_ficha").addClass("stick");
-        	$("#contact_ficha").addClass("stick");
-      }
-     }
+      	if (mediaquery.matches) {
+      		var windw = this;      		
+			$.fn.followTo = function ( pos ) {
+  			var $this = this,
+  			$window = $(windw);    
+    		$window.scroll(function(e){
+        		if ($window.scrollTop() > 30) {
+        			//$("#logonav").addClass("hide");
+        			//$(".header_ficha").addClass("stick");
+        			//$("#contact_ficha").addClass("stick");
+        			alert("quietor");        	
+        		} else {
+        			//$( "#logonav" ).removeClass("hide");
+        			//$(".header_ficha").removeClass("stick");
+        			//$("#contact_ficha").removeClass("stick");
+        			alert("al ataker");
+        		}        
+    		});
+		};
+  		
+  		}else{
+	  		alert("Nor");
+	  	}
+ 	}
 handleOrientationChange(mediaquery);
 mediaquery.addListener(handleOrientationChange);
+
+/*FORMULARIO SE OCULTA EN CIERTO PUNTO*/
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+});
 </script>
 <!-- //FUNCION PARA QUE SE CAMBIE EL FIXED DE LA CABECERA
 var windw = this;
