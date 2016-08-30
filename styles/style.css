@@ -1942,9 +1942,9 @@ aside#contact_ficha{
 	.tipoficha .contact_form .cuerpo input{
 		border: medium none;
     	float: left;
-    	margin: 5px 3%;
-    	padding: 10px 20px;
-    	width: 94%;
+    	margin: 5px 5%;
+	   	padding: 10px 20px;
+    	width: 90%;
 	}
 	
 	/* .tipoficha .contact_form .cuerpo ::-moz-placeholder{		
@@ -2065,7 +2065,7 @@ section.ficha .foto .back {
 section.ficha .foto .next {
 	height: 100%;
     position: absolute;
-    right: 4px;
+    right: 3px;
     text-align: center;
     top: 0;
     width: 60px;
@@ -2577,10 +2577,12 @@ section.inmusimi{
 		color:#414141;
 		font-size: 1.313em;
 		font-family: raleway_medium;
+		text-indent: 15px;
 	}
 section.inmusimi .bloqueminifichas{
-	display: table;
-	position: relative;
+	 display: inline-block;
+    height: 100%;
+    position: relative
 }
 section.inmusimi .back {
 	height: 100%;
@@ -2599,7 +2601,8 @@ section.inmusimi .back {
 		color:#cdcdcd;
 	  	display: table-cell;    
 	    font-size: 3em;
-	    vertical-align: middle;    
+	    vertical-align: middle;
+     	text-align: center;    
 	}
 		section.inmusimi .back a:hover::before{
 			color:#333;
@@ -2632,22 +2635,26 @@ section.inmusimi .next {
 	
 	
 /*minificha*/
-section.inmusimi .bloqueminifichas .minifichas{
- 	margin-left: 5%;
+section.inmusimi .bloqueminifichas .minifichas{ 	 
+    float: left;
+    margin-left: 5%;
+    position: relative;
     width: 90%;
 }
 section.inmusimi .minificha{	
    	background-color: #fff;
     border-bottom: 1px solid #c7c7c7;
     float: left;
-    height: 350px;
-    margin-right: 1%;
+    height: 350px;    
     margin-top: 20px;
     padding:10px;
     position: relative;
-    width: 32%;
+    width: 32.6667%;
 }
-
+section.inmusimi .minificha:nth-child(2) {
+    margin-left: 1%;
+    margin-right: 1%;
+}
 
 section.inmusimi .minificha .fav{
 	font-size: 1.5em;
@@ -2695,6 +2702,7 @@ section.inmusimi .minificha .fav{
 		section.inmusimi .minificha .info h3{
 			font-size: 1em;
 		 	margin: 10px 0;
+		 	text-indent: 0px;
 		}
 			section.inmusimi .minificha .info h3 span{
 				font-family: raleway_bold;
@@ -2702,7 +2710,7 @@ section.inmusimi .minificha .fav{
 			}
 		
 		section.inmusimi .minificha .info .descuento{
-			background-color: rgba(255, 255, 255, 0.8);
+	 		background-color: rgba(255, 255, 255, 0.8);
     		border-bottom: 1px solid #7a8e0e;
     		border-top: 1px solid #7a8e0e;
     		color: #7a8e0e;
@@ -2710,9 +2718,9 @@ section.inmusimi .minificha .fav{
     		margin-bottom: 10px;
     		padding: 5px;
     		position: absolute;
-    		text-align: center;
-    		top: 158px;
-    		width: 95%;
+		    text-align: center;		    
+    		top: 163px;
+    		width: 94.5%;
     		z-index: 1;
 		}
 			section.inmusimi .minificha .info .descuento p{
@@ -2821,11 +2829,13 @@ section.inmusimi .minificha .fav{
 	top:50px;
 	z-index:3;
 	box-shadow:-1px 1px 6px #ccc;
+ 	padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 #contact_ficha.stick{
 	position:fixed;
-	top: 175px;
+	top: 185px;
 }
 
 

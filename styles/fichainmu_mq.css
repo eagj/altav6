@@ -148,7 +148,12 @@
     		vertical-align: middle;
 		}
 		section.inmusimi .bloqueminifichas .minifichas .minificha{
-			width:48%;
+			width:49%;
+		}
+		section.inmusimi .minificha:nth-child(2){
+			float: right;
+			margin-left: 0;
+			margin-right: 0;
 		}
 		section.inmusimi .bloqueminifichas .minifichas .minificha:nth-child(3) {
     		display: none;
@@ -339,9 +344,18 @@
 	section.inmusimi h3{
 		text-indent: 15px;
 	}
+	section.inmusimi .bloqueminifichas .minifichas{
+		float: left;
+    	margin-left: 10%;
+    	position: relative;
+    	width: 80%;
+	}
+	section.inmusimi .next, section.inmusimi .back{
+		width:10%;
+	}
 	section.inmusimi .bloqueminifichas .minifichas .minificha {
-    	width: 89%;
-    	margin-left: 4%;
+	    width: 100%;
+    	/* margin-left: 4%; */
     }
 	section.inmusimi .bloqueminifichas .minifichas .minificha:nth-child(2) {
     	display: none;
@@ -349,7 +363,7 @@
 	
 	/*FICHA PROMO*/
 	.bloque{
-		width:33.3333333% !important;
+		/* width:33.3333333% !important; */
 	}
 	.bloque.habitaciones, .bloque.enlace{
 		display:none !important;
