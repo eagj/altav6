@@ -142,10 +142,18 @@
 					<h1>General Romero Basart, N&ordm;123</h1>
 					<h2>Madrid (<span>Madrid</span>)</h2>
 				</hgroup>
-				<div class="precios">
-					<p class="antes">antes <span>250.000&euro;</span></p>
-					<p class="descuen">20% de Descuento</p>
-					<p class="precio">81.800&euro;</p>
+				<div class="preciocuota">
+					<div class="precios">
+						<p class="antes">antes <span>250.000&euro;</span></p>
+						<p class="descuen">20% de Descuento</p>
+						<p class="precio">81.800&euro;</p>
+					</div>
+					<div class="cuota_mobile">
+						<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
+						<div class="simulador">
+							<p><a href="#">&nbsp;</a></p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="utils">
@@ -307,7 +315,7 @@
 						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
 					</div>				
 					<div class="bloque">
-						<p class="titulo">Fecha de recepci&oacute;n de la obra: <span>18/05/ 2018</span></p>						
+						<p class="titulo">Fecha de recepci&oacute;n de la obra: <span>18/05/2018</span></p>						
 					</div>
 					<div class="bloque">
 						<p class="titulo">Proyectista</p>
@@ -336,15 +344,13 @@
 				<div class="desple">
 					<div class="box_campa">
 						<div class="logo_campa">
-							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/20_es.jpg" alt="" />
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<a href=""><img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/20_es.jpg" alt="" /></a>							
 							<p><a href="">Ver m&aacute;s inmuebles</a></p>
 						</div>
 					</div>
 					<div class="box_campa">
 						<div class="logo_campa">
-							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/39_es.jpg" alt="" />
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<a href=""><img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/39_es.jpg" alt="" /></a>							
 							<p><a href="">Ver m&aacute;s inmuebles</a></p>
 						</div>
 					</div>							
@@ -518,37 +524,52 @@
 		});
 		
 
-//ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
-var mediaquery = window.matchMedia("(min-width: 768px)"),
+<!-- //FUNCION PARA QUE SE CAMBIE EL FIXED DE LA CABECERA
+var windw = this;
+$.fn.followTo = function ( pos ) {
+  var $this = this,
+  $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > 30) {
+        	$("#logonav").addClass("hide");
+        	$(".header_ficha").addClass("stick");
+        	$("#contact_ficha").addClass("stick");
+        	
+        } else {
+        	$( "#logonav" ).removeClass("hide");
+        	$(".header_ficha").removeClass("stick");
+        	$("#contact_ficha").removeClass("stick");
+        }        
+    });
+};
+//MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
+var mediaquery = window.matchMedia("(min-width: 7px)"),
 	content = document.querySelector("body");
     function handleOrientationChange(mediaquery) {
-      	if (mediaquery.matches) {
-      		var windw = this;      		
-			$.fn.followTo = function ( pos ) {
-  			var $this = this,
-  			$window = $(windw);    
-    		$window.scroll(function(e){
-        		if ($window.scrollTop() > 30) {
-        			//$("#logonav").addClass("hide");
-        			//$(".header_ficha").addClass("stick");
-        			//$("#contact_ficha").addClass("stick");
-        			alert("quietor");        	
-        		} else {
-        			//$( "#logonav" ).removeClass("hide");
-        			//$(".header_ficha").removeClass("stick");
-        			//$("#contact_ficha").removeClass("stick");
-        			alert("al ataker");
-        		}        
-    		});
-		};
-  		
-  		}else{
-	  		alert("Nor");
-	  	}
- 	}
+      if (mediaquery.matches) {
+        $('').followTo(50);
+      } else {
+       $('').followTo(33);
+      }
+     }
 handleOrientationChange(mediaquery);
 mediaquery.addListener(handleOrientationChange);
 
+
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+});
 /*FORMULARIO SE OCULTA EN CIERTO PUNTO*/
 $(document).ready(function() {
 	var el = $('#contact_ficha'),

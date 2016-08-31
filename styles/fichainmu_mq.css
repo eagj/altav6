@@ -163,21 +163,27 @@
 	}
 	aside#contact_ficha {
     	display: none;
+	    top: 10%;
     	z-index: 11;
-    	width: 90%;
-    	left: 9%;
+    	width: 100%;
+    	left: 0;
+    	font-size: 1.5em;
     	position: fixed;
-    	top: 10% !important;
 	}
 	aside#contact_ficha .contact_form{
-		width:100%;
+    	width: 60%;
+    	right: 0;
+    	left: 20%;
 	}
 		#ficha_inmu .contact_form .cerrar{
 			display:inline-block;
 		}
+		.tipoficha .contact_form .cuerpo input{
+			margin: 10px 5%;
+		}
 	/*STICK*/	
 	.header_ficha.stick{
-		top: 8px;
+		top: 4px;
 	}
 		.header_ficha.stick .utils{
 			    top: -46px;
@@ -188,10 +194,28 @@
 	
 }
 
-/* MQ para 465 de maximo */
-@media (max-width: 465px){
+/* MQ para 765 de maximo */
+@media (max-width: 765px){
+	html {
+		font-size: 15px;
+	}
+	.tipoficha header#general{
+		position:relative;
+	}
+	
+	.tipoficha header#logonav{
+    	position: relative;
+	    top: 0px !important;
+	}
+	.header_ficha{
+		position: relative;
+		top: 0px !important;
+	    margin-bottom: 0;
+        padding: 0 1%;
+	}
 	.header_ficha .superior{
-		margin-top: 10px;
+		margin-top: 0px;
+	    padding: 5px 0;
 	}
 	.header_ficha hgroup{
 		display:inline-block;
@@ -199,15 +223,13 @@
 	}
 		.header_ficha hgroup h1{
 			width: 80%;
-		}
-	.header_ficha .precios{
-		border-top: 1px solid #ccc;
+			font-size: 1.2em;
+		}	
+	.header_ficha .precios {    	
     	display: inline-block;
-    	width: 100%;
-    	margin-top: 10px;
-    	padding-top: 5px;
+    	width: 49%;    	
 	}
-	.header_ficha p{
+	.header_ficha .precios p{
 		text-align:left !important;
 	}
 	.header_ficha .precios p.antes, .header_ficha .precios p.descuen{
@@ -219,12 +241,74 @@
     	top: 53px;
     	border: none;
     	background-color: transparent;
+    	display: none;
 	}
 		.header_ficha .inferior ul{
 			display:none;
-		}	
+		}
+		
+	.header_ficha .superior .cuota_mobile{
+		display: inline-block;
+    	width: 49%;
+    	text-align: right;
+    	vertical-align: middle;
+    	padding-top: 5px;
+	}	
+		
+	.header_ficha .superior .preciocuota{
+		border-top: 1px solid #ccc;
+    	margin-top: 10px;
+	}
+	.header_ficha .superior .cuota_mobile p{
+    	display: inline-block;
+    	width: 100px;
+    	vertical-align: middle;
+	    text-align: center;
+    	color: #8e8d8d;
+    	font-family: Raleway_medium;
+	}
+	.header_ficha .superior .cuota_mobile p.cuota_text span{		
+    	border-radius: 5px;
+    	display: inline-block;
+    	text-align: center;
+    	vertical-align: middle;
+    	position: relative;
+    	color: red;
+    	font-family: raleway_bold;
+	}
+		.header_ficha .superior .cuota_mobile .simulador{
+			display: inline-block;
+		}
+			.header_ficha .superior .cuota_mobile .simulador p{
+				width: auto;
+    			margin-left: 10px;
+    			
+			}
+			.header_ficha .superior .cuota_mobile .simulador p a{
+	 			color: #fff;
+	    		display: inline-block;
+	    		font-family: raleway_light;
+				font-size: 0.813em;
+	    		line-height: 13px;    		
+	    		vertical-align: middle;
+	    		
+			}
+			.header_ficha .superior .cuota_mobile .simulador p a::before {    		
+	    		content:"\00a0";
+	    		background: transparent url("/images/ficha/ico_cuota_mobile.png") no-repeat scroll center top;			
+	    		height: 32px;
+	    		width: 27px;    		    
+	    		display: inline-block;
+	    		position: relative;
+	    		left: -5px;
+			}
+		
+			
 		.header_ficha .inferior .cuota p.cuota_text{
 			font-size: 1em;
+    		width: 100px;
+    		text-align: right !important;
+    		vertical-align: middle;
 		}
 	
 	.header_ficha .utils{
@@ -239,6 +323,9 @@
     	right: 10px;
 	    text-align: right;
 	}
+		.header_ficha .utils li#utils_fav a::before{
+			top:-8px;
+		}
     
 		.header_ficha .utils li span{
 			display:none;
@@ -272,21 +359,27 @@
 			margin-top: 220px;
 		}
 		
-		
+	
+	section.ficha{
+		margin-top: 0;
+	}	
 		
 		
 	section.caract{
     	margin: 20px 0;
 	}
 		section.caract .detalles{
-	    	width: 99%;
-    		margin-left: 2%;
+	    	width: 100%;
+    		margin-left: 0;
 		}
 			section.caract .detalles ul {
-    			padding: 0 6%;
+    			padding: 0;
+    			padding-left: 18%;
 			}
-				section.caract .detalles ul li{
-					margin-right: 0;
+				section.caract .detalles ul li{				
+		        	margin-right: 0;
+    				width: 49%;
+    				font-size: 0.8em;
 				}
 				
 	section.caract .botones{
@@ -297,10 +390,14 @@
 		section.caract .botones .vermapa{
 			display:inline-block;
 		    margin-right: 6%;
+	        margin-bottom: 20px;
 		}			
 	
-	#ficha_inmu .box_tipodesp{
-		margin-top: 20px;
+	#ficha_inmu .box_tipodesp{		
+    	margin-top: 20px;
+    	padding-left: 2%;
+    	border-bottom: none;
+    	padding-right: 2%;
 	}
 				
 	section.ubicacion{
@@ -308,7 +405,14 @@
 	}
 	section.descripcion{
 		margin-bottom: 0;
+	    padding: 0 2%;
 	}
+		section.descripcion p{
+			font-size: 1.1em;
+			margin-bottom: 20px;
+    		line-height: 30px;
+		}
+	
 	section.certificado .certificadobox{
 		margin-left: 15px;
 	}
@@ -341,6 +445,10 @@
 		text-align: center;
 	}
 	
+	section.utils{
+		border-top: 1px solid #cac8c8;
+	}
+	
 	section.inmusimi h3{
 		text-indent: 15px;
 	}
@@ -352,6 +460,9 @@
 	}
 	section.inmusimi .next, section.inmusimi .back{
 		width:10%;
+	}
+	section.inmusimi .next a::before, section.inmusimi .back a::before{
+		font-size: 2em;
 	}
 	section.inmusimi .bloqueminifichas .minifichas .minificha {
 	    width: 100%;
@@ -368,6 +479,30 @@
 	.bloque.habitaciones, .bloque.enlace{
 		display:none !important;
 	}
+	.contactar_responsive{
+		bottom:0;
+		top:inherit;
+	}
+	
+	aside#contact_ficha {
+    	display: none;
+    	z-index: 11;
+    	width: 90%;
+    	left: 0%;
+    	position: fixed;
+    	top: 5%;
+    	font-size: 1em;
+	}
+	aside#contact_ficha.stick{
+		top:5%;
+	}
+	aside#contact_ficha .contact_form{
+		width:100%;
+    	left: 5%;
+	}
+		#ficha_inmu .contact_form .cerrar{
+			display:inline-block;
+		}
 	
 }
 
@@ -391,15 +526,45 @@
 	header nav#responsive p{
 		padding-top: 20px;
 	}
-	section.caract .detalles ul{
+	
+	section.infocomple .desple .bloque p.info{
+		margin-left: 10px;
+	}
+	section.certificado .certificadobox{
 		text-align: center;
 	}
+	section.caract .detalles ul{
+		
+	}
+	
+	section.propietario .propi .texto{
+		margin-left: 0;
+    	text-align: center;
+    	width: 100%;
+	}
+		section.propietario .propi .texto p{
+			line-height: inherit;
+		}
+	section.propietario .propi .logopropi {
+    	display: inline-block;
+    	width: 100%;
+    	margin-top: 10px;
+    	text-align: center;
+	}
+		section.propietario .propi .logopropi img {
+	    	width: auto;
+	    	max-width: 300px;
+		}
+	
 	section.campa_asoc .box_campa{
-	    width: 50%;
+    	width: 50%;
 		margin-left: 0;
 	}
 	section.campa_asoc .box_campa:last-child{
 		float:right;
+	}
+	.tipoficha .contact_form .cuerpo input{
+		margin: 5px 5%;
 	}
 	
 }

@@ -1770,6 +1770,9 @@ aside.minifichas .minificha .fav{
 		float: right;
 		padding-bottom: 10px;
 	}
+	.header_ficha .superior .cuota_mobile{
+		display:none;
+	}
 		.header_ficha .inferior .cuota p.cuota_text{
 			color:#8e8d8d;
 			font-family: Raleway_medium;
@@ -2512,10 +2515,10 @@ section.propietario .propi{}
 
 /*SECTION CAMAPANAS ASOCIADAS*/
 	section.campa_asoc .box_campa{
-	 	float: left;
-    	margin-left: 8.33333%;
-    	width: 40%;
+    	float: left;
+    	width: 49%;
     	margin-bottom: 20px;
+    	text-align: center
 	}
 	section.campa_asoc .box_campa p{
 		color:#848484;
