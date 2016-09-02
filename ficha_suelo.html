@@ -5,7 +5,7 @@
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
   	<!-- Desactivar la deteccion automatica de numeros de teléfono -->
     <meta name="format-detection" content="telephone=no">
-	<title>Ficha promocion</title>
+	<title>Ficha suelos</title>
 	<link rel="icon" type="image/png" href="favicon.ico" />
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  	<!-- selectbox-->
@@ -66,15 +66,7 @@
 	function hideformficha(){
 		$(".lightcontact").hide();
 		$("#contact_ficha").hide();				
-	}
-	
-	/*PARA MOSTRAR Y OCULTAR LOS FORMULARIOS DE LA TABLA DE INMUEBLES*/
-	function showformlistado(listid){
-		$(listid).show();
-	}
-	function hideformlistado(listid){
-		$(listid).hide();
-	}
+	}	
 </script>
 <style type="text/css" media="screen">
 	.captcha img {
@@ -84,7 +76,7 @@
 </style>
 </head>
 <body>
-<div id="ficha_promo" class="tipoficha">
+<div id="ficha_su" class="tipoficha">
 	<header id="general">
 		<div class="contentgeneric">
 			<p class="visitados" id="pUltimosVisitados">
@@ -153,36 +145,22 @@
 		<div class="contentgeneric">
 			<div class="superior">
 				<hgroup>
-					<h1>General Romero Basart, N&ordm;123</h1>
+					<h1>FINCA APR 0607 S&Aacute;NCHEZ CARRASCOSA Y ALFALFA SANTIAGO CORDERO</h1>
 					<h2>Madrid (<span>Madrid</span>)</h2>
 				</hgroup>
-				<div class="precios">
-					<p class="antes">antes <span>250.000&euro;</span></p>
-					<p class="descuen">20% de Descuento</p>
-					<p class="precio"><span>desde</span> 81.800&euro;</p>
+				<div class="preciocuota">
+					<div class="precios">						
+						<p class="precio consultar">Precio <span>a consultar</span></p>
+					</div>					
 				</div>
 			</div>
 			<div class="utils">
 				<ul>
 					<li id="utils_fav"><a href="#"><span>A&ntilde;adir<br />a favoritos</span></a></li>
-					<!-- <li id="utils_alert"><a href="#"><span>Alerta bajada<br />de precio</span></a></li>
-					<li id="utils_inmusim"><a href="#"><span>Inmuebles<br />similares</span></a></li> -->
+					<li id="utils_alert"><a href="#"><span>Alerta bajada<br />de precio</span></a></li>
+					<li id="utils_inmusim"><a href="#"><span>Inmuebles<br />similares</span></a></li>
 				</ul>
-			</div>
-			<!-- <div class="inferior">
-				<ul>
-					<li>63 <span>m<sup>2</sup></span></li>
-					<li>3 <span>hab.</span></li>
-					<li>2 <span>ba&ntilde;os</span></li>
-					<li><span>Garaje</span></li>
-				</ul>
-				<div class="cuota">
-					<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
-					<div class="simulador">
-						<p><a href="#"><span>Simulador<br /> de cuotas</span></a></p>
-					</div>
-				</div>
-			</div> -->
+			</div>			
 		</div>				
 	</header>
 	<!--FORMULARIO CONTACTO-->
@@ -222,7 +200,7 @@
 				<div class="back">
 					<a href="#">&nbsp;</a>
 				</div>
-				<img src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/10/110_1.jpg" alt="" />
+				<img src="http://www.altamirainmuebles.com/estaticos/activos/inmuebles/fotos/grandes/62/78062_1.jpg" alt="" />
 				<div class="next">
 					<a href="#">&nbsp;</a>
 				</div>
@@ -231,192 +209,32 @@
 				</div>
 			</section>
 			<section class="caract">
-				<!-- <div class="detalles">
-					<ul>
-						<li class="superf">63 <span>m<sup>2</sup></span></li>
-						<li class="hab">3 <span>hab.</span></li>
-						<li class="ban">2 <span>ba&ntilde;os</span></li>
-						<li class="garaje"><span>Garaje</span></li>
-						<li class="garajeopc"><span>G. Opcional</span></li>
-						<li class="piscina"><span>Piscina</span></li>
-						<li class="airac"><span>Aire ac.</span></li>
-						<li class="ascensor"><span>Ascensor</span></li>
-						<li class="calefaccion"><span>Calefacci&oacute;n</span></li>
-						<li class="terraza"><span>Terraza</span></li>
-						<li class="trastero"><span>Trastero</span></li>
-					</ul>					
-				</div> -->
+				<h3>Caracter&iacute;sticas</h3>
+				<p class="uso"><span>Uso:</span> Deportivo, Zonas Verdes</p>
+				<p class="superficie"><span>Superficie suelo:</span> 1.146,93</p>
+				<p class="edificabilidad"><span>Edificabilidad:</span> Lorem ipsum dolor sit amet</p>
 				<div class="botones">
 					<div class="vermapa">
 						<a href="#">Ubicaci&oacute;n</a>
 					</div>
-					<div class="video">
+					<!-- <div class="video">
 						<a href="#">Ver video</a>
-					</div>
+					</div> -->
 				</div>
 			</section>
-			<section class="descripcion">
-				<h3>Descripci&oacute;n</h3>
-				<p>Piso de segunda mano, interior, distribuido en sal&oacute;n, cocina, ba&ntilde;o y 2 dormitorios en finca hist&oacute;rica rehabilitada. Zona muy bien comunicada al lado del metro Pacifico y dotada de todo tipo de servicios.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt est id auctor iaculis. Vestibulum sed feugiat lorem. Vestibulum blandit pulvinar leo, ut volutpat nibh ullamcorper sit amet.</p>
-				<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse volutpat convallis velit, sit amet viverra ligula ultricies vitae. Curabitur augue tortor, tempus a mattis id, efficitur eu est. Curabitur laoreet turpis vel pulvinar dignissim.</p>
-			</section>
-			<section class="list_inmus">
-				<h3>Listado de inmuebles de la promoci&oacute;n</h3>
-				
-				<div class="linea cabecera">
-					<div class="bloque tipo">
-						<p>Tipo</p>
-					</div>
-					<div class="bloque superficie">
-						<p>Superficie</p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>N&deg; Habitaciones</p>
-					</div>
-					<div class="bloque precio">
-						<p>Precio</p>
-					</div>
-					<div class="bloque enlace">
-						<p>&nbsp;</p>
+			<section class="descripcion box_tipodesp">
+				<h3 class="tipopleg"><a href="">Descripci&oacute;n</a></h3>
+				<div class="desple">
+					<div class="descripcionbox">
+						<p>Piso de segunda mano, interior, distribuido en sal&oacute;n, cocina, ba&ntilde;o y 2 dormitorios en finca hist&oacute;rica rehabilitada. Zona muy bien comunicada al lado del metro Pacifico y dotada de todo tipo de servicios.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt est id auctor iaculis. Vestibulum sed feugiat lorem. Vestibulum blandit pulvinar leo, ut volutpat nibh ullamcorper sit amet.</p>
+						<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse volutpat convallis velit, sit amet viverra ligula ultricies vitae. Curabitur augue tortor, tempus a mattis id, efficitur eu est. Curabitur laoreet turpis vel pulvinar dignissim.</p>
 					</div>
 				</div>
-				<div id="linea1" class="linea">
-					<div class="bloque tipo">
-						<p><a href="">Piso</a></p>
-					</div>
-					<div class="bloque superficie">
-						<p>150 <span>m<sup>2</sup></span></p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>2</p>
-					</div>
-					<div class="bloque precio">
-						<p>150.000&euro;</p>
-					</div>
-					<div class="bloque enlace">
-						<p><a href="#" onclick="showformlistado('#formlistado1'); return false">Consultar</a></p>
-					</div>
-					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					<div id="formlistado1" class="formlistado">
-						<div class="formhead">
-							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
-							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
-							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado1'); return false">X</a></p>
-						</div>
-						<form action="" method="get">
-		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
-				   			<div class="avisoleg">
-				   				<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<input type="checkbox" id="politi1" name="politi1">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<label for="politi1">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
-					  		</div>
-					  		<div class="capt">
-					  			Aqui va el captcha robot
-					  		</div>
-					  		<div class="enviar">
-					  			<input type="submit" value="enviar">
-					  		</div>
-						</form>
-					</div>					
-				</div>
-				
-				<div id="linea2" class="linea">
-					<div class="bloque tipo">
-						<p><a href="">Piso</a></p>
-					</div>
-					<div class="bloque superficie">
-						<p>150 <span>m<sup>2</sup></span></p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>2</p>
-					</div>
-					<div class="bloque precio">
-						<p>150.000&euro;</p>
-					</div>
-					<div class="bloque enlace">
-						<p><a href="" onclick="showformlistado('#formlistado2'); return false">Consultar</a></p>
-					</div>
-					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					<div id="formlistado2" class="formlistado">
-						<div class="formhead">
-							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
-							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
-							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado2'); return false">X</a></p>
-						</div>
-						<form action="" method="get">
-		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
-				   			<div class="avisoleg">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<input type="checkbox" id="politi2" name="politi2">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<label for="politi2">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
-					  		</div>
-					  		<div class="capt">
-					  			Aqui va el captcha robot
-					  		</div>
-					  		<div class="enviar">
-					  			<input type="submit" value="enviar">
-					  		</div>
-						</form>									
-					</div>						
-				</div>
-				
-				<div id="linea3" class="linea">
-					<div class="bloque tipo">
-						<p><a href="">Piso</a></p>
-					</div>
-					<div class="bloque superficie">
-						<p>150 <span>m<sup>2</sup></span></p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>2</p>
-					</div>
-					<div class="bloque precio">
-						<p>150.000&euro;</p>
-					</div>
-					<div class="bloque enlace">
-						<p><a href="" onclick="showformlistado('#formlistado3'); return false">Consultar</a></p>
-					</div>
-					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					<div id="formlistado3" class="formlistado">
-						<div class="formhead">
-							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
-							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
-							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado3'); return false">X</a></p>
-						</div>
-						<form action="" method="get">
-		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
-				   			<div class="avisoleg">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<input type="checkbox" id="politi3" name="politi3">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<label for="politi3">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
-					  		</div>
-					  		<div class="capt">
-					  			Aqui va el captcha robot
-					  		</div>
-					  		<div class="enviar">
-					  			<input type="submit" value="enviar">
-					  		</div>
-						</form>									
-					</div>						
-				</div>
-				
-				
 			</section>
 			<section class="ubicacion box_tipodesp">
-				<h3 class="tipopleg"><a href="">Ubicaci&oacute;n y servicios cercanos</a></h3>				
+				<h3 class="tipopleg"><a href="">Ubicaci&oacute;n y servicios cercanos</a></h3>
+				<!-- <h4><span>Lorem ipsum</span> dolore sit amet</h4> -->
 				<div class="servicio_mapa">
 					<div class="servicios_menu">
 						<ul>
@@ -431,16 +249,7 @@
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194347.38441000276!2d-3.819619853628188!3d40.438131079835216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1469084166813"  frameborder="0" style="border:0" allowfullscreen></iframe>	
 					</div>
 				</div>
-			</section>
-			<section class="certificado box_tipodesp">
-				<h3 class="tipopleg"><a href="">Certificado energ&eacute;tico</a></h3>
-				<div class="desple">
-					<div class="certificadobox">
-						<img src="http://www.altamirainmuebles.com/images/eficenerg_logos/EFI_ENER_B.jpg" alt="Certificado B" />
-						<p><span>Calificaci&oacute;n de eficiencia</span> energ&eacute;tica de vivienda terminado seg&uacute;n RD 235/2013 de 5 de abril.</p>
-					</div>
-				</div>
-			</section>
+			</section>			
 			<section class="descargas box_tipodesp">
 				<h3 class="tipopleg"><a href="">Descargas</a></h3>
 				<div class="desple">
@@ -464,29 +273,44 @@
 					</div>
 				</div>
 			</section>
-			<section class="infocomple box_tipodesp">
-				<h3 class="tipopleg"><a href="">Informaci&oacute;n Complementaria</a></h3>
+			<section class="datosadicio box_tipodesp">
+				<h3 class="tipopleg"><a href="">Datos adicionales</a></h3>
 				<div class="desple">
-					<div class="bloque">
-						<p class="titulo">Promotor</p>
-						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
-						<p class="info"><span>Domicilio:</span> Madrid</p>
-						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
-					</div>				
-					<div class="bloque">
-						<p class="titulo">Intermediario</p>
-						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
-						<p class="info"><span>Domicilio:</span> Madrid</p>
-						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
-					</div>				
-					<div class="bloque">
-						<p class="titulo">Fecha de recepci&oacute;n de la obra: <span>18/05/2018</span></p>						
+					<div class="linea">
+						<div class="bloque">					
+							<p class="titulo">Situaci&oacute;n:</p>
+							<p class="info">Lorem ipsum dolor sit amet</p>
+						</div>
+						<div class="bloque">
+							<p class="titulo">Tipo Suelo:</p>
+							<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
 					</div>
-					<div class="bloque">
-						<p class="titulo">Proyectista</p>
-						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
-						<p class="info"><span>Domicilio:</span> Madrid</p>
-						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
+					<div class="linea">
+						<div class="bloque">					
+							<p class="titulo">Emplazamiento:</p>
+							<p class="info">Lorem ipsum dolor sit amet</p>
+						</div>
+						<div class="bloque">
+							<p class="titulo">Clasificaci&oacute;n:</p>
+							<p class="info">Lorem ipsum dolor sit amet</p>
+						</div>
+					</div>
+					<div class="linea">
+						<div class="bloque">					
+							<p class="titulo">&Aacute;mbito:</p>
+							<p class="info">Lorem ipsum dolor sit amet</p>
+						</div>
+						<div class="bloque">
+							<p class="titulo">Construcciones anexas:</p>
+							<p class="info">Lorem ipsum dolor sit amet</p>
+						</div>
+					</div>
+					<div class="linea">
+						<div class="bloque">					
+							<p class="titulo">Referencia Catastral:</p>
+							<p class="info">Lorem ipsum dolor sit amet</p>
+						</div>						
 					</div>
 				</div>				
 			</section>
@@ -509,15 +333,15 @@
 				<div class="desple">
 					<div class="box_campa">
 						<div class="logo_campa">
-							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/20_es.jpg" alt="" />
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<a href=""><img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/20_es.jpg" alt="" /></a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>							
 							<p><a href="">Ver m&aacute;s inmuebles</a></p>
 						</div>
 					</div>
 					<div class="box_campa">
 						<div class="logo_campa">
-							<img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/39_es.jpg" alt="" />
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+							<a href=""><img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/39_es.jpg" alt="" /></a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>							
 							<p><a href="">Ver m&aacute;s inmuebles</a></p>
 						</div>
 					</div>							
@@ -529,95 +353,10 @@
 				</div>
 				<div class="bloque">
 					<a href="#"><img src="/images/ficha/ico_share.png" alt="Compartir ficha" /><p>Compartir</p></a>					
-				</div>
-				
+				</div>				
 			</section>
 		</section>		
-	</div>
-	<section class="inmusimi">
-		<div class="contentgeneric">
-			<h3>Inmuebles similares</h3>
-			<div class="bloqueminifichas">
-				<div class="back">
-					<a href="#">&nbsp;</a>
-				</div>
-				<div class="minifichas">							
-					<div class="minificha">
-						<div class="fav active">
-							<a title="añadir o quitar favorito" href="">&nbsp;</a>
-						</div>
-						<div class="foto">
-							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg"></a> 
-						</div>
-						<div class="info">
-							<h2>Puerta de San Fernado SCMV FASE I</h2>
-							<h3>desde <span>151.550&euro;</span></h3>
-							<div class="detalles">
-								<ul>
-									<li class="superf">63 <span>m<sup>2</sup></span></li>
-									<li class="hab">3 <span>hab.</span></li>
-									<li class="ban">2 <span>ba&ntilde;os</span></li>
-								</ul>					
-							</div>
-							<p class="enlace">
-								<a href="">Ver inmueble</a>
-							</p>
-						</div>			
-					</div>			
-					<div class="minificha">
-						<div class="fav">
-							<a href="">&nbsp;</a>
-						</div>
-						<div class="foto">
-							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/inmuebles/fotos/grandes/97/53297_6.jpg"></a> 
-							<div class="descuento">
-								<p>Descuento <span>-15%</span></p>
-							</div>
-						</div>
-						<div class="info">
-							<h2>Piso en Madrid (Madrid)</h2>
-							<h3><span>87.900&euro;</span></h3>							
-							<div class="detalles">
-								<ul>
-									<li class="superf">68 <span>m<sup>2</sup></span></li>
-									<li class="hab">3 <span>hab.</span></li>
-									<li class="ban">1 <span>ba&ntilde;os</span></li>
-								</ul>					
-							</div>
-							<p class="enlace">
-								<a href="">Ver inmueble</a>
-							</p>
-						</div>			
-					</div>
-					<div class="minificha">
-						<div class="fav">
-							<a href="">&nbsp;</a>
-						</div>
-						<div class="foto">
-							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/30/14830_12.jpg"></a> 
-						</div>
-						<div class="info">
-							<h2>Promoci&oacute;n Mirador de Valdebebas</h2>
-							<h3>desde <span>151.550&euro;</span></h3>
-							<div class="detalles">
-								<ul>
-									<li class="superf">63 <span>m<sup>2</sup></span></li>
-									<li class="hab">3 <span>hab.</span></li>
-									<li class="ban">2 <span>ba&ntilde;os</span></li>
-								</ul>					
-							</div>
-							<p class="enlace">
-								<a href="">Ver inmueble</a>
-							</p>
-						</div>			
-					</div>				
-				</div>
-				<div class="next">
-					<a href="#">&nbsp;</a>
-				</div>
-			</div>
-		</div>
-	</section>	
+	</div>	
 	<footer>
 		<div class="contentgeneric">
 			<div class="upfoot">			
@@ -688,6 +427,7 @@
 			mobile: false,
 		});
 		
+
 //FUNCION PARA QUE SE CAMBIE EL FIXED DE LA CABECERA
 var windw = this;
 $.fn.followTo = function ( pos ) {
@@ -734,9 +474,70 @@ $(document).ready(function() {
   		}
 	});
 });
+/*FORMULARIO SE OCULTA EN CIERTO PUNTO*/
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+});
+</script>
+<!-- //FUNCION PARA QUE SE CAMBIE EL FIXED DE LA CABECERA
+var windw = this;
+$.fn.followTo = function ( pos ) {
+  var $this = this,
+  $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > 30) {
+        	$("#logonav").addClass("hide");
+        	$(".header_ficha").addClass("stick");
+        	$("#contact_ficha").addClass("stick");
+        	
+        } else {
+        	$( "#logonav" ).removeClass("hide");
+        	$(".header_ficha").removeClass("stick");
+        	$("#contact_ficha").removeClass("stick");
+        }        
+    });
+};
+//MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
+var mediaquery = window.matchMedia("(min-width: 7px)"),
+	content = document.querySelector("body");
+    function handleOrientationChange(mediaquery) {
+      if (mediaquery.matches) {
+        $('').followTo(50);
+      } else {
+       $('').followTo(33);
+      }
+     }
+handleOrientationChange(mediaquery);
+mediaquery.addListener(handleOrientationChange);
+
+
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+}); -->
 	
    
-</script>
+
 
 </body>
 </html>

@@ -206,18 +206,15 @@
 	}
 	header#logonav .logohead{
 		width:40%;
-	}
-		header#logonav .logohead img{
-			width:100%;
-		}
+	}	
 	
-	.contact_responsive{
-		left:62%;
-	}
-		
-	header nav#responsive p{
-		padding-top: 20px;
-	}
+	
+	header nav#responsive{
+		margin-top: -10px;
+	}		    
+		header nav#responsive p{
+			padding-top: 20px;
+		}
 	section#blog .entrada .texto .titulo h4{
 		/* height:59px; */
 	}

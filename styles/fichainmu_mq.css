@@ -48,12 +48,10 @@
 	html{
 		font-size: 12px;
 	}
-	#ficha_inmu header#logonav{
+	#ficha_inmu header#logonav, #ficha_promo header#logonav, #ficha_su header#logonav{
 		top: 33px;
 	}
-	#ficha_promo header#logonav{
-		top: 33px;
-	}
+	
 	.header_ficha{
 		top:65px;
 	}	
@@ -73,6 +71,13 @@
 @media (max-width: 940px){	
 	aside#contact_ficha{
 		display:none;
+	}
+	.header_ficha .superior hgroup h1{
+    	max-height: 50px;
+    	padding: 5px 0;
+	}
+	.header_ficha .superior .preciocuota{
+		padding: 5px 0;
 	}
 	.header_ficha .superior{
 		width:98%;
@@ -112,6 +117,10 @@
 			}
 	section.ficha{
 		width:98%;
+	    font-size: 14px;
+	}
+	section.descripcion p{
+		font-size: 1.1em;
 	}
 	section.caract .detalles{		
     	width: 81%;
@@ -123,7 +132,8 @@
     	display: block;
     	position: fixed;
     	text-align: center;
-    	top: calc(100% - 50px);
+    	/* top: calc(100% - 50px); */
+    	bottom: 0;
     	vertical-align: middle;
     	width: 100%;
     	z-index: 10;
@@ -158,7 +168,7 @@
 		section.inmusimi .bloqueminifichas .minifichas .minificha:nth-child(3) {
     		display: none;
 		}
-	#ficha_inmu footer{
+	.tipoficha footer{
 		padding-bottom: 50px;
 	}
 	aside#contact_ficha {
@@ -191,6 +201,11 @@
 		.header_ficha.stick .superior{
 			margin-top: 70px;
 		}
+	/*FICHA SUELO*/
+	#ficha_su .header_ficha p.precio.consultar{
+		margin-top: 5px;
+		width:100%;
+	}
 	
 }
 
@@ -259,6 +274,10 @@
 		border-top: 1px solid #ccc;
     	margin-top: 10px;
 	}
+	.header_ficha p.precio.consultar span{
+		width:auto;
+		display:inline-block;
+	}
 	.header_ficha .superior .cuota_mobile p{
     	display: inline-block;
     	width: 100px;
@@ -326,6 +345,9 @@
 		.header_ficha .utils li#utils_fav a::before{
 			top:-8px;
 		}
+		#ficha_promo .header_ficha .utils li#utils_fav a::before{
+			top:-3px;
+		}
     
 		.header_ficha .utils li span{
 			display:none;
@@ -360,13 +382,16 @@
 		}
 		
 	
-	section.ficha{
+	section.ficha, #ficha_promo section.ficha, #ficha_su section.ficha{
 		margin-top: 0;
-	}	
+	}
+	
 		
 		
 	section.caract{
     	margin: 20px 0;
+    	padding-right: 2%;
+    	padding-left: 2%;
 	}
 		section.caract .detalles{
 	    	width: 100%;
@@ -393,7 +418,7 @@
 	        margin-bottom: 20px;
 		}			
 	
-	#ficha_inmu .box_tipodesp{		
+	.tipoficha .box_tipodesp{		
     	margin-top: 20px;
     	padding-left: 2%;
     	border-bottom: none;
@@ -473,8 +498,12 @@
 	}
 	
 	/*FICHA PROMO*/
-	.bloque{
-		/* width:33.3333333% !important; */
+	#ficha_promo .list_inmus .bloque{
+		width:33.3333333% !important;
+	    font-size: 1.2em;
+	}
+	#ficha_promo section.list_inmus{
+		margin-bottom: 20px;
 	}
 	.bloque.habitaciones, .bloque.enlace{
 		display:none !important;
@@ -490,20 +519,41 @@
     	width: 90%;
     	left: 0%;
     	position: fixed;
-    	top: 5%;
+    	top: 0%;
     	font-size: 1em;
 	}
 	aside#contact_ficha.stick{
-		top:5%;
+		top:0%;
 	}
 	aside#contact_ficha .contact_form{
 		width:100%;
     	left: 5%;
 	}
-		#ficha_inmu .contact_form .cerrar{
+		.tipoficha .contact_form .cerrar{
 			display:inline-block;
 		}
-	
+		.tipoficha .contact_form .cuerpo input{
+			margin:5px 5%;
+		}
+		.tipoficha .contact_form .cuerpo .avisoleg{
+			margin: 5px 0;
+		}
+		.tipoficha .contact_form .cuerpo .captcha{
+			margin-bottom: 5px;
+		}
+		
+		/*FICHA SUELO*/
+		#ficha_su .header_ficha .precios{
+			width:100%;
+		}
+		section.datosadicio .linea{
+			margin-bottom: 0;
+		}
+		section.datosadicio .bloque{
+			display:inline-block;
+			width:100%;
+			margin-bottom: 45px;
+		}
 }
 
 
@@ -512,29 +562,32 @@
 	html{
 		font-size: 11px;
 	}
-	header#logonav .logohead{
-		width:40%;
+	.header_ficha{
+		font-size: 1.2em;
 	}
-		header#logonav .logohead img{
-			width:100%;
-		}
-	
-	.contact_responsive{
-		left:62%;
+	#ficha_su .header_ficha .precios{
+		width:100%;
 	}
-		
-	header nav#responsive p{
-		padding-top: 20px;
+	.header_ficha .superior .cuota_mobile .simulador p{
+		margin-left: 0;
 	}
-	
+	.header_ficha .superior hgroup h1{
+		max-height: 45px;
+	}
 	section.infocomple .desple .bloque p.info{
 		margin-left: 10px;
-	}
+	}	
 	section.certificado .certificadobox{
 		text-align: center;
 	}
+	.tipoficha h3.tipopleg a{
+		font-size: 1.2em;
+	}
 	section.caract .detalles ul{
 		
+	}
+	section.caract .detalles ul li{
+		font-size: 1em;
 	}
 	
 	section.propietario .propi .texto{
@@ -563,8 +616,47 @@
 	section.campa_asoc .box_campa:last-child{
 		float:right;
 	}
-	.tipoficha .contact_form .cuerpo input{
-		margin: 5px 5%;
+	aside#contact_ficha, aside#contact_ficha.stick{
+		
 	}
-	
+		.tipoficha .contact_form .titulo{
+			padding:5px 0;
+		}
+	.tipoficha .contact_form .cuerpo input{
+		margin: 5px 5%;		
+    	font-size: 1.5em;
+	}
+	.tipoficha .contact_form .cuerpo .avisoleg{
+		margin:5px 0;
+	}
+	.tipoficha .contact_form .cuerpo .captcha{
+		margin-bottom: 5px;
+	}
+	.tipoficha .contact_form .cuerpo .avisoleg input[type="checkbox"] ~ label::before, .tipoficha .contact_form .cuerpo .avisoleg input[type="checkbox"]:checked ~ label::before{		
+    	height: 10px;
+    	width: 10px;
+    	background-size: contain;    	
+	}
+	.tipoficha .contact_form .cuerpo .avisoleg label{
+		font-size: 1em;
+	}
+	section.utils .bloque a img{
+		margin-right: 0;
+	}
+	section.utils .bloque a p{
+		width:100%;
+		font-size: 1em;
+		text-align: center;
+		margin-top: 10px;
+		
+	}
+}
+/* IPHONE 4*/
+@media (max-height: 480px){
+	aside#contact_ficha, aside#contact_ficha.stick{
+		top:0;
+	}
+	.tipoficha .contact_form .cuerpo .captcha{
+		margin-bottom: 0px;
+	}
 }

@@ -1691,7 +1691,7 @@ aside.minifichas .minificha .fav{
 		   		color: red;    			
     			font-size: 1.5em;
     			margin: 0;
-    			max-height: 60px;
+    			max-height: 57px;
     			overflow: hidden;
 			}
 			.header_ficha hgroup h2{
@@ -1741,6 +1741,23 @@ aside.minifichas .minificha .fav{
 				color: #848484;
     			display: inline-block;
     			font-size: .6em;
+			}
+		
+		.header_ficha p.precio.consultar{
+  			color: red;
+    		display: inline-block;
+    		font-family: Raleway_light;
+    		font-size: 1.5em;
+    		text-align: right;
+    		vertical-align: middle;
+    		width: 100%;
+		}
+			.header_ficha p.precio.consultar span{
+				 color: red;
+    			font-family: raleway_bold;
+    			font-size: 1em;
+    			text-align: right;
+    			width: 100%;	
 			}
 
 .header_ficha .inferior{
@@ -1954,6 +1971,11 @@ aside#contact_ficha{
 		text-transform: uppercase;
 	} */
 
+.tipoficha .contact_form .cuerpo .captcha{
+	display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+}
 .tipoficha .contact_form .cuerpo .avisoleg{
 	display:inline-block;
 	width:100%;
@@ -2039,6 +2061,34 @@ section.ficha .foto{
     vertical-align: middle;
     width: 100%
 }
+	section.ficha .foto .numfotos{
+ 		background-color: #5e5e61;
+    	border: 1px solid #fff;
+    	border-radius: 8px;
+    	bottom: 10px;
+    	color: #fff;
+    	padding: 5px 0;
+    	position: absolute;
+    	right: 10px;
+    	text-align: center;
+    	width: 80px;
+    	z-index: 2;
+	}
+		section.ficha .foto .numfotos p{
+			color:#fff;
+			font-family: raleway_medium;
+    		font-size: 0.875em;
+		}
+		section.ficha .foto .numfotos p::before{
+			content:"\00a0";
+    		background: transparent url("/images/ficha/ico_numfotos.png") no-repeat scroll center top;
+		 	display: inline-block;
+			height: 14px;
+    		margin-right: 10px;
+    		vertical-align: middle;
+    		width: 17px;
+		}
+
 	section.ficha .foto img{
 		width: 100%;
 	}
@@ -2090,7 +2140,7 @@ section.ficha .foto .next {
 
 /*SECTION CARACTERISTICAS*/
 section.caract{
-	 margin: 40px 0;
+	 margin: 40px 0 0;
 }
 	section.caract .detalles{
 		 display: inline-block;
@@ -2515,10 +2565,10 @@ section.propietario .propi{}
 
 /*SECTION CAMAPANAS ASOCIADAS*/
 	section.campa_asoc .box_campa{
-    	float: left;
-    	width: 49%;
+		float: left;
+    	margin-left: 8.33333%;
+    	width: 40%;
     	margin-bottom: 20px;
-    	text-align: center
 	}
 	section.campa_asoc .box_campa p{
 		color:#848484;
@@ -2680,6 +2730,7 @@ section.inmusimi .minificha .fav{
     	overflow: hidden;
     	vertical-align: middle;
     	width: 100%;
+    	position:relative;
 	}
 		section.inmusimi .minificha .foto img{
 			max-width: 100%;
@@ -2712,18 +2763,18 @@ section.inmusimi .minificha .fav{
 				font-size: 1.6em;
 			}
 		
-		section.inmusimi .minificha .info .descuento{
+		section.inmusimi .minificha .foto .descuento{
 	 		background-color: rgba(255, 255, 255, 0.8);
     		border-bottom: 1px solid #7a8e0e;
     		border-top: 1px solid #7a8e0e;
     		color: #7a8e0e;
-    		left: 10px;
+    		top: 0px;
+    		left: 0px;
     		margin-bottom: 10px;
     		padding: 5px;
     		position: absolute;
-		    text-align: center;		    
-    		top: 163px;
-    		width: 94.5%;
+		    text-align: center;
+    		width: 100%;
     		z-index: 1;
 		}
 			section.inmusimi .minificha .info .descuento p{
@@ -2853,16 +2904,16 @@ section.inmusimi .minificha .fav{
     z-index: 10;
 }
 
-
-
-
-
-
+	
+	
+	
+	
+	
 
 
 
 /***************************** FICHA PROMOCION ******************************/
-#ficha_promo section.ficha{
+#ficha_promo section.ficha, #ficha_su section.ficha{
 	 margin-top: 250px;
 }
 
@@ -2924,7 +2975,7 @@ section.list_inmus .formlistado{
 	section.list_inmus .formlistado .formhead{
  		border-bottom: 1px solid red;    	
     	display: block;
-    	padding: 20px 0 10px;
+    	padding: 22px 25px;
 	}
 		section.list_inmus .formlistado .formhead img{
 	  		 display: inline-block;
@@ -2951,8 +3002,8 @@ section.list_inmus .formlistado{
 			}	
 	
 	section.list_inmus .formlistado form{
-		margin: 10px 5%;
-    	padding-bottom: 16px;
+		margin: 20px 5%;
+    	padding-bottom: 30px;
     	width: 90%;
     }
 		section.list_inmus .formlistado form input{
@@ -3051,6 +3102,65 @@ section.list_inmus .formlistado form .enviar input[type="submit"] {
     text-transform: uppercase;
     width: 60%;
 }				
+
+
+
+
+
+
+
+
+
+
+/****************************** FICHA SUELO ******************************/
+section.caract{}
+	section.caract h3{
+	  	border-bottom: 1px solid #cac8c8;
+    	color: #414141;
+    	font-size: 1.5em;
+    	margin-bottom: 40px;
+    	padding-bottom: 15px;
+    	width: 100%;
+	}
+	section.caract p{
+ 		color: #b2b1b1;
+    	display: inline-block;
+    	margin-left: 5%;
+    	width: 95%;
+    	margin-bottom: 5%;
+	}
+		section.caract p span{
+			color:red;
+			font-family: raleway_bold;
+			font-size: 1.375em;
+		}
+
+
+section.datosadicio .linea{
+ 	display: table;
+    margin-bottom: 45px;
+    margin-left: 2%;
+    width: 96%;
+}
+section.datosadicio .bloque{
+ 	display: table-cell;
+	width:50%;
+	font-size: 1.125em;
+}
+	section.datosadicio .bloque p.titulo{
+		color: #848484;
+    	font-family: raleway_bold;
+    	margin-bottom: 15px;    	
+	}
+	section.datosadicio .bloque p.info{
+		color: #b2b1b1;    	
+    	margin-left: 10%;
+	}
+
+
+
+
+
 
 
 
@@ -3295,7 +3405,8 @@ footer{
 		display:none;
 	}
 	header nav#responsive{
-		display:block;
+    	display: inline-block;
+    	/* margin-top: -10px; */
 	}
 	
 	header#general .usuarioconect{
@@ -3363,5 +3474,39 @@ footer{
 		margin-left: -55px;
     	margin-top: 10px;
     	left:inherit;
+	}
+}
+
+/* mobile 320px y menos*/
+@media (max-width: 320px){
+	html{
+		font-size: 11px;
+	}
+	header#logonav .logohead{
+		width:40%;
+		padding-top: 10px;
+	}
+		header#logonav img#logoalta{
+			width:100%;
+		}
+		
+	header nav#responsive ul{
+		top:60px;
+	}	
+	.contact_responsive{
+		left:55%;
+	}
+	
+	header nav#responsive{
+		margin-top: -10px;
+	}		    
+		header nav#responsive p{
+			padding-top: 20px;
+		}
+	section#blog .entrada .texto .titulo h4{
+		/* height:59px; */
+	}
+	section#blog .entrada .texto p.vermas {
+    	margin-top: 25px;
 	}
 }
