@@ -61,6 +61,9 @@
 	 	margin-bottom: 10px;
 	 	overflow: hidden;
 	}
+	section#buscador .cajabuscador .tipo select{
+		
+	}
 	section#buscador .cajabuscador .semanti {   
     	margin-left: 2%;
     	width: 96%;
@@ -138,7 +141,7 @@
 		}
 		section#blog .entrada .texto{
 			margin-left: 0;
-			margin-top: -70px;
+			margin-top: -80px;
     		position: relative;
     		width: 100%;
 		}
@@ -151,12 +154,15 @@
 			    background: -o-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(97, 97, 97, 0.5) 85%, rgba(97, 97, 97, 0.85) 100%);
 			    background: -webkit-gradient(linear, 0 100%, 0 0, from(rgba(255, 255, 255, 0)), color-stop(0.85, rgba(97, 97, 97, 0.5)), to(rgba(97, 97, 97, 0.85)));
 			    background: rgba(0, 0, 0, 0) linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(97, 97, 97, 0.5) 85%, rgba(97, 97, 97, 0.85) 100%) repeat scroll 0 0;
-			    height: 69px;
+			    height: 80px;
 			}
 			section#blog .entrada .texto .titulo h4 a{
 				color:#fff;
 			 	height: 70px;
     			overflow: hidden;
+    			font-size: 1.8em;
+    			display:inline-block;
+    			width:90%;
 			  
 			}
 			section#blog .entrada .texto p{

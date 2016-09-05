@@ -457,7 +457,7 @@ ul.selectBox-dropdown-menu li.selectBox-selected a {
 
 
 section#buscador .cajabuscador .tipo select{
-	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 93% center;
+	background: #ffffff url("/images/select_cursor.png") no-repeat scroll 93% center;	
     border: medium none;
     float: left;
     font-family: Raleway_medium;
@@ -465,7 +465,7 @@ section#buscador .cajabuscador .tipo select{
     height: 49px;
     text-indent: 10px;
     width: 100%;
-    margin-top: 0; 
+    margin-top: 0;   
 }
 
 section#buscador .cajabuscador .semanti{
@@ -1199,12 +1199,12 @@ select#tipo {
 	border:none; 
  	background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll right center; 	
  	width:120px;
- 	margin-top: 18px;	 
+ 	margin-top: 11px;	 
 }
 section.filtrador .tipo{
 	float: left;
 	width: 130px;
-	margin-top: -5px;
+	margin-top: -3px;
 	margin-left: 1%;
 }
 section.filtrador a.selectBox {
@@ -1298,6 +1298,17 @@ section.filtrador .box_extend p a::after {
     	text-align: center;
     	width: 46%;
 	}
+	section.filtrador .box_extend .box_extend_content .selectextend select{
+		background: #ffffff url("/images/select_cursor.png") no-repeat scroll 93% center;
+    	border: medium none;
+    	float: left;
+    	font-family: Raleway_medium;
+    	font-size: 1.2em;
+    	height: 49px;
+    	margin-top: 0;
+    	text-indent: 10px;
+    	width: 100%;
+    	}
 		section.filtrador .box_extend .box_extend_content .selectextend label{
 			color: #8f8f8f;
 		}

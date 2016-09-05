@@ -243,7 +243,11 @@ samp {
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
  * styling of `select`, unless a `border` property is set.
  */
-
+selec{
+	-moz-appearance: none;
+ 	-webkit-appearance: none;
+ 	appearance: none; 
+}
 /**
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.

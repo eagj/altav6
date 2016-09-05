@@ -61,6 +61,9 @@
     html{
         font-size: 15px;
     }
+    section.filtrador .tipo{
+    	margin-top: -2px;
+    }
     
     section.mapa, aside.minifichas{
         display:block;
@@ -264,7 +267,7 @@
         width:92%
     }
     aside.minifichas .minificha{
-        width:98%;
+        width:96%;
         height:auto;
     }
     aside.minifichas .minificha .foto{
