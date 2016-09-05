@@ -253,6 +253,23 @@
 	}
 	aside.minifichas .minificha{
 		width:98%;
+		height:auto;
+	}
+	aside.minifichas .minificha .foto{
+		width:100%;
+		display:inline-block;
+		max-height: 200px; 
+	}
+		aside.minifichas .minificha .foto img{
+			margin-top: -10%;;
+		}
+	
+	aside.minifichas .minificha .info{
+		width:100%;
+		display:inline-block; 
+	}
+	aside.minifichas .minificha .info h2{
+		margin-top: 10px;
 	}
 }
 
@@ -272,6 +289,10 @@
 	
 	header nav#responsive p{
 		padding-top: 20px;
+	}
+	
+	aside.minifichas .minificha .foto{
+    	max-height: 150px;
 	}
 	
 }
