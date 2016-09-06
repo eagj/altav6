@@ -263,157 +263,510 @@
 			</section>
 			<section class="list_inmus">
 				<h3>Listado de inmuebles de la promoci&oacute;n</h3>
-				
-				<div class="linea cabecera">
-					<div class="bloque tipo">
-						<p>Tipo</p>
-					</div>
-					<div class="bloque superficie">
-						<p>Superficie</p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>N&deg; Habitaciones</p>
-					</div>
-					<div class="bloque precio">
-						<p>Precio</p>
-					</div>
-					<div class="bloque enlace">
-						<p>&nbsp;</p>
-					</div>
-				</div>
-				<div id="linea1" class="linea">
-					<div class="bloque tipo">
-						<p><a href="">Piso</a></p>
-					</div>
-					<div class="bloque superficie">
-						<p>150 <span>m<sup>2</sup></span></p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>2</p>
-					</div>
-					<div class="bloque precio">
-						<p>150.000&euro;</p>
-					</div>
-					<div class="bloque enlace">
-						<p><a href="#" onclick="showformlistado('#formlistado1'); return false">Consultar</a></p>
-					</div>
-					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					<div id="formlistado1" class="formlistado">
-						<div class="formhead">
-							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
-							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
-							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado1'); return false">X</a></p>
+				<div class="tabla">
+					<div class="linea cabecera">
+						<div class="bloque tipo">
+							<p>Tipo</p>
 						</div>
-						<form action="" method="get">
-		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
-				   			<div class="avisoleg">
-				   				<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<input type="checkbox" id="politi1" name="politi1">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<label for="politi1">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
-					  		</div>
-					  		<div class="capt">
-					  			Aqui va el captcha robot
-					  		</div>
-					  		<div class="enviar">
-					  			<input type="submit" value="enviar">
-					  		</div>
-						</form>
-					</div>					
-				</div>
-				
-				<div id="linea2" class="linea">
-					<div class="bloque tipo">
-						<p><a href="">Piso</a></p>
-					</div>
-					<div class="bloque superficie">
-						<p>150 <span>m<sup>2</sup></span></p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>2</p>
-					</div>
-					<div class="bloque precio">
-						<p>150.000&euro;</p>
-					</div>
-					<div class="bloque enlace">
-						<p><a href="" onclick="showformlistado('#formlistado2'); return false">Consultar</a></p>
-					</div>
-					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					<div id="formlistado2" class="formlistado">
-						<div class="formhead">
-							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
-							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
-							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado2'); return false">X</a></p>
+						<div class="bloque superficie">
+							<p>Superficie</p>
 						</div>
-						<form action="" method="get">
-		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
-				   			<div class="avisoleg">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<input type="checkbox" id="politi2" name="politi2">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<label for="politi2">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
-					  		</div>
-					  		<div class="capt">
-					  			Aqui va el captcha robot
-					  		</div>
-					  		<div class="enviar">
-					  			<input type="submit" value="enviar">
-					  		</div>
-						</form>									
+						<div class="bloque habitaciones">
+							<p>N&deg; Habitaciones</p>
+						</div>
+						<div class="bloque precio">
+							<p>Precio</p>
+						</div>
+						<div class="bloque enlace">
+							<p>&nbsp;</p>
+						</div>
+					</div>
+					<div id="linea1" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="#" onclick="showformlistado('#formlistado1'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado1" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado1'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+					   				<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi1" name="politi1">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi1">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>
+						</div>					
+					</div>
+				
+					<div id="linea2" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado2'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado2" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado2'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi2" name="politi2">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi2">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>
 					</div>						
-				</div>
 				
-				<div id="linea3" class="linea">
-					<div class="bloque tipo">
-						<p><a href="">Piso</a></p>
-					</div>
-					<div class="bloque superficie">
-						<p>150 <span>m<sup>2</sup></span></p>
-					</div>
-					<div class="bloque habitaciones">
-						<p>2</p>
-					</div>
-					<div class="bloque precio">
-						<p>150.000&euro;</p>
-					</div>
-					<div class="bloque enlace">
-						<p><a href="" onclick="showformlistado('#formlistado3'); return false">Consultar</a></p>
-					</div>
-					<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					<div id="formlistado3" class="formlistado">
-						<div class="formhead">
-							<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
-							<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
-							<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado3'); return false">X</a></p>
+				
+					<div id="linea3" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
 						</div>
-						<form action="" method="get">
-		   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
-				   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
-				   			<div class="avisoleg">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<input type="checkbox" id="politi3" name="politi3">
-					  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
-					  			<label for="politi3">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
-					  		</div>
-					  		<div class="capt">
-					  			Aqui va el captcha robot
-					  		</div>
-					  		<div class="enviar">
-					  			<input type="submit" value="enviar">
-					  		</div>
-						</form>									
-					</div>						
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado3'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado3" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado3'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi3" name="politi3">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi3">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+				
+					<div id="linea4" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado4'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado4" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado4'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi4" name="politi4">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi4">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+					
+					<div id="linea5" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado5'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado5" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado5'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi3" name="politi5">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi5">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+					
+					<div id="linea6" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado6'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado6" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado6'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi6" name="politi6">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi6">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+				
+					<div id="linea7" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado7'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado7" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado7'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi7" name="politi7">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi7">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+					
+					<div id="linea8" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado8'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado8" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado8'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi8" name="politi8">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi8">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+				
+					<div id="linea9" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado9'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado9" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado9'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi9" name="politi9">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi9">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+					
+					<div id="linea10" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado10'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado10" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado10'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi10" name="politi10">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi9">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+				
+					<div id="linea11" class="linea">
+						<div class="bloque tipo">
+							<p><a href="">Piso</a></p>
+						</div>
+						<div class="bloque superficie">
+							<p>150 <span>m<sup>2</sup></span></p>
+						</div>
+						<div class="bloque habitaciones">
+							<p>2</p>
+						</div>
+						<div class="bloque precio">
+							<p>150.000&euro;</p>
+						</div>
+						<div class="bloque enlace">
+							<p><a href="" onclick="showformlistado('#formlistado11'); return false">Consultar</a></p>
+						</div>
+						<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						<div id="formlistado11" class="formlistado">
+							<div class="formhead">
+								<img src="/images/ficha/ico_sobre_rojo.png" alt="Contactar sobre este inmueble" />
+								<p class="titulo">&iexcl;Cont&aacute;ctanos!</p>
+								<p class="cerrar"><a href="" onclick="hideformlistado('#formlistado11'); return false">X</a></p>
+							</div>
+							<form action="" method="get">
+			   					<input type="text" name="some_name" value="" id="some_name" placeholder="Nombre"/>					   			
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Apellido"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="Tel&eacute;fono"/>
+					   			<input type="text" name="some_name" value="" id="some_name" placeholder="EMAIL"/>
+					   			<div class="avisoleg">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<input type="checkbox" id="politi11" name="politi11">
+						  			<!--ESTE NUMERO TIENE QUE IR CAMBIANDO EN CADA UNO-->
+						  			<label for="politi11">He le&iacute;do y acepto el <a href="#">aviso legal</a> y la pol&iacute;tica de privacidad</label>
+						  		</div>
+						  		<div class="capt">
+						  			Aqui va el captcha robot
+						  		</div>
+						  		<div class="enviar">
+						  			<input type="submit" value="enviar">
+						  		</div>
+							</form>									
+						</div>						
+					</div>
+
 				</div>
-				
-				
 			</section>
 			<section class="ubicacion box_tipodesp">
 				<h3 class="tipopleg"><a href="">Ubicaci&oacute;n y servicios cercanos</a></h3>				
@@ -467,6 +820,10 @@
 			<section class="infocomple box_tipodesp">
 				<h3 class="tipopleg"><a href="">Informaci&oacute;n Complementaria</a></h3>
 				<div class="desple">
+					<div class="bloque">
+						<p class="titulo">Referencia</p>
+						<p class="info">1234567890aeiou</p>
+					</div>
 					<div class="bloque">
 						<p class="titulo">Promotor</p>
 						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
@@ -550,7 +907,7 @@
 							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg"></a> 
 						</div>
 						<div class="info">
-							<h2>Puerta de San Fernado SCMV FASE I</h2>
+							<h2><a href="">Puerta de San Fernado SCMV FASE I</a></h2>
 							<h3>desde <span>151.550&euro;</span></h3>
 							<div class="detalles">
 								<ul>
@@ -569,13 +926,13 @@
 							<a href="">&nbsp;</a>
 						</div>
 						<div class="foto">
-							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/inmuebles/fotos/grandes/97/53297_6.jpg"></a> 
+							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/inmuebles/fotos/grandes/97/53297_6.jpg"></a>
 							<div class="descuento">
 								<p>Descuento <span>-15%</span></p>
-							</div>
+							</div> 
 						</div>
 						<div class="info">
-							<h2>Piso en Madrid (Madrid)</h2>
+							<h2><a href="">Piso en Madrid (Madrid)</a></h2>
 							<h3><span>87.900&euro;</span></h3>							
 							<div class="detalles">
 								<ul>
@@ -597,7 +954,7 @@
 							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/30/14830_12.jpg"></a> 
 						</div>
 						<div class="info">
-							<h2>Promoci&oacute;n Mirador de Valdebebas</h2>
+							<h2><a href="">Promoci&oacute;n Mirador de Valdebebas</a></h2>
 							<h3>desde <span>151.550&euro;</span></h3>
 							<div class="detalles">
 								<ul>

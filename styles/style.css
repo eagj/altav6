@@ -1478,6 +1478,7 @@ aside.minifichas .minificha{
     width: 98%;
     border-bottom: 1px solid #c7c7c7;
     position:relative;
+    display: table;
 }
 aside.minifichas .minificha.banner{
 	text-align: center;
@@ -1524,11 +1525,14 @@ aside.minifichas .minificha .fav{
 	 		color: red;
     		font-family: raleway;
 			font-size: 1.2em;
-    		max-height: 45px;
+    		max-height: 42px;
     		overflow: hidden;
     		width: 89%;
     		margin-bottom: 5px;
 		}
+			aside.minifichas .minificha .info h2 a{
+				color: red;
+			}
 		aside.minifichas .minificha .info h3{
 			font-size: 1em;
 		 	margin: 10px 0;
@@ -1537,6 +1541,18 @@ aside.minifichas .minificha .fav{
 				font-family: raleway_bold;
 				font-size: 1.6em;
 			}
+		aside.minifichas .minificha .info h3.on::after {
+	    	background-color: red;
+			border-radius: 7px;    		
+    		color: #fff;
+    		content: "obra nueva";
+    		font-family: raleway_semibold;
+    		font-size: 0.7em;
+    		margin-right: 10px;
+    		padding: 5px;
+    		position: absolute;
+    		right: 0;
+		}
 		
 		aside.minifichas .minificha .info .descuento{
 			border-bottom: 1px solid #7a8e0e;
@@ -1572,7 +1588,7 @@ aside.minifichas .minificha .fav{
 				aside.minifichas .minificha .info .detalles li{
 					display:inline-block;
 					margin-right: -3px;
-					width: 30%
+					width: 30%;
 				}
 				aside.minifichas .minificha .info .detalles li:nth-child(1){
 					width:40%
@@ -2709,7 +2725,7 @@ section.inmusimi .minificha{
    	background-color: #fff;
     border-bottom: 1px solid #c7c7c7;
     float: left;
-    height: 350px;    
+    height: 370px;    
     margin-top: 20px;
     padding:10px;
     position: relative;
@@ -2764,6 +2780,9 @@ section.inmusimi .minificha .fav{
     		overflow: hidden;
     		width: 89%;
 		}
+			section.inmusimi .minificha .info h2 a{
+				color:red;
+			}
 		section.inmusimi .minificha .info h3{
 			font-size: 1em;
 		 	margin: 10px 0;
@@ -2940,7 +2959,12 @@ section.list_inmus{
 		color:#414141;
 	}
 	
-
+section.list_inmus .tabla{
+	display: block;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 420px;
+}
 section.list_inmus .linea.cabecera{
 	background-color: #6d6c6c;
 	 padding: 5px 0;
@@ -3145,32 +3169,6 @@ section.caract{}
 			font-family: raleway_bold;
 			font-size: 1.375em;
 		}
-
-
-section.datosadicio .linea{
- 	display: table;
-    margin-bottom: 45px;
-    margin-left: 2%;
-    width: 96%;
-}
-section.datosadicio .bloque{
- 	display: table-cell;
-	width:50%;
-	font-size: 1.125em;
-}
-	section.datosadicio .bloque p.titulo{
-		color: #848484;
-    	font-family: raleway_bold;
-    	margin-bottom: 15px;    	
-	}
-	section.datosadicio .bloque p.info{
-		color: #b2b1b1;    	
-    	margin-left: 10%;
-	}
-
-
-
-
 
 
 

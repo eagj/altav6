@@ -68,6 +68,26 @@
     section.mapa, aside.minifichas{
         display:block;
     }
+    aside.minifichas .minificha .foto{
+    	display:  table-cell;;
+    	height: inherit;
+    	margin-left: 0;
+		overflow: hidden;
+    	text-align: center;
+    	vertical-align: middle;
+    	width: 37%;
+	}
+		aside.minifichas .minificha .foto img{
+	   		margin-left:0%;
+    		max-height: inherit;
+    		max-width: 100%;
+    	}
+    aside.minifichas .minificha .info {
+    	display: table-cell;
+    	padding-left: 3%;
+    	vertical-align: top;
+    	width: 63%;
+	}
 }
 
 /* tablets menos de 1024 y ipad en vertical*/
@@ -133,10 +153,11 @@
                     background: rgba(0, 0, 0, 0) url("/images/select_cursor.png") no-repeat scroll 96% center;
                     height:29px;
                     color:#a0a0a0;
+                    width:100%;
                 }
                 section.filtrador_mobile .ordenar_mobile a .selectBox-arrow{
                     display:none
-                }
+                }                
                 
                 
             section.filtrador_mobile .resultados_mobile{
@@ -154,7 +175,7 @@
             
             
             
-            aside.minifichas .ordenar {
+            aside.minifichas .ordenar{
                 display: none;
             }
             section.filtrador_mobile .ordenar_mobile{
@@ -162,9 +183,10 @@
             }
             section.filtrador_mobile select{
                 outline: none;
+            	color:#a0a0a0;
                 border: 1px solid #a0a0a0;
                 background-color: #e9e9e9;
-                height:30px;
+                height:28px;
             }       
     
     section.filtrador .guardbusq{
@@ -173,31 +195,51 @@
         top: 138px;
     }
     section.mapa{
-        width:100%;     
-        }
+		width:100%;     
+    }
     aside.minifichas{
         z-index:0;      
         height: calc(100% - 210px);
         top: 182px;     
         width:100%;
-        background-color: #f6f6f6;
-        }
-    aside.minifichas .minificha{
-       float: left;
-        background-color: #fff;
-        box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.2);
-        height: 200px;
-        margin-left: 2%;
-        margin-top: 2%;
-        width: 47%;
-        display: inherit;
-        overflow: hidden;
+		background-color: #f6f6f6;
     }
-    aside.minifichas .minificha:nth-child(odd){
-         float: right;
-        margin-left: 0;
-        margin-right: 2%
-    }
+	    aside.minifichas .minificha{
+	       float: left;
+	        background-color: #fff;
+	        box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.2);
+	        height: 215px;
+	        margin-left: 2%;
+	        margin-top: 2%;
+	        width: 47%;
+	        display: inherit;
+	        overflow: hidden;
+	    }
+	    aside.minifichas .minificha:nth-child(odd){
+	         float: right;
+	        margin-left: 0;
+	        margin-right: 2%
+	    }
+	    aside.minifichas .minificha .foto{
+	    	display: inline-block;
+	    	margin-left: 3%;
+	    	overflow: hidden;
+	    	text-align: center;
+	    	vertical-align: top;
+	    	width: 34%;
+	    	height: 100%;
+	    }
+	    	aside.minifichas .minificha .foto img{
+			   margin-left: -30%;
+	    		max-height: 180px;
+	    		max-width: inherit;
+	    	}
+    aside.minifichas .minificha .info {
+    	display: inline-block;
+    	padding-left: 3%;
+    	vertical-align: middle;
+    	width: 58%;
+	}
     aside.minifichas .minificha .info .descuento p::before{
         background: transparent url("/images/ico_descuento_peq.png") no-repeat scroll center center;
         height: 26px;
@@ -210,9 +252,19 @@
         text-align: center;
     }
     aside.minifichas .minificha.banner img{
-        max-width:100%;
-        max-height
+    	width: 100%;
+    	height: 100%;
     }
+    aside.minifichas .minificha .info .detalles li{
+    	width: 33%
+	}
+	aside.minifichas .minificha .info .detalles li:nth-child(1){
+		width:35%
+	}
+	aside.minifichas .minificha .info p.enlace{
+		position:absolute;
+		bottom:0;
+	}
 }
 
 /* mobile menos de 1023 */
@@ -247,8 +299,8 @@
     
 }
 
-/* MQ para 465 de maximo */
-@media (max-width: 465px){
+/* MQ para 767px de maximo */
+@media (max-width: 767px){
     section.filtrador .semanti{
         margin-left: 0;
         width:60%;
@@ -271,13 +323,16 @@
         height:auto;
     }
     aside.minifichas .minificha .foto{
-        width:100%;
-        display:inline-block;
-        max-height: 200px; 
+  		width: 100%;
+    	display: inline-block;
+    	margin-left: 0;
+    	max-height: 200px;
     }
         aside.minifichas .minificha .foto img{
-            margin-top: -10%;
-            max-height: inherit;
+       		margin-top: -10%;
+    		max-width: 100%;
+    		margin-left: 0;
+    		max-height: inherit;
         }
     
     aside.minifichas .minificha .info{
@@ -287,6 +342,15 @@
     aside.minifichas .minificha .info h2{
         margin-top: 10px;
     }
+     aside.minifichas .minificha .info .detalles li{
+    	width: 30%;
+	}
+	aside.minifichas .minificha .info .detalles li:nth-child(1){
+		width: 40%;
+	}
+	aside.minifichas .minificha .info p.enlace{
+		position:relative;
+	}
 }
 
 
@@ -305,6 +369,9 @@
     
     header nav#responsive p{
         padding-top: 20px;
+    }
+    section.filtrador_mobile select{
+    	height: 25px;
     }
     
     aside.minifichas .minificha .foto{

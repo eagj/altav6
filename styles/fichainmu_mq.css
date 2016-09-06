@@ -201,6 +201,7 @@
 		.header_ficha.stick .superior{
 			margin-top: 70px;
 		}
+		
 	/*FICHA SUELO*/
 	#ficha_su .header_ficha p.precio.consultar{
 		margin-top: 5px;
@@ -384,8 +385,7 @@
 	
 	section.ficha, #ficha_promo section.ficha, #ficha_su section.ficha{
 		margin-top: 0;
-	}
-	
+	}	
 		
 		
 	section.caract{
@@ -399,7 +399,7 @@
 		}
 			section.caract .detalles ul {
     			padding: 0;
-    			padding-left: 18%;
+    			padding-left: 9%;
 			}
 				section.caract .detalles ul li{				
 		        	margin-right: 0;
@@ -446,7 +446,7 @@
 	}
 	section.certificado .certificadobox p{
     	font-size: 1em;
-    	width: 255px;
+    	width: 240px;
 	}
 	
 	section.descargas .descboxes .descbox{
@@ -468,6 +468,8 @@
 		
 	section.campa_asoc .box_campa{
 		text-align: center;
+		margin-left: 0;
+		width:50%;
 	}
 	
 	section.utils{
@@ -491,6 +493,7 @@
 	}
 	section.inmusimi .bloqueminifichas .minifichas .minificha {
 	    width: 100%;
+	   
     	/* margin-left: 4%; */
     }
 	section.inmusimi .bloqueminifichas .minifichas .minificha:nth-child(2) {
@@ -498,10 +501,20 @@
 	}
 	
 	/*FICHA PROMO*/
+	#ficha_promo section.list_inmus {
+    	margin: 20px 0;
+    	padding-right: 2%;
+    	padding-left: 2%;
+	}
+		#ficha_promo section.list_inmus .tabla{
+	    	max-height: 220px;
+		}	
+	
 	#ficha_promo .list_inmus .bloque{
 		width:33.3333333% !important;
 	    font-size: 1.2em;
 	}
+	
 	#ficha_promo section.list_inmus{
 		margin-bottom: 20px;
 	}
@@ -575,7 +588,7 @@
 		max-height: 45px;
 	}
 	section.infocomple .desple .bloque p.info{
-		margin-left: 10px;
+		margin-left: 0px;
 	}	
 	section.certificado .certificadobox{
 		text-align: center;
@@ -583,30 +596,30 @@
 	.tipoficha h3.tipopleg a{
 		font-size: 1.2em;
 	}
-	section.caract .detalles ul{
-		
-	}
+	
 	section.caract .detalles ul li{
 		font-size: 1em;
 	}
-	
+	section.certificado .certificadobox p{
+	    text-align: left;
+    	font-size: .9em;
+    	width: 180px;
+	}
 	section.propietario .propi .texto{
 		margin-left: 0;
-    	text-align: center;
-    	width: 100%;
+    	    	
 	}
 		section.propietario .propi .texto p{
 			line-height: inherit;
 		}
 	section.propietario .propi .logopropi {
-    	display: inline-block;
-    	width: 100%;
+    	display: inline-block;    	
     	margin-top: 10px;
     	text-align: center;
 	}
 		section.propietario .propi .logopropi img {
 	    	width: auto;
-	    	max-width: 300px;
+	    	max-width: 100%;
 		}
 	
 	section.campa_asoc .box_campa{
@@ -649,6 +662,9 @@
 		text-align: center;
 		margin-top: 10px;
 		
+	}
+	section.inmusimi .bloqueminifichas .minifichas .minificha{
+		height: 340px;
 	}
 }
 /* IPHONE 4*/
