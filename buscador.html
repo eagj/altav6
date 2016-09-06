@@ -70,9 +70,31 @@
 		$( "#precio_box" ).removeClass("selected");		
 		$( "#superficie_box" ).removeClass("selected");
 		$( "#filtros_box" ).removeClass("selected");
+		$( "#filtros_box_mobile" ).removeClass("selected");
 		$(id).addClass("selected");
 	}
 </script>
+<style>
+section.filtrador #filtros_box_mobile{
+	display:none;
+}
+@media (max-width: 767px){
+	section.filtrador #filtros_box{
+		display:none;
+	}
+	section.filtrador #filtros_box_mobile.box_extend{
+		position:inherit;
+	}
+	section.filtrador #filtros_box_mobile{
+		display:inline;
+	}
+		section.filtrador #filtros_box_mobile .box_extend_content{
+			width:100%;
+			left:0;
+			margin-left: 0;
+		}
+}
+</style>
 </head>
 <body>
 <div id="buscador">
@@ -231,6 +253,116 @@
 						<div class="bloque">
 							<input type="radio" value="4" id="habitaciones4" name="numhabis">
 							<label for="habitaciones4">4 &oacute; m&aacute;s</label>
+						</div>
+					</div>
+					
+					<div id="otrosserv" class="linea">
+						<p class="titulo">Otros Servicios</p>
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conGaraje" value="true" name="filtro.conGaraje">
+							<label for="filtradoForm_filtro_conGaraje">Garaje</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conAscensor" value="true" name="filtro.conAscensor">
+							<label for="filtradoForm_filtro_conAscensor">Ascensor</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conTrastero" value="true" name="filtro.conTrastero">
+							<label for="filtradoForm_filtro_conTrastero">Trastero</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="checkbox" id="filtradoForm_filtro_conPiscina" value="true" name="filtro.conPiscina">
+							<label for="filtradoForm_filtro_conPiscina">Piscina</label>
+						</div>
+					</div>
+					<div id="promos" class="linea">
+						<p class="titulo">Promociones</p>
+						<select name="promos" id="promobox">
+							<option>La Era de los Descuentos 2</option>
+							<option>Semana Santa Costa 2016</option>
+							<option>Naves, locales y oficinas 2016</option>
+							<option>Segunda Mano</option>
+						</select>
+					</div>
+					<div class="botonera linea">
+						<input type="reset" value="Borrar filtros" name="submit" id="filtradoForm_reset">
+						<input type="submit" value="Aceptar" name="submit" id="filtradoForm_submit">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="box_extend" id="filtros_box_mobile">
+			<p><a href="#" onclick="show_box_extend('#filtros_box_mobile')">Filtros</a></p>
+			<div class="box_extend_content">
+				<form action="" method="get">
+					<div class="tipo_mobile">
+						<h4 class="titulo">Tipolog&iacute;a</h4>
+						<select id="tipo_mobile" name="tipoInmueble">
+							<option value="1">Pisos y casas</option>
+							<option value="2">Trasteros</option>
+							<option value="3">Garajes</option>
+							<option value="4">Locales</option>
+							<option value="5">Naves</option>
+							<option value="6">Oficinas</option>
+							<option value="9">Suelos</option>
+						</select>
+					</div>
+					<div class="precio_mobile">
+						<h4 class="titulo">Precio</h4>
+						<select name="preciomin_mobile" id="preciomin_mobile">
+							<option>M&iacute;nimo</option>
+							<option>100.000&euro;</option>					
+						</select>
+						<select name="preciomax_mobile" id="preciomax_mobile">
+						<option>M&aacute;ximo</option>
+						<option>100.000&euro;</option>	
+					</select>						
+					</div>
+					<div class="superficie_mobile">
+						<h4 class="titulo">Superficie</h4>
+						<select name="preciomin_mobile" id="preciomin_mobile">
+							<option>M&iacute;nimo</option>
+							<option>100.000&euro;</option>					
+						</select>
+						<select name="preciomax_mobile" id="preciomax_mobile">
+							<option>M&aacute;ximo</option>
+							<option>100.000&euro;</option>	
+					</select>
+					</div>					
+					<div class="habitaciones_mobile" class="linea">
+						<p class="titulo">Habitaciones</p>						
+						<div class="bloque">
+							<input type="radio" value="1" checked="checked" id="habitaciones_mobile1" name="numhabis_mobile">
+							<label for="habitaciones1">1</label>
+						</div>				
+						
+						<div class="bloque">
+							<input type="radio" value="2" id="habitaciones_mobile2" name="numhabis_mobile">
+							<label for="habitaciones2">2</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="radio" value="3" id="habitaciones_mobile3" name="numhabis_mobile">
+							<label for="habitaciones3">3</label>
+						</div>
+						
+						<div class="bloque">
+							<input type="radio" value="4" id="habitaciones_mobile4" name="numhabis_mobile">
+							<label for="habitaciones4">4 &oacute; m&aacute;s</label>
+						</div>
+					</div>
+					<div id="estado" class="linea">
+						<p class="titulo">Estado</p>
+						<div class="bloque">
+							<input type="checkbox" id="obraNueva01" value="true" name="filtro.obraNueva01">
+							<label for="obraNueva01">Obra Nueva</label>
+						</div>
+						<div class="bloque">
+							<input type="checkbox" id="segundaMano01" value="true" name="filtro.segundaMano01">
+							<label for="segundaMano01">Segunda Mano</label>
 						</div>
 					</div>
 					
