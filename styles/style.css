@@ -1337,6 +1337,10 @@ section.filtrador .precio .box_extend .box_extend_content a.selectBox {
     color:#000
 }
 
+/*FILTRO MOBILE*/
+#filtros_box_mobile{
+	display:none;
+}
 /*ESTILOS SELECT PRECIO*/
 #preciominselect, #supminselect{
 	font-size: 0.9em;
