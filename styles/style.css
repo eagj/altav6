@@ -3386,6 +3386,212 @@ footer{
 		}
 
 
+/************************** MODALES********************************/
+#modal_full {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+	#modal_full #modal{
+		background-color: #fff;
+    	left: calc(50% - 307.5px);
+    	padding: 20px;
+    	position: absolute;
+	   	top: 15%;
+    	width: 615px;
+    	color: ##616261;
+	}
+
+
+#modal_full #modal .generic_modal{
+	 border: 3px solid #0071b5;
+    font-family: raleway;
+  	border-radius: 20px;
+  	padding: 25px;
+  	position:relative;
+}
+#modal_full #modal .generic_modal .cerrar {
+    background-color: #0071b5;
+    border-radius: 0 20px 0 8px;
+    color: #fff;
+    padding: 2px 10px;
+    position: absolute;
+	right: -2px;
+    top: -2px;
+    z-index: 101 !important;
+}
+	#modal_full #modal .generic_modal .cerrar a{
+		color: #fff;
+    	font-family: raleway_bold;
+    	font-size: 1.5em;
+    	font-weight: normal;
+	}
+
+#modal_full #modal .generic_modal .ico{
+	background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 95px;
+    width: 100%;
+	margin-bottom: 25px;
+    margin-top: 35px;
+}
+	#modal_full #modal .generic_modal h4.titulo{
+		text-align: center;
+		font-size: 2em;		
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
+		#modal_full #modal .generic_modal h4.titulo span{
+			font-family: raleway_bold;			
+		}
+	
+	#modal_full #modal .generic_modal h4.light{
+		font-family: raleway_light;
+    	font-size: 1.438em;
+    	margin-bottom: 20px;
+    	margin-top: 5px;
+    	text-align: center;
+    	text-transform: uppercase;
+	}
+	#modal_full #modal .generic_modal h5{
+		color:#616261;
+		font-size: 1.125em;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+		#modal_full #modal .generic_modal h5 span{
+			font-family: raleway_bold;		
+		}
+	
+	
+	#modal_full #modal .generic_modal form {
+    	display: inline-block;
+    	margin-bottom: 10px;
+    	text-align: center;
+    	width: 100%;
+	}
+	
+	#modal_full #modal .generic_modal .linea{
+		display: inline-block;
+    	margin-bottom: 20px;
+    	position: relative;
+    	width: 100%;
+	}
+	#modal_full #modal .generic_modal .linea.form{
+		width:75%;
+	}
+	#modal_full #modal .generic_modal .linea.email::after {
+    	background: transparent url("/images/modales/user_login_ico.png") no-repeat scroll 0 0;
+    	content: " ";
+    	height: 18px;
+    	position: absolute;
+    	right: 10px;
+    	width: 18px;
+}
+	#modal_full #modal .generic_modal .linea input[type="text"]{
+		-moz-border-bottom-colors: none;
+	    -moz-border-left-colors: none;
+	    -moz-border-right-colors: none;
+	    -moz-border-top-colors: none;
+	    background-color: transparent;
+	    border-color: -moz-use-text-color -moz-use-text-color #e0e0e0;
+	    border-image: none;
+	    border-style: none none solid;
+	    border-width: medium medium 1px;
+	    float: left;
+	    font-family: raleway_light;
+	    margin-left: 4%;
+	    width: 96%;
+	    color:#515151;
+	}
+	#modal_full #modal .generic_modal .linea input[type="button"]{		
+    	border: medium none;
+    	border-radius: 4px;
+    	box-shadow: 0 6px 0 #414141;    	
+    	font-size: 1.2em;
+    	padding: 5px 10px;
+    	text-transform: uppercase;
+    	width: 50%;
+	}
+		#modal_full #modal .generic_modal .linea.botonera{
+			margin-top: 20px;
+		 	text-align: center;
+		}
+			#modal_full #modal .generic_modal .linea.botonera a{
+				border: medium none;
+		    	border-radius: 4px;
+		    	font-size: 1.2em;
+		    	padding: 5px 10px;
+		    	text-transform: uppercase;
+		    	width: 50%;
+		    	color: #fff;	
+			}
+	/*BOTON ROJO*/
+	#modal_full #modal .generic_modal .linea.red input[type="button"]{
+		color: #fff;
+		background-color: red;
+		box-shadow: 0 6px 0 #c60505;
+	}
+	#modal_full #modal .generic_modal .linea.botonera.red a{
+		;
+		background-color: red;
+		box-shadow: 0 6px 0 #c60505;
+	}
+	/*BOTON VERDE*/
+	#modal_full #modal .generic_modal .linea.green input[type="button"]{
+		color: #fff;
+		background-color:#2bb218;
+		box-shadow: 0 6px 0 #165F0C;
+	}
+	
+
+/*ERROR*/	
+#modal_full #modal.error .generic_modal{
+	border-color:red;
+	color:red;
+}	
+	#modal_full #modal.error .generic_modal .cerrar{
+		background-color: red;
+	}	
+	
+#modal_full #modal.error .generic_modal .ico{
+	background-image: url('/images/modales/error_ico.png');
+}
+
+	
+/*BAJADA PRECIO*/
+#modal_full #modal.bajaprecio .generic_modal{
+	border-color:#9a9b23;	
+}
+	#modal_full #modal.bajaprecio .generic_modal .cerrar{
+		background-color: #9a9b23;
+	}
+	#modal_full #modal.bajaprecio .generic_modal .ico{
+		background-image: url('/images/modales/bajada_precio.png');
+	}
+
+/*BUSQUEDA GUARDADA*/
+#modal_full #modal.busqguardada .generic_modal{
+	border-color:#9a9b23;	
+}
+	#modal_full #modal.busqguardada .generic_modal .cerrar{
+		background-color: #9a9b23;
+	}
+	#modal_full #modal.busqguardada .generic_modal .ico{
+		background-image: url('/images/modales/ico_guardar_busqueda.png');
+		margin-bottom: 0;
+	}
+#modal_full #modal.busqguardada .generic_modal .linea.botonera{
+	margin:40px 0;
+}
+
+
+
 /* tablets menos de 1024 */
 @media (max-width: 1023px){	
 	
