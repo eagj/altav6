@@ -984,6 +984,7 @@ section.mapa{
 	position: absolute;
 	top: 189px;
 	width: 66%;
+	background-color: #fff;
 }
 	section.mapa > *{
 		width:100%;
