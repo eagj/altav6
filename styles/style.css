@@ -3398,11 +3398,11 @@ footer{
 }
 	#modal_full #modal{
 		background-color: #fff;
-    	left: calc(50% - 307.5px);
+    	left: calc(50% - 330px);
     	padding: 20px;
     	position: absolute;
 	   	top: 15%;
-    	width: 615px;
+    	width: 660px;
     	color: ##616261;
 	}
 
@@ -3445,9 +3445,11 @@ footer{
 		font-size: 2em;		
 		text-transform: uppercase;
 		margin-bottom: 5px;
+		color:#616161;
 	}
 		#modal_full #modal .generic_modal h4.titulo span{
-			font-family: raleway_bold;			
+			font-family: raleway_bold;
+		 	vertical-align: middle;			
 		}
 	
 	#modal_full #modal .generic_modal h4.light{
@@ -3458,11 +3460,28 @@ footer{
     	text-align: center;
     	text-transform: uppercase;
 	}
+	
+	#modal_full #modal .generic_modal h4.titulo.ico{
+		height:auto;
+		margin-bottom: 30px;
+	}
+	#modal_full #modal .generic_modal h4 .icoinline{
+		height: 44px;
+    	margin-right: 20px;
+    	text-align: left;
+    	vertical-align: middle;
+    	width: 40px;
+	 	display: inline-block;
+	}
 	#modal_full #modal .generic_modal h5{
 		color:#616261;
 		font-size: 1.125em;
 		text-align: center;
 		margin-bottom: 5px;
+	}
+	#modal_full #modal .generic_modal h5.light{
+		font-family: raleway_light;
+		font-size: 0.938em;
 	}
 		#modal_full #modal .generic_modal h5 span{
 			font-family: raleway_bold;		
@@ -3478,9 +3497,77 @@ footer{
 	
 	#modal_full #modal .generic_modal .linea{
 		display: inline-block;
-    	margin-bottom: 20px;
+    	margin:20px 0;
     	position: relative;
     	width: 100%;
+	}
+	#modal_full #modal .generic_modal .linea.titulo{
+		display: inline-block;
+    	text-align: left;
+    	width: 100%;
+	}
+	#modal_full #modal .generic_modal .linea.titulo label{
+		display: inline-block;
+    	font-family: raleway_light;
+    	font-size: 1.313em;
+    	text-transform: uppercase;
+	}
+	#modal_full #modal .generic_modal .linea .bloque{
+		 display: inline-block;
+    	margin-left: 30px;
+	}
+	#modal_full #modal .generic_modal .linea .bloque.ico{
+		 height: auto;
+    	margin-bottom: 0;
+    	margin-left: 0;
+    	margin-top: 0;
+    	width: auto;
+	}	
+	#modal_full #modal .generic_modal .linea .bloque label {
+    	color: #b7b7b7;
+    	font-family: raleway_light;
+    	font-size: 0.9em;
+    	text-transform: capitalize;
+	}
+	#modal_full #modal .generic_modal input[type="radio"], #modal_full #modal .generic_modal input[type="checkbox"] {
+    	left: 0;
+    	position: absolute;
+    	visibility: hidden;
+	}
+	#modal_full #modal .generic_modal input[type="radio"] ~ label::before{
+    	color: red;
+    	content: "\ee74";
+    	font-family: icomoon;
+    	margin-left: -20px;
+    	position: absolute;
+    	visibility: visible;
+	}
+	#modal_full #modal .generic_modal input[type="radio"]:checked ~ label::before{
+		content: "\ee6e";
+	}
+	#modal_full #modal .generic_modal input[type="checkbox"] ~ label::before{
+    	color: red;
+    	content: "\ee64";
+    	font-family: icomoon;
+    	margin-left: -20px;
+    	position: absolute;
+    	visibility: visible;
+	}
+	#modal_full #modal .generic_modal input[type="checkbox"]:checked ~ label::before{
+		content: "\ee65";
+	}
+	#modal_full #modal .generic_modal input[type="radio"]:checked ~ label, #modal_full #modal .generic_modal input[type="checkbox"]:checked ~ label {
+    	color: #616161;
+	}
+	
+	
+	
+	#modal_full #modal .generic_modal .linea.titulo input[type="text"]{
+ 		display: inline-block;
+    	float: none;
+    	font-size: 0.9em;
+	   	margin-left: 2%;
+    	width: 58%;
 	}
 	#modal_full #modal .generic_modal .linea.form{
 		width:75%;
@@ -3492,8 +3579,18 @@ footer{
     	position: absolute;
     	right: 10px;
     	width: 18px;
+    	margin-top: -5px;
 }
-	#modal_full #modal .generic_modal .linea input[type="text"]{
+#modal_full #modal .generic_modal .linea.pass::after {
+    	background: transparent url("/images/modales/candado_login_ico.png") no-repeat scroll 0 0;
+    	content: " ";
+    	height: 18px;
+    	position: absolute;
+    	right: 10px;
+    	width: 18px;
+    	margin-top: -5px;
+}
+	#modal_full #modal .generic_modal .linea input[type="text"], #modal_full #modal .generic_modal .linea input[type="password"]{
 		-moz-border-bottom-colors: none;
 	    -moz-border-left-colors: none;
 	    -moz-border-right-colors: none;
@@ -3508,8 +3605,9 @@ footer{
 	    margin-left: 4%;
 	    width: 96%;
 	    color:#515151;
+	    text-indent: 10px;
 	}
-	#modal_full #modal .generic_modal .linea input[type="button"]{		
+	#modal_full #modal .generic_modal .linea input[type="button"], #modal_full #modal .generic_modal .linea input[type="submit"]{		
     	border: medium none;
     	border-radius: 4px;
     	box-shadow: 0 6px 0 #414141;    	
@@ -3531,24 +3629,187 @@ footer{
 		    	width: 50%;
 		    	color: #fff;	
 			}
+#modal_full #modal.logueo .generic_modal .login .linea.botonera input{
+	font-size: 1em;
+	width:100%;
+	padding:9px 0;
+ 	text-transform: capitalize;
+ 	 box-shadow: inherit;
+ 	 color: #fff;
+}			
+			
+			
+			
+			
 	/*BOTON ROJO*/
-	#modal_full #modal .generic_modal .linea.red input[type="button"]{
+	#modal_full #modal .generic_modal .linea.red input[type="button"], #modal_full #modal .generic_modal .linea.red input[type="submit"]{
 		color: #fff;
 		background-color: red;
 		box-shadow: 0 6px 0 #c60505;
 	}
-	#modal_full #modal .generic_modal .linea.botonera.red a{
-		;
+	#modal_full #modal .generic_modal .linea.botonera.red a{		
 		background-color: red;
 		box-shadow: 0 6px 0 #c60505;
 	}
 	/*BOTON VERDE*/
-	#modal_full #modal .generic_modal .linea.green input[type="button"]{
+	#modal_full #modal .generic_modal .linea.green input[type="button"], #modal_full #modal .generic_modal .linea.green input[type="submit"]{
 		color: #fff;
 		background-color:#2bb218;
-		box-shadow: 0 6px 0 #165F0C;
+		box-shadow: none;
+    	padding: 9px 0;
+	}
+
+	
+/*LOGIN*/
+#modal_full #modal.logueo .generic_modal .ico{
+	background-position:inherit;
+	background-repeat:inherit;
+    display:inherit;
+    height:inherit;
+    margin-bottom:0;
+    margin-top:0;
+    width:inherit;
+ 	position: absolute;
+    text-align: center;
+    width: 30px;
+}
+
+#modal_full #modal.logueo .generic_modal h4.titulo{
+	font-size: 1.375em;
+	color:#0071b5;
+	font-family: raleway_light;
+ 	margin-bottom: 40px;
+    margin-top: 22px;
+}
+	#modal_full #modal.logueo .generic_modal h4.titulo span{
+		color:#616161;
 	}
 	
+	
+#modal_full #modal.logueo .generic_modal .loginsocial{
+	float: left;
+	width:45%;
+	margin-left: 2%;
+}
+	#modal_full #modal.logueo .generic_modal .loginsocial .botonrrss {
+	    border-radius: 5px;
+	    margin: 20px 0;
+	    padding: 9px 0;
+	    text-align: center;
+	    width: 88%;
+	}
+		#modal_full #modal.logueo .generic_modal .loginsocial .texto{
+		    display: inline-block;
+		    margin-left: 10px;
+		}
+			#modal_full #modal.logueo .generic_modal .loginsocial .texto p {
+			    color: #fff;
+			    font-family: raleway_light;
+			    font-size: 0.813em;
+			}
+			#modal_full #modal.logueo .generic_modal .loginsocial .texto p span{
+				font-family: raleway_bold;
+			}
+
+			#modal_full #modal.logueo .generic_modal .loginsocial #form_usu_fblogin {
+			    background-color: #3b519a;
+			    margin-top: 31px;
+			}
+			#modal_full #modal.logueo .generic_modal .loginsocial #form_usu_gglogin {
+		    	background-color: #fff;
+		    	border: 1px solid #d3d1d1;
+		    	color: #000;
+		    	cursor: pointer;
+			}
+				#modal_full #modal.logueo .generic_modal .loginsocial #form_usu_gglogin .texto p {
+			 		color: #515151;
+				}
+					
+
+#modal_full #modal.logueo .generic_modal .login {
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    padding-left: 3%;
+    padding-top: 22px;
+    width: 50%;
+}
+	#modal_full #modal.logueo .generic_modal .login .linea{
+	 	float: left;
+	    margin: 0 0 20px;
+	    width: 100%
+	}
+		#modal_full #modal.logueo .generic_modal .login input{
+		    font-family: raleway_light;
+		    font-size: 0.875em;
+		    padding-bottom: 3px;
+		    text-indent: 5px;
+		}
+		#modal_full #modal.logueo .generic_modal .login a{
+	 		color: #ed2422;
+    		float: left;
+    		font-size: 0.813em;
+    		margin-top: -5px;
+    		text-align: center;
+    		width: 100%;
+		}
+#modal_full #modal.logueo .generic_modal .linea.register{
+	text-align: center;
+	font-size: 0.875em;
+	color:#9e9e9e;
+	margin:0px;
+}		
+	#modal_full #modal.logueo .generic_modal .linea.register a{
+		color:#ed2422
+	}
+
+
+
+
+/*LOGIN ERROR*/
+#modal_full #modal.logueo.loginerror h4.titulo{
+	font-size: 1.188em;
+
+}
+
+#modal_full #modal.logueo.loginerror h4.titulo:nth-child(2) {
+    margin-top: -30px;
+}
+	#modal_full #modal.logueo.loginerror h4.titulo span{
+		color:red;
+	}
+
+#modal_full #modal.logueo.loginerror .generic_modal .login input{
+	border-color: red;
+	color:red;
+}
+
+#modal_full #modal.logueo.loginerror .generic_modal .linea.email::after{
+	background: transparent url("/images/modales/user_login_ico_red.png") no-repeat scroll 0 0;
+}
+#modal_full #modal.logueo.loginerror .generic_modal .linea.pass::after{
+	background: transparent url("/images/modales/candado_login_ico_red.png") no-repeat scroll 0 0;
+}
+
+
+
+/*TODOOK*/
+#modal_full #modal.todook .generic_modal{
+	border-color:#9a9b23
+}
+	#modal_full #modal.todook .generic_modal .cerrar{
+		background-color:#9a9b23;
+	}	
+	
+#modal_full #modal.todook .generic_modal .ico{
+	background-image: url('/images/modales/ok_ico.png');
+}	
+
+#modal_full #modal.todook .generic_modal h4.titulo{
+	color:#9a9b23;
+ 	margin-bottom: 10px;
+}
+
+
 
 /*ERROR*/	
 #modal_full #modal.error .generic_modal{
@@ -3562,6 +3823,10 @@ footer{
 #modal_full #modal.error .generic_modal .ico{
 	background-image: url('/images/modales/error_ico.png');
 }
+#modal_full #modal.error .generic_modal h4.titulo{
+	color:red;
+ 	margin-bottom: 10px;
+}
 
 	
 /*BAJADA PRECIO*/
@@ -3573,6 +3838,7 @@ footer{
 	}
 	#modal_full #modal.bajaprecio .generic_modal .ico{
 		background-image: url('/images/modales/bajada_precio.png');
+		margin-top: 0;
 	}
 
 /*BUSQUEDA GUARDADA*/
@@ -3585,11 +3851,83 @@ footer{
 	#modal_full #modal.busqguardada .generic_modal .ico{
 		background-image: url('/images/modales/ico_guardar_busqueda.png');
 		margin-bottom: 0;
+		margin-top: 0;
 	}
-#modal_full #modal.busqguardada .generic_modal .linea.botonera{
-	margin:40px 0;
+	#modal_full #modal.busqguardada .generic_modal .linea.botonera{
+		margin:40px 0;
+	}
+
+/*GUARDAR BUSQUEDA*/
+#modal_full #modal.guardbusqueda .generic_modal{
+	border-color:#9a9b23;	
+}
+	#modal_full #modal.guardbusqueda .generic_modal .cerrar{
+		background-color: #9a9b23;
+	}
+
+	#modal_full #modal.guardbusqueda .generic_modal h4.ico .icoinline{
+		background-image: url('/images/modales/ico_guardar_busqueda.png');
+	}
+
+	#modal_full #modal.guardbusqueda .generic_modal .linea .bloque.ico{
+		background-image: url('/images/modales/ico_guardar_busqueda_alertas.png');
+		width:30px;
+		height:33px;
+		vertical-align: middle;
+		margin-right: 30px;
+	}
+
+/*ALERTAS NUEVOS*/
+#modal_full #modal.alertanuevos .generic_modal{
+	border-color:#9a9b23;	
+}
+	#modal_full #modal.alertanuevos .generic_modal .cerrar{
+		background-color: #9a9b23;
+	}
+
+	#modal_full #modal.alertanuevos .generic_modal h4.ico{
+		font-size: 1.875em;
+		color:#9a9b23;
+	}
+	#modal_full #modal.alertanuevos .generic_modal h4.ico .icoinline{
+		background-image: url('/images/modales/icono_alerta_piso_nuevo.png');
+		width:50px;
+		height:58px;
+	}
+	
+	#modal_full #modal .generic_modal .linea.titulo input[type="text"]{
+		width:52%;
+	}
+
+	#modal_full #modal.alertanuevos .generic_modal .linea .bloque.ico{
+		background-image: url('/images/modales/ico_guardar_busqueda_alertas.png');
+		width:30px;
+		height:33px;
+		vertical-align: middle;
+		margin-right: 30px;
+	}
+
+
+/*COLECTIVOS*/
+#modal_full #modal.logincolect .generic_modal .ico{
+	background-image: url('/images/modales/ico_regmail.png');
+	height: 185px;
+	margin: 0;	 
+} 
+#modal_full #modal.logincolect .generic_modal h4{
+	color:#0071b5;
+	margin-bottom: 0;
+}
+#modal_full #modal.logincolect .generic_modal h4 span{
+	 color: #616161;
+    display: inline-block;
+    font-family: raleway_bold;
+    width: 100%;
 }
 
+#modal_full #modal.logincolect .generic_modal .linea.botonera{
+	margin-top: 0 ;
+}
 
 
 /* tablets menos de 1024 */
