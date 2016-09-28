@@ -2703,42 +2703,7 @@ section.utils{
     		vertical-align: middle;
 		}
 		
-/*SHARE*/
-#modal_full #modal.sharebox ul{
-	margin:40px 0;
-}
-#modal_full #modal.sharebox li{
-	display: inline-block;
-    text-align: center;
-    width: 25%;
-    margin-right: -4px;
-}
-	#modal_full #modal.sharebox li a{
-		color:#414141;
-		font-family: raleway_semibold;		
-	}
-	#modal_full #modal.sharebox li a::before{
-		content: "\00a0";
-    	height: 32px;
-    	width: 100%;
-		display: inline-block;
-		margin-bottom: 10px;
-	}
-#modal_full #modal.sharebox li.fb_ico a::before {
-    background: transparent url("/images/ico_pie_fb.png") no-repeat scroll center center;   
-}
-#modal_full #modal.sharebox li.twi_ico a::before {
-    background: transparent url("/images/ico_pie_twi.png") no-repeat scroll center center;   
-}
-#modal_full #modal.sharebox li.gplus_ico a::before {
-    background: transparent url("/images/ico_pie_gplus.png") no-repeat scroll center center;   
-}
-#modal_full #modal.sharebox li.in_ico a::before {
-    background: transparent url("/images/ico_pie_linke.png") no-repeat scroll center center;   
-}
-#modal_full #modal.sharebox li.inst_ico a::before {
-    background: transparent url("/images/ico_pie_insta.png") no-repeat scroll center center;   
-}
+
 
 
 /*SECTION INMUEBLES SIMILARES*/
@@ -4202,6 +4167,50 @@ footer{
 }
 
 
+
+/*SHARE*/
+#modal_full.sharemodal {
+    background-color: transparent;
+    display: none;
+}
+#modal_full #modal.sharebox ul{
+	margin:40px 0;
+}
+#modal_full #modal.sharebox li{
+	display: inline-block;
+    text-align: center;
+    width: 25%;
+    margin-right: -4px;
+}
+	#modal_full #modal.sharebox li a{
+		color:#414141;
+		font-family: raleway_semibold;		
+	}
+	#modal_full #modal.sharebox li a::before{
+		content: "\00a0";
+    	height: 32px;
+    	width: 100%;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+#modal_full #modal.sharebox li.fb_ico a::before {
+    background: transparent url("/images/ico_pie_fb.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.twi_ico a::before {
+    background: transparent url("/images/ico_pie_twi.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.gplus_ico a::before {
+    background: transparent url("/images/ico_pie_gplus.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.in_ico a::before {
+    background: transparent url("/images/ico_pie_linke.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.inst_ico a::before {
+    background: transparent url("/images/ico_pie_insta.png") no-repeat scroll center center;   
+}
+
+
+
 	
 /* tablets menos de 1024 */
 @media (max-width: 1023px){	
@@ -4330,6 +4339,10 @@ footer{
 	/*CALCULADORA HIPETECARIA*/
 	#modal_full #modal.calculadora{
 		background-color:transparent;
+		
+	}
+	#modal_full #modal.calculadora .generic_modal{
+		height:auto;
 	}
 	#modal_full #modal.calculadora .generic_modal h4.titulo{
 		font-size: 1.5em;
@@ -4345,6 +4358,17 @@ footer{
 	#modal_full #modal.calculadora .generic_modal .bloque{
 		margin-bottom: 10px;
 	}
+	
+	/*SHARE MODAL*/
+	#modal_full #modal.sharebox{
+		margin-top: 20%;
+		background-color:transparent;
+		
+	}
+	#modal_full #modal.sharebox .generic_modal{
+        height:auto;
+    }
+	
 }
 /* iphone y menos*/
 @media (max-width: 375px){
@@ -4406,5 +4430,11 @@ footer{
 	
 	#modal_full #modal.calculadora .generic_modal .bloque input, #modal_full #modal.calculadora .generic_modal #plazo.bloque input, #modal_full #modal.calculadora .generic_modal #euribor.bloque input{
 		width: 100px;
+	}
+	
+	/*MODAL SHARE*/
+	#modal_full #modal.sharebox li{
+		width:50%;
+		margin-bottom: 20px;
 	}
 }
