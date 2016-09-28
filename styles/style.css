@@ -4438,3 +4438,15 @@ footer{
 		margin-bottom: 20px;
 	}
 }
+/* IPHONE 4*/
+@media (max-height: 480px){
+	aside#contact_ficha, aside#contact_ficha.stick{
+		top:0;
+	}
+	.tipoficha .contact_form .cuerpo .captcha{
+		margin-bottom: 0px;
+	}
+	#modal_full #modal.sharebox{
+		margin-top: 0;
+	}
+}
