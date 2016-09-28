@@ -4438,6 +4438,12 @@ footer{
 		margin-bottom: 20px;
 	}
 }
+/*IPHONE 5 HORIZONTAL*/
+@media (max-height: 320px){
+	#modal_full #modal.sharebox{
+		margin-top: 0;
+	}
+}
 /* IPHONE 4*/
 @media (max-height: 480px){
 	aside#contact_ficha, aside#contact_ficha.stick{
@@ -4446,7 +4452,5 @@ footer{
 	.tipoficha .contact_form .cuerpo .captcha{
 		margin-bottom: 0px;
 	}
-	#modal_full #modal.sharebox{
-		margin-top: 0;
-	}
+	
 }
