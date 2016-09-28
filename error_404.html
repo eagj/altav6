@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+  	<!-- Desactivar la deteccion automatica de numeros de teléfono -->
+    <meta name="format-detection" content="telephone=no">
+	<title>Error 404</title>
+	<link rel="icon" type="image/png" href="favicon.ico" />
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 	<!-- selectbox-->
+ 	<script src="/include/jquery/selectbox/jquery.selectBox.js" type="text/javascript"></script>
+ 	<link href="/include/jquery/selectbox/jquery.selectBox.css" rel="stylesheet" type="text/css" />
+	<!-- HOJAS DE ESTILOS -->
+	<link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/styles/style.css">
+	<!-- CSS media query INDEX -->
+	<link rel="stylesheet" media="(max-width: 1023px)" href="/styles/index_mq.css" />
+
+	<link href="/include/jquery/vegas/vegas.css" rel="stylesheet">
+	<style type="text/css" media="screen">
+		section.paginaerror p.titulo{
+			color: red;
+    		font-family: raleway_bold;
+    		margin: 40px 0;
+    		text-align: center;
+    		text-transform: uppercase;
+    		font-size: 1.6em;
+		}
+		section.paginaerror .imagen{
+			width: 98%;
+    		margin-left: 1%;
+		}
+		section.paginaerror .imagen picture, section#error_404 .imagen img{
+			width: 100%;
+		}
+		section.paginaerror p.descrip{
+			font-size: 1.5em;
+    		margin:40px 0 80px 1%;
+    		text-align: center;
+    		width:98%;
+    		
+		}
+			section.paginaerror p.descrip a{
+				color:red;
+			}
+		@media (max-width: 767px){ 
+			section.paginaerror p.titulo, section.paginaerror p.descrip{
+				margin:20px 0;	
+			}
+		}
+	</style>
+</head>
+<body>
+<div id="index">
+	<header id="general">
+		<div class="contentgeneric">
+			<p class="visitados" id="pUltimosVisitados">
+				<a id="btnUltimosVisitados" href="#">Ver &uacute;ltimos visitados</a>
+			</p>
+			<p class="loginhead" id="loginacces">
+				<a href="#" class="acceso" onclick="showarepriv(); return false">Acceso</a>|<a class="registro" href="">Registro</a>
+			</p>
+			<div class="usuarioconect" id="usuario">
+				<a href="" onclick="showmenuarepriv(); return false" id="nombrePerfil">Quique Garcia</a>
+				<div style="display: none;" id="menuAreaPrivada">
+					<ul>
+						<li class="inicio"><a href="">Inicio</a></li>
+						<li class="fav"><a href="">Favoritos</a></li>
+						<li class="buscguard"><a href="">Alertas</a></li>
+						<li class="inmuguard"><a href="">Inmuebles guardados</a></li>
+						<li class="solicenv"><a href="">Consultas</a></li>
+						<li class="suscrip"><a href="">Suscripciones</a></li>
+						<li class="perfil"><a href="">Perfil</a></li>
+						<li class="exit"><a title="Salir" href="">Salir</a></li>
+					</ul>
+				</div>				
+			</div>						
+		</div>
+	</header>
+	<header id="logonav">
+		<div class="contentgeneric">
+			<div class="logohead">
+				<a href="/"><img id="logoalta" src="/images/logoaltamira.png" alt="Altamira Inmuebles logo" /></a>
+			</div>
+			<div class="contact">
+				<div class="contacto seccion">					
+					<p><a href="#" onclick="showform();return false"><img src="/images/ico_head_contacto.png" alt="Contacto" /> Contacto</a></p>
+				</div>
+				<div class="tellamamos seccion">					
+					<p><a href="#" onclick="showformtella();return false"><img src="/images/ico_head_tellamamos.png" alt="Contacto" /> Te llamamos</a></p>
+				</div>
+				<div class="telefono seccion">					
+					<p><img src="/images/ico_head_tfno.png" alt="Contacto" /> 914 842 874</p>
+				</div>
+			</div>
+			<div class="contact_responsive">									
+				<p><a href="tel:914842874"><img src="/images/ico_head_tfno.png" alt="Contacto" /></a></p>								
+			</div>
+			<nav id="responsive">
+				<p><a href="#" onclick="showmenu(); return false">men&uacute;</a></p>
+				<ul id="opt_responsive">
+					<li><a href="">Buscador</a></li>
+					<li><a href="">Promociones</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Acceso</a></li>
+					<li><a href="">Registro</a></li>
+					<li><a href="">Contacto</a></li>
+					<li><a href="">Te llamamos</a></li>					
+				</ul>
+			</nav>
+			<nav id="menu">
+				<ul>
+					<li><a href="#">Promociones</a></li>
+					<li><a href="#">blog</a></li>
+				</ul>
+			</nav>
+		</div>		
+	</header>
+	<section id="error_404" class="paginaerror">				
+		<div class="contentgeneric">
+			<p class="titulo">Sentimos no poder mostrar ning&uacute;n resultado.</p>
+			<div class="imagen">
+				<picture>				
+		  		<source srcset="/images/error_404_mobile.jpg" media="(max-width: 767px)">
+				<img srcset="/images/error_404.jpg" alt="error 404">
+		</picture>
+			</div>
+			<p class="descrip">Parece ser que este enlace ya no existe.<br>Prueba a ir a la <a href="/">p&aacute;gina principal</a> o bien a nuestras <a href="/novedades">&uacute;ltimas novedades</a> en inmuebles.</p>
+		</div>
+	</section>
+	<footer>
+		<div class="contentgeneric">
+			<div class="upfoot">			
+				<div class="contacto">
+					<p class="contact">Cont&aacute;ctanos</p>
+					<p class="number">914 842 874</p>
+				</div>
+				<div class="inverpro">
+					<ul>
+						<li><a href="#">Inversores</a></li>
+						<li><a href="#">Profesionales</a></li>
+					</ul>
+				</div>
+				<div class="granjas">
+					<div class="granja">
+						<h4><a href="">Pisos de bancos en venta</a></h4>				
+						<ul class="pisos">
+							<li><a href="#">Pisos y Casas de Bancos en A Coru&ntilde;a en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en &Aacute;lava en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en Albacete en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en Alicante en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en Almer&iacute;a en venta</a></li>												
+						</ul>						
+					</div>
+					<div class="granja">
+						<h4><a href="">Suelos de bancos en venta</a></h4>				
+						<ul class="pisos">
+							<li><a href="#">Suelos de bancos en venta en A Coru&ntilde;a en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en &Aacute;lava en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en Albacete en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en Alicante en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en Almer&iacute;a en venta</a></li>												
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="downfoot">
+				<ul class="enlacespie">				
+					<li><a href="">Gobierno Corporativo</a></li>
+					<li><a href="">Aviso legal</a></li>
+					<li><a href="">Pol&iacute;tica de Cookies</a></li>
+					<li><a href="">Mapa web</a></li>					
+				</ul>
+				<ul class="socialpie">
+					<li><a href=""><img src="/images/ico_pie_fb.png" alt="Facebook" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_twi.png" alt="Twitter" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_yout.png" alt="Facebook" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_gplus.png" alt="Google +" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_linke.png" alt="Linkedin" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_insta.png" alt="Instagram" /></a></li>
+				</ul>	
+			</div>
+		</div>
+	</footer>	
+</div>
+</body>
+</html>

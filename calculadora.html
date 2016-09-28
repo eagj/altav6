@@ -80,6 +80,16 @@
 		$(".videocontent").hide();
 		$(".verfotos").hide();				
 	}	
+	function showcalc(){
+		$(".calchipo").show();
+		$(".lightcontact").show();
+		
+	}
+	function hidecalc(){
+		$(".calchipo").hide();
+		$(".lightcontact").hide();
+		
+	}
 </script>
 <style type="text/css" media="screen">
 	.captcha img {
@@ -170,7 +180,7 @@
 					<div class="cuota_mobile">
 						<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
 						<div class="simulador">
-							<p><a href="#">&nbsp;</a></p>
+							<p><a href="#" onclick="showcalc(); return false">&nbsp;</a></p>
 						</div>
 					</div>
 				</div>
@@ -190,7 +200,7 @@
 				<div class="cuota">
 					<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
 					<div class="simulador">
-						<p><a href="#"><span>Simulador<br /> de cuotas</span></a></p>
+						<p><a href="#" onclick="showcalc(); return false"><span>Simulador<br /> de cuotas</span></a></p>
 					</div>
 				</div>
 			</div>
@@ -551,6 +561,41 @@
 		</a>
 	</div>
 	<div class="lightcontact"></div>
+	<div id="modal_full" class="calchipo">
+		<div id="modal" class="calculadora">
+			<div class="generic_modal">
+				<div class="cerrar"><a href="#" onclick="hidecalc();return false">X</a></div>
+				<div id="modal_contenido">
+					<h4 class="titulo"><span>Simulador de cuotas</span></h4>
+					<div class="ico"></div>
+					<form action="">					
+						<div id="cantidad" class="bloque">
+							<label>Cantidad a financiar</label>
+							<input id="sliderCantidad" name="sliderCantidad" value="" placeholder="0" type="number" step="any" required="true">
+						</div>
+						<div id="plazo"class="bloque">
+							<label>Plazo</label>
+							<input id="sliderPlazo" name="sliderPlazo" value="" placeholder="25" type="number" step="any" required="true">						
+						</div>
+						<div id="euribor" class="bloque">
+							<label>Tipo Euribor</label>
+							<input id="selectEuribor" name="selectEuribor" value="" placeholder="1.25" type="number" step="any" required="true">												
+						</div>
+						<div class="linea botonera red">
+							<input type="submit" name="calcular" value="Calcular" id="calcular"/>
+						</div>
+						<div id="cuotafinal" class="bloque">
+							<label>Cuota mensual</label>
+							<p id="totalcalc">560</p>
+						</div>
+					</form>
+					<p class="adverdisc">*El resultado del c&aacute;lculo realizado con el simulador es meramente orientativo y no vinculante; por tanto, no supone ning&uacute;n tipo de oferta comercial, debiendo acudir a su entidad financiera para el estudio y dictamen correspondiente.</p>						
+								
+				</div>
+			</div>
+			
+		</div>
+	</div>
 </div>
 <script src="/include/jquery/vegas/vegas.js"></script>
 <script>

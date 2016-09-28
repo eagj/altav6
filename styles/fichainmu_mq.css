@@ -217,6 +217,7 @@
 	}
 	.tipoficha header#general{
 		position:relative;
+		font-size: 1.5em;
 	}
 	
 	.tipoficha header#logonav{

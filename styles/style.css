@@ -2170,6 +2170,22 @@ section.ficha .foto .next {
 	    padding-right: 0.3em;    
 	}
 
+
+
+/*SECTION VIDEO*/
+section.ficha .videocontent{
+	display:none;
+	height: 100%;
+    margin-top: 20px;
+    height: 460px;    
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+}
+	section.ficha .videocontent iframe{
+		width:100%;
+		height:100%;
+	}
 /*SECTION CARACTERISTICAS*/
 section.caract{
 	 margin: 40px 0 0;
@@ -2327,6 +2343,7 @@ section.caract .vermapa{
 	
 section.caract .video{
 	display:inline-block;
+	
 }
 	section.caract .video a{
 	 	border: 1px solid #6c6c6c;
@@ -2360,6 +2377,44 @@ section.caract .video{
     	vertical-align: middle;
 	}
 		section.caract .video a:hover::before{
+			background-position:-23px 0 ;
+		}
+
+section.caract .verfotos{
+	display:none;
+}
+	section.caract .verfotos a{
+	 	border: 1px solid #6c6c6c;
+    	border-radius: 6px;
+    	color: red;
+    	font-family: raleway_bold;
+    	font-size: 0.875em;
+    	padding: 10px 20px 10px 40px;
+    	position: relative;
+    	vertical-align: middle;
+	}
+	section.caract .verfotos a::before {
+    	background: transparent url("/images/ficha/ico_vervideo.png") no-repeat scroll 0 0;
+    	content: "\00a0";
+	  	height: 23px;
+		left: 10px;
+    	position: absolute;
+    	top: 6px;
+    	vertical-align: middle;
+    	width: 23px;
+	}
+	section.caract .verfotos a:hover{
+		background-color: red;
+    	border: 1px solid red;
+    	border-radius: 6px;
+    	color: #fff;
+    	font-family: raleway_bold;
+    	font-size: 0.875em;
+    	padding: 10px 20px 10px 40px;
+    	position: relative;
+    	vertical-align: middle;
+	}
+		section.caract .verfotos a:hover::before{
 			background-position:-23px 0 ;
 		}
 	
@@ -3810,6 +3865,29 @@ footer{
 }
 
 
+/*registro ok*/
+#modal_full #modal.regok .generic_modal{
+	border-color:#9a9b23
+}
+	#modal_full #modal.regok .generic_modal .cerrar{
+		background-color:#9a9b23;
+	}	
+	
+#modal_full #modal.regok .generic_modal .ico{
+	background-image: url('/images/modales/registro_ok.png');
+}	
+
+#modal_full #modal.regok .generic_modal h4.titulo{	
+ 	margin-bottom: 10px;
+}
+#modal_full #modal.regok .generic_modal h5{
+		font-family: raleway_light;
+}
+	#modal_full #modal.regok .generic_modal h5 span{
+		color:#9a9b23;
+		font-family: raleway_bold;
+	}
+
 
 /*ERROR*/	
 #modal_full #modal.error .generic_modal{
@@ -3930,6 +4008,162 @@ footer{
 }
 
 
+
+/*CALCULADORA HIPOTECARIA*/
+#modal_full.calchipo{
+	display:none;
+	position: absolute;
+	background-color: transparent;
+}
+#modal_full #modal.calculadora .generic_modal{
+	border-color:#9a9b23
+}
+	#modal_full #modal.calculadora .generic_modal .cerrar{
+		background-color:#9a9b23;
+	}	
+	
+#modal_full #modal.calculadora .generic_modal .ico{
+	background-image: url('/images/modales/ico_calc.png');
+}	
+
+#modal_full #modal.calculadora .generic_modal h4.titulo{	
+ 	margin-bottom: 10px;
+}
+
+#modal_full #modal.calculadora .generic_modal form{
+	 text-align: left;
+	display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    width: 80%;
+}
+#modal_full #modal.calculadora .generic_modal .bloque [type="number"]{
+-moz-appearance:textfield;	
+}
+#modal_full #modal.calculadora .generic_modal .bloque input::-webkit-outer-spin-button,#modal_full #modal.calculadora .generic_modal .bloque input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -webkit-appearance: none;
+	  border-radius: 0;
+}
+	
+	#modal_full #modal.calculadora .generic_modal .bloque{
+		clear: both;
+    	float: left;
+    	margin-bottom: 20px;
+    	position: relative;
+	}
+	
+	/*CANTIDAD*/	
+	#cantidad.bloque::after {
+	  	color: #aaa;
+    	content: "€";
+    	font-size: 0.8em;
+    	position: absolute;
+    	right: -15px;
+    	top: 10px;
+	}
+	#modal_full #modal.calculadora .generic_modal #cantidad.bloque input{
+    	width: 100px
+	}
+	
+	
+	/*PLAZO*/	
+	#modal_full #modal.calculadora .generic_modal #plazo.bloque::after {
+		color: #aaa;
+    	content: "años";
+    	font-size: 0.8em;
+    	position: absolute;
+    	right: -35px;
+    	top: 10px;
+	}
+		
+		#modal_full #modal.calculadora .generic_modal #plazo.bloque input {
+	    	width: 50px;
+	    	text-align: center;
+	    	text-indent: 0;
+	    	-webkit-appearance: none;
+	  		border-radius: 0;
+		}
+	
+	/*EURIBOR*/	
+	#euribor.bloque::after {
+	  	 color: #aaa;
+		content: "%";
+    	font-size: 0.8em;
+    	position: absolute;
+    	right: -15px;
+    	top: 8px;
+	}
+	#modal_full #modal.calculadora .generic_modal #euribor.bloque input {
+    	width: 50px;
+    	text-align: center;
+    	text-indent: 0;
+    	-webkit-appearance: none;
+	  border-radius: 0;
+	}
+	
+	#modal_full #modal.calculadora .generic_modal .bloque label {
+    	display: inline-block;
+    	margin-right: 10px;
+    	text-align: right;
+    	width: 150px
+	}
+	
+	#modal_full #modal.calculadora .generic_modal .bloque input{
+		border: 1px solid #ccc;
+    	padding: 5px 0;
+    	text-indent: 15px;
+    	-webkit-appearance: none;
+	  	border-radius: 0;
+	}	
+#modal_full #modal.calculadora .generic_modal p.adverdisc{
+	font-family: raleway_light;
+    font-size: 0.7em;
+    margin-left: 10%;
+    margin-top: 20px;
+    text-align: justify;
+    width: 80%;
+    color:#888;
+}	
+
+/*BOTON*/
+#modal_full #modal.calculadora .generic_modal .linea.botonera {
+	border-bottom: 1px solid #ccc;
+    margin-top: 0;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#modal_full #modal.calculadora .generic_modal .bloque input[type="submit"]{
+ 	background-color: #2bb218;
+    box-shadow: none;
+    color: #fff;
+    padding: 9px 0;
+    width:80%;
+}
+
+/*TOTAL*/
+#modal_full #modal.calculadora .generic_modal #cuotafinal.bloque::after {
+    color: #aaa;
+    content: "€/mes";
+    font-size: 0.8em;
+    position: absolute;
+    right: -50px;
+    top: 10px;
+}
+#modal_full #modal.calculadora .generic_modal #cuotafinal.bloque p#totalcalc {
+	background-color: #e3e3e3;
+    border-radius: 0;
+    color: red;
+    display: inline-block;
+    font-family: raleway_bold;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+
+	
 /* tablets menos de 1024 */
 @media (max-width: 1023px){	
 	
@@ -4034,9 +4268,47 @@ footer{
     	left:inherit;
 	}
 }
-
-/* mobile 320px y menos*/
-@media (max-width: 320px){
+@media (max-width: 767px){ 
+	
+/*VENTANAS MODALES*/
+	#modal_full #modal{
+		background-color: rgba(255,255,255,.5);
+		left: 0;
+		top:0;
+	    height: 100%;
+    	width: 100%;
+	}
+	
+	#modal_full #modal .generic_modal{
+		height:100%;
+	    background-color: #fff;
+	}
+	#modal_full #modal.calculadora .generic_modal{
+		height: 600px;
+	}
+	
+	
+	/*CALCULADORA HIPETECARIA*/
+	#modal_full #modal.calculadora{
+		background-color:transparent;
+	}
+	#modal_full #modal.calculadora .generic_modal h4.titulo{
+		font-size: 1.5em;
+		margin-bottom: 0;
+	}
+	#modal_full #modal.calculadora .generic_modal .ico{
+		margin:20px 0 ;
+	}
+	#modal_full #modal.calculadora .generic_modal form{
+		width:100%;
+		margin-left: 0;
+	}
+	#modal_full #modal.calculadora .generic_modal .bloque{
+		margin-bottom: 10px;
+	}
+}
+/* iphone y menos*/
+@media (max-width: 375px){
 	html{
 		font-size: 11px;
 	}
@@ -4066,5 +4338,34 @@ footer{
 	}
 	section#blog .entrada .texto p.vermas {
     	margin-top: 25px;
+	}
+	
+	/*CALC HIPOTEC*/
+	#modal_full #modal.calculadora .generic_modal .bloque label{
+		width: 100%;
+    	margin: 0;
+    	margin-bottom: 5px;
+    	text-align: center;		
+	}
+	#modal_full #modal.calculadora .generic_modal .bloque {
+    	margin-bottom: 10px;
+    	width: 100%;
+    	text-align: center;
+	}
+	#modal_full #modal.calculadora .generic_modal .bloque::after{
+		right: 50px;
+    	top: 25px;
+	}
+	#modal_full #modal.calculadora .generic_modal #plazo.bloque::after{
+		right: 36px;
+    	top: 25px;
+	}
+	#modal_full #modal.calculadora .generic_modal #cuotafinal.bloque::after{
+		right: 30px;
+    	top: 25px;
+	}
+	
+	#modal_full #modal.calculadora .generic_modal .bloque input, #modal_full #modal.calculadora .generic_modal #plazo.bloque input, #modal_full #modal.calculadora .generic_modal #euribor.bloque input{
+		width: 100px;
 	}
 }
