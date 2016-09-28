@@ -2702,6 +2702,44 @@ section.utils{
     		text-align: left;
     		vertical-align: middle;
 		}
+		
+/*SHARE*/
+#modal_full #modal.sharebox ul{
+	margin:40px 0;
+}
+#modal_full #modal.sharebox li{
+	display: inline-block;
+    text-align: center;
+    width: 25%;
+    margin-right: -4px;
+}
+	#modal_full #modal.sharebox li a{
+		color:#414141;
+		font-family: raleway_semibold;		
+	}
+	#modal_full #modal.sharebox li a::before{
+		content: "\00a0";
+    	height: 32px;
+    	width: 100%;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+#modal_full #modal.sharebox li.fb_ico a::before {
+    background: transparent url("/images/ico_pie_fb.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.twi_ico a::before {
+    background: transparent url("/images/ico_pie_twi.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.gplus_ico a::before {
+    background: transparent url("/images/ico_pie_gplus.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.in_ico a::before {
+    background: transparent url("/images/ico_pie_linke.png") no-repeat scroll center center;   
+}
+#modal_full #modal.sharebox li.inst_ico a::before {
+    background: transparent url("/images/ico_pie_insta.png") no-repeat scroll center center;   
+}
+
 
 /*SECTION INMUEBLES SIMILARES*/
 section.inmusimi{
@@ -4056,21 +4094,22 @@ footer{
 	/*CANTIDAD*/	
 	#cantidad.bloque::after {
 	  	color: #aaa;
-    	content: "€";
+	  	content: "\20AC";
     	font-size: 0.8em;
     	position: absolute;
     	right: -15px;
     	top: 10px;
 	}
 	#modal_full #modal.calculadora .generic_modal #cantidad.bloque input{
-    	width: 100px
+    	width: 100px;
+    	text-align: center;
 	}
 	
 	
 	/*PLAZO*/	
 	#modal_full #modal.calculadora .generic_modal #plazo.bloque::after {
 		color: #aaa;
-    	content: "años";
+    	content: "a\00f1os";
     	font-size: 0.8em;
     	position: absolute;
     	right: -35px;
@@ -4078,7 +4117,7 @@ footer{
 	}
 		
 		#modal_full #modal.calculadora .generic_modal #plazo.bloque input {
-	    	width: 50px;
+	    	width: 100px;
 	    	text-align: center;
 	    	text-indent: 0;
 	    	-webkit-appearance: none;
@@ -4095,7 +4134,7 @@ footer{
     	top: 8px;
 	}
 	#modal_full #modal.calculadora .generic_modal #euribor.bloque input {
-    	width: 50px;
+    	width: 100px;
     	text-align: center;
     	text-indent: 0;
     	-webkit-appearance: none;
@@ -4145,7 +4184,7 @@ footer{
 /*TOTAL*/
 #modal_full #modal.calculadora .generic_modal #cuotafinal.bloque::after {
     color: #aaa;
-    content: "€/mes";
+    content: "\20AC/mes";
     font-size: 0.8em;
     position: absolute;
     right: -50px;

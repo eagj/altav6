@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+  	<!-- Desactivar la deteccion automatica de numeros de teléfono -->
+    <meta name="format-detection" content="telephone=no">
+	<title>Ficha inmueble</title>
+	<link rel="icon" type="image/png" href="favicon.ico" />
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 	<!-- selectbox-->
+ 	<script src="/include/jquery/selectbox/jquery.selectBox.js" type="text/javascript"></script>
+ 	<link href="/include/jquery/selectbox/jquery.selectBox.css" rel="stylesheet" type="text/css" />
+	<!-- HOJAS DE ESTILOS -->
+	<link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/styles/style.css">
+	<!-- CSS media query INDEX -->
+	<link rel="stylesheet" media="(max-width: 1134px)" href="/styles/fichainmu_mq.css" />
+
+	<link href="/include/jquery/vegas/vegas.css" rel="stylesheet">
+<script type="text/javascript">
+	function showform(){
+		document.getElementById("contacto").style.display="block";		
+	}	
+	function hideform(){
+		document.getElementById("contacto").style.display="none";
+		document.getElementById("contbutton").style.display="block";
+		
+	}
+	function showformtella(){
+		document.getElementById("contacto_tellama").style.display="block";
+	}
+	function hideformtella(){
+		document.getElementById("contacto_tellama").style.display="none";
+	}
+	function showmenu(){
+		document.getElementById("opt_responsive").style.display="block";		
+	}
+	function showarepriv(){
+		document.getElementById("menuAreaPrivada").style.display="block";		
+	}
+	function showarepriv(){
+		document.getElementById("loginacces").style.display="none";
+		document.getElementById("usuario").style.display="block";		
+	}	
+	function showmenuarepriv(){
+		document.getElementById("menuAreaPrivada").style.display="block";
+		$( "#usuario" ).addClass("desple");
+	}
+	
+	
+	/*ESTA FUNCION ES IMPORTANTE YA QUE AÑADE UN ID A LOS SELECT CUANDO SE DESPLEGAN*/
+	function passid(elid){
+		$(".selectBox-dropdown-menu").attr('id', elid);;
+	}
+	
+	/*ESTO ES SOLO PARA QUE SE ACTIVEN LOS BOTONES DEL MAPA EN MAQUETACION*/
+	function passselect(elclass){
+		$("li").removeClass("select");
+		$(elclass).addClass("select");
+	}
+	
+	function showformficha(){
+		$(".lightcontact").show();
+		$("#contact_ficha").show();				
+	}
+	function hideformficha(){
+		$(".lightcontact").hide();
+		$("#contact_ficha").hide();				
+	}
+	function showvideo(){
+		$(".videocontent").show();
+		$(".verfotos").show();
+		$(".foto").hide();
+		$(".video").hide();				
+	}
+	function showfotos(){
+		$(".foto").show();
+		$(".video").show();
+		$(".videocontent").hide();
+		$(".verfotos").hide();				
+	}	
+	
+	function showshare(){
+		$(".sharemodal").show();
+		$(".lightcontact").show();
+		
+	}
+	function hideshare(){
+		$(".sharemodal").hide();
+		$(".lightcontact").hide();
+		
+	}
+	function urlweb(ida, urlsocial){
+		document.getElementById(ida).href=urlsocial+window.location;
+	}
+</script>
+<style type="text/css" media="screen">
+	.captcha img {
+    	margin-left: 5%;
+    	width: 90%;
+	}
+</style>
+</head>
+<body>
+<div id="ficha_inmu" class="tipoficha">
+	<header id="general">
+		<div class="contentgeneric">
+			<p class="visitados" id="pUltimosVisitados">
+				<a id="btnUltimosVisitados" href="#">Ver &uacute;ltimos visitados</a>
+			</p>
+			<p class="loginhead" id="loginacces">
+				<a href="#" class="acceso" onclick="showarepriv(); return false">Acceso</a>|<a class="registro" href="">Registro</a>
+			</p>
+			<div class="usuarioconect" id="usuario">
+				<a href="" onclick="showmenuarepriv(); return false" id="nombrePerfil">Quique Garcia</a>
+				<div style="display: none;" id="menuAreaPrivada">
+					<ul>
+						<li class="inicio"><a href="">Inicio</a></li>
+						<li class="fav"><a href="">Favoritos</a></li>
+						<li class="buscguard"><a href="">Alertas</a></li>
+						<li class="inmuguard"><a href="">Inmuebles guardados</a></li>
+						<li class="solicenv"><a href="">Consultas</a></li>
+						<li class="suscrip"><a href="">Suscripciones</a></li>
+						<li class="perfil"><a href="">Perfil</a></li>
+						<li class="exit"><a title="Salir" href="">Salir</a></li>
+					</ul>
+				</div>				
+			</div>						
+		</div>
+	</header>
+	<header id="logonav">
+		<div class="contentgeneric">
+			<div class="logohead">
+				<a href="/"><img id="logoalta" src="/images/logoaltamira.png" alt="Altamira Inmuebles logo" /></a>
+			</div>
+			<div class="contact">
+				<div class="contacto seccion">					
+					<p><a href="#" onclick="showform();return false"><img src="/images/ico_head_contacto.png" alt="Contacto" /> Contacto</a></p>
+				</div>
+				<div class="tellamamos seccion">					
+					<p><a href="#" onclick="showformtella();return false"><img src="/images/ico_head_tellamamos.png" alt="Contacto" /> Te llamamos</a></p>
+				</div>
+				<div class="telefono seccion">					
+					<p><img src="/images/ico_head_tfno.png" alt="Contacto" /> 914 842 874</p>
+				</div>
+			</div>
+			<div class="contact_responsive">									
+				<p><a href="tel:914842874"><img src="/images/ico_head_tfno.png" alt="Contacto" /></a></p>								
+			</div>
+			<nav id="responsive">
+				<p><a href="#" onclick="showmenu(); return false">men&uacute;</a></p>
+				<ul id="opt_responsive">
+					<li><a href="">Buscador</a></li>
+					<li><a href="">Promociones</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Acceso</a></li>
+					<li><a href="">Registro</a></li>
+					<li><a href="">Contacto</a></li>
+					<li><a href="">Te llamamos</a></li>					
+				</ul>
+			</nav>
+			<nav id="menu">
+				<ul>
+					<li><a href="#">Promociones</a></li>
+					<li><a href="#">blog</a></li>
+				</ul>
+			</nav>
+		</div>		
+	</header>	
+	<header class="header_ficha">
+		<div class="contentgeneric">
+			<div class="superior">
+				<hgroup>
+					<h1>General Romero Basart, N&ordm;123</h1>
+					<h2>Madrid (<span>Madrid</span>)</h2>
+				</hgroup>
+				<div class="preciocuota">
+					<div class="precios">
+						<p class="antes">antes <span>250.000&euro;</span></p>
+						<p class="descuen">20% de Descuento</p>
+						<p class="precio">81.800&euro;</p>
+					</div>
+					<div class="cuota_mobile">
+						<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
+						<div class="simulador">
+							<p><a href="#" onclick="showcalc(); return false">&nbsp;</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="utils">
+				<ul>
+					<li id="utils_fav"><a href="#"><span>A&ntilde;adir<br />a favoritos</span></a></li>
+					<li id="utils_alert"><a href="#"><span>Alerta bajada<br />de precio</span></a></li>
+					<li id="utils_inmusim"><a href="#"><span>Inmuebles<br />similares</span></a></li>
+				</ul>
+			</div>
+			<div class="inferior">
+				<ul>
+					<li>63 <span>m<sup>2</sup></span></li>
+					<li>3 <span>hab.</span></li>					
+				</ul>
+				<div class="cuota">
+					<p class="cuota_text">Cuota desde <span>700 &euro;</span> mes</p>
+					<div class="simulador">
+						<p><a href="#" onclick="showcalc(); return false"><span>Simulador<br /> de cuotas</span></a></p>
+					</div>
+				</div>
+			</div>
+		</div>				
+	</header>
+	<!--FORMULARIO CONTACTO-->
+	<aside id="contact_ficha">
+		<div class="contentgeneric">
+			<div class="contact_form" id="contacto">
+				<div class="cerrar">
+					<a href="#" onclick="hideformficha();return false">&nbsp;</a>
+				</div>
+				<div class="titulo">
+					<div class="ico"><img src="/images/ico_sobre_contact.png" alt="Contactar" /></div>
+					<p>&iexcl;Cont&aacute;ctanos!</p>
+				</div>
+				<div class="cuerpo">
+					<form action="" method="get">
+				  		<input type="text" name="nombre" value="" id="nombre"placeholder="Nombre"/>
+					  	<input type="text" name="apellidos" value="" id="apellidos"placeholder="Apellidos"/>
+					  	<input type="text" name="tfno" value="" id="tfno"placeholder="Tel&eacute;fono"/>
+					  	<input type="text" name="email" value="" id="email"placeholder="Email"/>
+					  	<div class="avisoleg">
+					  		<input type="checkbox" name="politi" id="politi">
+					  		<label for="politi">He le&iacute;do y acepto el <a href="#">aviso legal</a> <br /> y la pol&iacute;tica de privacidad</label>
+					  	</div>
+					  	<div class="captcha">
+					  		<!-- <p style="text-align: center">AQUI VA EL CAPTCHA</p> -->
+					  		<img src="/images/temp/Recaptcha_anchor_2x.0.gif" alt="" />
+					  	</div>
+			   			<p><input type="submit" value="enviar"/></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<div class="contentgeneric">
+		<section class="ficha">			
+			<section class="foto">
+				<div class="back">
+					<a href="#">&nbsp;</a>
+				</div>
+				<img src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/10/110_1.jpg" alt="" />
+				<div class="next">
+					<a href="#">&nbsp;</a>
+				</div>
+				<div class="numfotos">
+					<p>1/1</p>
+				</div>
+			</section>
+			<section class="videocontent">				
+				<iframe src="https://www.youtube.com/embed/6sJkax_iy4g" frameborder="0" allowfullscreen></iframe>
+			</section>
+			<section class="caract">
+				<div class="detalles">
+					<ul>
+						<li class="superf">63 <span>m<sup>2</sup></span></li>
+						<li class="hab">3 <span>hab.</span></li>
+						<li class="ban">2 <span>ba&ntilde;os</span></li>
+						<li class="garaje"><span>Garaje</span></li>
+						<li class="garajeopc"><span>G. Opcional</span></li>
+						<li class="piscina"><span>Piscina</span></li>
+						<li class="airac"><span>Aire ac.</span></li>
+						<li class="ascensor"><span>Ascensor</span></li>
+						<li class="calefaccion"><span>Calefacci&oacute;n</span></li>
+						<li class="terraza"><span>Terraza</span></li>
+						<li class="trastero"><span>Trastero</span></li>
+					</ul>					
+				</div>
+				<div class="botones">
+					<div class="vermapa">
+						<a href="#">Ubicaci&oacute;n</a>
+					</div>
+					<div class="video">
+						<a href="#" onclick="showvideo(); return false">Ver video</a>
+					</div>
+					<div class="verfotos">
+						<a href="#" onclick="showfotos(); return false">Ver fotos</a>
+					</div>
+				</div>
+			</section>
+			<section class="descripcion">
+				<h3>Descripci&oacute;n</h3>
+				<p>Piso de segunda mano, interior, distribuido en sal&oacute;n, cocina, ba&ntilde;o y 2 dormitorios en finca hist&oacute;rica rehabilitada. Zona muy bien comunicada al lado del metro Pacifico y dotada de todo tipo de servicios.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt est id auctor iaculis. Vestibulum sed feugiat lorem. Vestibulum blandit pulvinar leo, ut volutpat nibh ullamcorper sit amet.</p>
+				<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse volutpat convallis velit, sit amet viverra ligula ultricies vitae. Curabitur augue tortor, tempus a mattis id, efficitur eu est. Curabitur laoreet turpis vel pulvinar dignissim.</p>
+			</section>
+			<section class="ubicacion box_tipodesp">
+				<h3 class="tipopleg"><a href="">Ubicaci&oacute;n y servicios cercanos</a></h3>
+				<!-- <h4><span>Lorem ipsum</span> dolore sit amet</h4> -->
+				<div class="servicio_mapa">
+					<div class="servicios_menu">
+						<ul>
+							<li class="edu" onclick="passselect('.edu');return false"><a href="#">Educativos</a></li>
+							<li class="sanit" onclick="passselect('.sanit');return false"><a href="#">Sanitarios</a></li>
+							<li class="compras" onclick="passselect('.compras');return false"><a href="#">Compras</a></li>
+							<li class="rest" onclick="passselect('.rest');return false"><a href="#">Restaurantes</a></li>
+							<li class="transp" onclick="passselect('.transp');return false"><a href="#">Transportes</a></li>
+						</ul>
+					</div>
+					<div class="maparaserv">								
+						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d194347.38441000276!2d-3.819619853628188!3d40.438131079835216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1469084166813"  frameborder="0" style="border:0" allowfullscreen></iframe> -->	
+					</div>
+				</div>
+			</section>
+			<section class="certificado box_tipodesp">
+				<h3 class="tipopleg"><a href="">Certificado energ&eacute;tico</a></h3>
+				<div class="desple">
+					<div class="certificadobox">
+						<img src="http://www.altamirainmuebles.com/images/eficenerg_logos/EFI_ENER_B.jpg" alt="Certificado B" />
+						<p><span>Calificaci&oacute;n de eficiencia</span> energ&eacute;tica de vivienda terminado seg&uacute;n RD 235/2013 de 5 de abril.</p>
+					</div>
+				</div>
+			</section>
+			<section class="descargas box_tipodesp">
+				<h3 class="tipopleg"><a href="">Descargas</a></h3>
+				<div class="desple">
+					<div class="descboxes">
+						<div class="descbox calidades">
+							<a href=""><img src="/images/ficha/ico_memcal.png" alt="memoria de calidades" /></a>
+							<p>Memoria<br /> de calidades</p>
+						</div>
+						<div class="descbox pdf">
+							<a href=""><img src="/images/ficha/ico_pdf.png" alt="pdf" /></a>
+							<p>Descripci&oacute;n<br /> <span>PDF</span></p>
+						</div>
+						<div class="descbox epub">
+							<a href=""><img src="/images/ficha/ico_epub.png" alt="epub" /></a>
+							<p>Descripci&oacute;n<br /> <span>EPUB</span></p>
+						</div>
+						<div class="descbox">
+							<a href=""><img src="/images/ficha/ico_plano.png" alt="plano" /></a>
+							<p>Planos<br /> de la casa</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="infocomple box_tipodesp">
+				<h3 class="tipopleg"><a href="">Informaci&oacute;n Complementaria</a></h3>
+				<div class="desple">
+					<div class="bloque">
+						<p class="titulo">Referencia</p>
+						<p class="info">1234567890aeiou</p>
+					</div>
+					<div class="bloque">
+						<p class="titulo">Promotor</p>
+						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
+						<p class="info"><span>Domicilio:</span> Madrid</p>
+						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
+					</div>				
+					<div class="bloque">
+						<p class="titulo">Intermediario</p>
+						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
+						<p class="info"><span>Domicilio:</span> Madrid</p>
+						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
+					</div>				
+					<div class="bloque">
+						<p class="titulo">Fecha de recepci&oacute;n de la obra: <span>18/05/2018</span></p>						
+					</div>
+					<div class="bloque">
+						<p class="titulo">Proyectista</p>
+						<p class="info"><span>Nombre o raz&oacute;n social:</span> Lorem ipsum dolor sit amet</p>
+						<p class="info"><span>Domicilio:</span> Madrid</p>
+						<p class="info"><span>Inscripcion de registro mercantil:</span> Lorem ipsum dolor sit amet</p>
+					</div>
+				</div>				
+			</section>
+			<section class="propietario box_tipodesp">
+				<h3 class="tipopleg"><a href="">Propietario</a></h3>
+				<div class="desple">
+					<div class="propi">
+						<div class="texto">
+							<p class="propie">SAREB</p>
+							<p class="nifpropi">CIF: A86602158</p>
+						</div>
+						<div class="logopropi">
+							<img src="http://www.altamirainmuebles.com/images/propietario_sareb.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="campa_asoc box_tipodesp">
+				<h3 class="tipopleg"><a href="">Promociones asociadas</a></h3>
+				<div class="desple">
+					<div class="box_campa">
+						<div class="logo_campa">
+							<a href=""><img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/20_es.jpg" alt="" /></a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>							
+							<p><a href="">Ver m&aacute;s inmuebles</a></p>
+						</div>
+					</div>
+					<div class="box_campa">
+						<div class="logo_campa">
+							<a href=""><img src="http://www.altamirainmuebles.com/estaticos/campanas/iconos/39_es.jpg" alt="" /></a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>							
+							<p><a href="">Ver m&aacute;s inmuebles</a></p>
+						</div>
+					</div>							
+				</div>
+			</section>
+			<section class="utils">
+				<div class="bloque">
+					<a href="#"><img src="/images/ficha/ico_print.png" alt="Imprimir ficha" /><p>Imprimir</p></a>					
+				</div>
+				<div class="bloque">
+					<a href="#" onclick="showshare();return false"><img src="/images/ficha/ico_share.png" alt="Compartir ficha" /><p>Compartir</p></a>					
+				</div>
+				<div class="bloque">
+					<a href="#"><img src="/images/ficha/ico_volver.png" alt="Volver" /><p>Volver a<br />la promoci&oacute;n</p></a>					
+				</div>
+			</section>
+		</section>		
+	</div>
+	<section class="inmusimi">
+		<div class="contentgeneric">
+			<h3>Inmuebles similares</h3>
+			<div class="bloqueminifichas">
+				<div class="back">
+					<a href="#">&nbsp;</a>
+				</div>
+				<div class="minifichas">							
+					<div class="minificha">
+						<div class="fav active">
+							<a title="añadir o quitar favorito" href="">&nbsp;</a>
+						</div>
+						<div class="foto">
+							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/95/16495_1.jpg"></a> 
+						</div>
+						<div class="info">
+							<h2><a href="">Puerta de San Fernado SCMV FASE I</a></h2>
+							<h3>desde <span>151.550&euro;</span></h3>
+							<div class="detalles">
+								<ul>
+									<li class="superf">63 <span>m<sup>2</sup></span></li>
+									<li class="hab">3 <span>hab.</span></li>
+									<li class="ban">2 <span>ba&ntilde;os</span></li>
+								</ul>					
+							</div>
+							<p class="enlace">
+								<a href="">Ver inmueble</a>
+							</p>
+						</div>			
+					</div>			
+					<div class="minificha">
+						<div class="fav">
+							<a href="">&nbsp;</a>
+						</div>
+						<div class="foto">
+							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/inmuebles/fotos/grandes/97/53297_6.jpg"></a>
+							<div class="descuento">
+								<p>Descuento <span>-15%</span></p>
+							</div> 
+						</div>
+						<div class="info">
+							<h2><a href="">Piso en Madrid (Madrid)</a></h2>
+							<h3><span>87.900&euro;</span></h3>							
+							<div class="detalles">
+								<ul>
+									<li class="superf">68 <span>m<sup>2</sup></span></li>
+									<li class="hab">3 <span>hab.</span></li>
+									<li class="ban">1 <span>ba&ntilde;os</span></li>
+								</ul>					
+							</div>
+							<p class="enlace">
+								<a href="">Ver inmueble</a>
+							</p>
+						</div>			
+					</div>
+					<div class="minificha">
+						<div class="fav">
+							<a href="">&nbsp;</a>
+						</div>
+						<div class="foto">
+							<a href=""><img alt="" src="http://www.altamirainmuebles.com/estaticos/activos/fotos/grandes/30/14830_12.jpg"></a> 
+						</div>
+						<div class="info">
+							<h2><a href="">Promoci&oacute;n Mirador de Valdebebas</a></h2>
+							<h3>desde <span>151.550&euro;</span></h3>
+							<div class="detalles">
+								<ul>
+									<li class="superf">63 <span>m<sup>2</sup></span></li>
+									<li class="hab">3 <span>hab.</span></li>
+									<li class="ban">2 <span>ba&ntilde;os</span></li>
+								</ul>					
+							</div>
+							<p class="enlace">
+								<a href="">Ver inmueble</a>
+							</p>
+						</div>			
+					</div>				
+				</div>
+				<div class="next">
+					<a href="#">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<footer>
+		<div class="contentgeneric">
+			<div class="upfoot">			
+				<div class="contacto">
+					<p class="contact">Cont&aacute;ctanos</p>
+					<p class="number">914 842 874</p>
+				</div>
+				<div class="inverpro">
+					<ul>
+						<li><a href="#">Inversores</a></li>
+						<li><a href="#">Profesionales</a></li>
+					</ul>
+				</div>
+				<div class="granjas">
+					<div class="granja">
+						<h4><a href="">Pisos de bancos en venta</a></h4>				
+						<ul class="pisos">
+							<li><a href="#">Pisos y Casas de Bancos en A Coru&ntilde;a en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en &Aacute;lava en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en Albacete en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en Alicante en venta</a></li>
+							<li><a href="#">Pisos y Casas de Bancos en Almer&iacute;a en venta</a></li>												
+						</ul>						
+					</div>
+					<div class="granja">
+						<h4><a href="">Suelos de bancos en venta</a></h4>				
+						<ul class="pisos">
+							<li><a href="#">Suelos de bancos en venta en A Coru&ntilde;a en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en &Aacute;lava en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en Albacete en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en Alicante en venta</a></li>
+							<li><a href="#">Suelos de bancos en venta en Almer&iacute;a en venta</a></li>												
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="downfoot">
+				<ul class="enlacespie">				
+					<li><a href="">Gobierno Corporativo</a></li>
+					<li><a href="">Aviso legal</a></li>
+					<li><a href="">Pol&iacute;tica de Cookies</a></li>
+					<li><a href="">Mapa web</a></li>					
+				</ul>
+				<ul class="socialpie">
+					<li><a href=""><img src="/images/ico_pie_fb.png" alt="Facebook" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_twi.png" alt="Twitter" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_yout.png" alt="Facebook" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_gplus.png" alt="Google +" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_linke.png" alt="Linkedin" /></a></li>
+					<li><a href=""><img src="/images/ico_pie_insta.png" alt="Instagram" /></a></li>
+				</ul>	
+			</div>
+		</div>
+	</footer>
+	<div class="contactar_responsive">
+		<a href="#" onclick="showformficha();return false">
+			<div class="ico">
+				<img alt="Contactar" src="/images/ico_sobre_contact.png">
+			</div>
+			<p>&iexcl;Cont&aacute;ctanos!</p>
+		</a>
+	</div>
+	<div class="lightcontact"></div>
+	<div id="modal_full" class="sharemodal">
+		<div id="modal" class="sharebox">
+			<div class="generic_modal">
+				<div class="cerrar"><a href="#" onclick="hideshare();return false">X</a></div>
+				<div id="modal_contenido">
+					<h4 class="titulo"><span>Compartir en:</span></h4>
+					<ul>
+						<li class="fb_ico"><a title="Facebook" id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.altamirainmuebles.com/madrid/colmenar-viejo/residencial-picos-de-europa/795/1" onclick="urlweb('facebook', 'https://www.facebook.com/sharer/sharer.php?u=')" target="_blank">Facebook</a></li>
+						<li class="twi_ico"><a title="Twitter" id="twitter" href="#" onclick="urlweb('twitter', 'https://twitter.com/share?hashtags=altamirainmuebles&amp;url=')" target="_blank">Twitter</a></li>
+						<li class="gplus_ico"><a title="Google+" id="gplus" href="#" onclick="urlweb('gplus', 'https://plus.google.com/share?url=')" target="_blank">Google+</a></li>
+						<li class="in_ico"><a title="LinkedIn" id="linkedin" href="#" onclick="urlweb('linkedin', 'https://www.linkedin.com/shareArticle?url=')" target="_blank">LinkedIn</a></li>
+						<!-- <li class="inst_ico"><a title="Instagram" id="instagram" href="#" onclick="pinterest('pinterest', 'http://pinterest.com/pin/create/button/?url=')" target="_blank">Instagram</a></li> -->
+					</ul>	
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+<script src="/include/jquery/vegas/vegas.js"></script>
+<script>
+		$('select').selectBox({
+			mobile: false,
+		});
+		
+
+<!-- //FUNCION PARA QUE SE CAMBIE EL FIXED DE LA CABECERA
+var windw = this;
+$.fn.followTo = function ( pos ) {
+  var $this = this,
+  $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > 30) {
+        	$("#logonav").addClass("hide");
+        	$(".header_ficha").addClass("stick");
+        	$("#contact_ficha").addClass("stick");
+        	
+        } else {
+        	$( "#logonav" ).removeClass("hide");
+        	$(".header_ficha").removeClass("stick");
+        	$("#contact_ficha").removeClass("stick");
+        }        
+    });
+};
+//MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
+var mediaquery = window.matchMedia("(min-width: 7px)"),
+	content = document.querySelector("body");
+    function handleOrientationChange(mediaquery) {
+      if (mediaquery.matches) {
+        $('').followTo(50);
+      } else {
+       $('').followTo(33);
+      }
+     }
+handleOrientationChange(mediaquery);
+mediaquery.addListener(handleOrientationChange);
+
+
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+});
+/*FORMULARIO SE OCULTA EN CIERTO PUNTO*/
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+});
+</script>
+<!-- //FUNCION PARA QUE SE CAMBIE EL FIXED DE LA CABECERA
+var windw = this;
+$.fn.followTo = function ( pos ) {
+  var $this = this,
+  $window = $(windw);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > 30) {
+        	$("#logonav").addClass("hide");
+        	$(".header_ficha").addClass("stick");
+        	$("#contact_ficha").addClass("stick");
+        	
+        } else {
+        	$( "#logonav" ).removeClass("hide");
+        	$(".header_ficha").removeClass("stick");
+        	$("#contact_ficha").removeClass("stick");
+        }        
+    });
+};
+//MUY IMPORTANTE ESTO HACE QUE DEPENDIENDO DE LA RESOLUCION PONGA UN VALOR U OTRO
+var mediaquery = window.matchMedia("(min-width: 7px)"),
+	content = document.querySelector("body");
+    function handleOrientationChange(mediaquery) {
+      if (mediaquery.matches) {
+        $('').followTo(50);
+      } else {
+       $('').followTo(33);
+      }
+     }
+handleOrientationChange(mediaquery);
+mediaquery.addListener(handleOrientationChange);
+
+
+$(document).ready(function() {
+	var el = $('#contact_ficha'),
+	top_offset = $('.propietario').offset().top;
+	$(window).scroll(function() {
+  		var scroll_top = $(window).scrollTop();
+  		if (scroll_top > top_offset) {
+    		el.css('top', '-2000px');
+  		}
+  		else {
+    		el.css('top', '');
+  		}
+	});
+}); -->
+	
+   
+
+
+</body>
+</html>
